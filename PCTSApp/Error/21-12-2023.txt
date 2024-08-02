@@ -1,0 +1,181 @@
+Time: 21/12/2023 03:31:00 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.InvalidOperationException: The specified cast from a materialized 'System.Int32' type to the 'System.String' type is not valid.
+   at System.Data.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNIPIProgram(NIPIProgram A, Int16 methodFlag)
+-----------------------------------------------------------
+
+Time: 21/12/2023 04:43:55 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__NDDProgram'. Cannot insert duplicate key in object 'dbo.NDDProgram'. The duplicate key value is (10281, 201908).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17444
+ClientConnectionId:43a69be9-25f7-4d8a-b3da-5b8a4899ba4c
+Error Number:2627,State:1,Class:14
+-----------------------------------------------------------
+
+Time: 21/12/2023 04:45:20 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__NDDProgram'. Cannot insert duplicate key in object 'dbo.NDDProgram'. The duplicate key value is (10281, 201908).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17444
+ClientConnectionId:43a69be9-25f7-4d8a-b3da-5b8a4899ba4c
+Error Number:2627,State:1,Class:14
+-----------------------------------------------------------
+
+Time: 21/12/2023 04:52:14 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__NDDProgram'. Cannot insert duplicate key in object 'dbo.NDDProgram'. The duplicate key value is (10281, 201908).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17444
+ClientConnectionId:b1b3c715-295e-4ef4-af9a-e7e99500c987
+Error Number:2627,State:1,Class:14
+-----------------------------------------------------------
+
+Time: 21/12/2023 04:53:46 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__NDDProgram'. Cannot insert duplicate key in object 'dbo.NDDProgram'. The duplicate key value is (10281, 201908).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17445
+ClientConnectionId:f4686a2c-3a08-4592-b0dc-cfafcb8e6e13
+Error Number:2627,State:1,Class:14
+-----------------------------------------------------------
+
+Time: 21/12/2023 05:42:12 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at PCTSApp.Controllers.PCTSAppController.SaveAAMRProgram(AAMRProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17638
+ClientConnectionId:14f14683-9c06-489c-9cda-9a91fe8029b9
+Error Number:8114,State:1,Class:16
+-----------------------------------------------------------
+
+Time: 21/12/2023 05:43:41 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at PCTSApp.Controllers.PCTSAppController.SaveAAMRProgram(AAMRProgram A, Int16 methodFlag)
+ClientConnectionId:14f14683-9c06-489c-9cda-9a91fe8029b9
+Error Number:8114,State:1,Class:16
+-----------------------------------------------------------
+
+Time: 21/12/2023 05:46:01 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at PCTSApp.Controllers.PCTSAppController.SaveAAMRProgram(AAMRProgram A, Int16 methodFlag)
+ClientConnectionId:a8784aaa-e5a0-420e-af54-b9c1f4887d43
+Error Number:8114,State:1,Class:16
+-----------------------------------------------------------
+

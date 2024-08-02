@@ -1,0 +1,103 @@
+Time: 30/01/2024 02:05:01 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Operand type clash: int is incompatible with date
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.FamilyPlanningController.SaveAntraProgram(ANTRA A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\FamilyPlanningController.cs:line 159
+ClientConnectionId:78b23111-2948-4511-88ca-b1bef73ac57d
+Error Number:206,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 30/01/2024 02:53:11 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Operand type clash: int is incompatible with date
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.FamilyPlanningController.SaveAntraProgram(ANTRA A, Int32 methodFlag)
+ClientConnectionId:8ff3993c-915b-4eea-82c1-0a73161802af
+Error Number:206,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 30/01/2024 02:59:24 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to date.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.FamilyPlanningController.SaveAntraProgram(ANTRA A, Int32 methodFlag)
+ClientConnectionId:b92ba575-8023-419b-9ccc-d45b03029742
+Error Number:8114,State:5,Class:16
+-----------------------------------------------------------
+
+Time: 30/01/2024 03:00:46 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.FamilyPlanningController.SaveAntraProgram(ANTRA A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\FamilyPlanningController.cs:line 159
+-----------------------------------------------------------
+

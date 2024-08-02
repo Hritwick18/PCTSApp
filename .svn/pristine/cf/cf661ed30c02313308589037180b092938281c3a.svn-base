@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rajmedicalModelStoreContainer" CdmEntityContainer="rajmedicalEntities">
+    <FunctionImportMapping FunctionImportName="GetANMForLinelist" FunctionName="rajmedicalModel.Store.GetANMForLinelist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.GetANMForLinelist_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetUnitName" FunctionName="rajmedicalModel.Store.uspGetUnitName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetUnitName_Result">
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Anganwari_Village">
+      <EntityTypeMapping TypeName="rajmedicalModel.Anganwari_Village">
+        <MappingFragment StoreEntitySet="Anganwari_Village">
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnganwariMasters">
+      <EntityTypeMapping TypeName="rajmedicalModel.AnganwariMaster">
+        <MappingFragment StoreEntitySet="AnganwariMaster">
+          <ScalarProperty Name="MiniAnganwari" ColumnName="MiniAnganwari" />
+          <ScalarProperty Name="FamilyCount" ColumnName="FamilyCount" />
+          <ScalarProperty Name="HouseHoldCount" ColumnName="HouseHoldCount" />
+          <ScalarProperty Name="Population2011" ColumnName="Population2011" />
+          <ScalarProperty Name="ECCount" ColumnName="ECCount" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="RuralUrban" ColumnName="RuralUrban" />
+          <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+          <ScalarProperty Name="AWCID" ColumnName="AWCID" />
+          <ScalarProperty Name="ICDSCode" ColumnName="ICDSCode" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="NameH" ColumnName="NameH" />
+          <ScalarProperty Name="NameE" ColumnName="NameE" />
+          <ScalarProperty Name="renameVillageAutoID" ColumnName="renameVillageAutoID" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASHA_AddlCharge">
+      <EntityTypeMapping TypeName="rajmedicalModel.ASHA_AddlCharge">
+        <MappingFragment StoreEntitySet="ASHA_AddlCharge">
+          <ScalarProperty Name="MainAnganwari" ColumnName="MainAnganwari" />
+          <ScalarProperty Name="AdditionalChargeID" ColumnName="AdditionalChargeID" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="AshaAutoID" ColumnName="AshaAutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASHADetails">
+      <EntityTypeMapping TypeName="rajmedicalModel.ASHADetail">
+        <MappingFragment StoreEntitySet="ASHADetails">
+          <ScalarProperty Name="IsExtend" ColumnName="IsExtend" />
+          <ScalarProperty Name="TrainingDate" ColumnName="TrainingDate" />
+          <ScalarProperty Name="RetirementDate" ColumnName="RetirementDate" />
+          <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+          <ScalarProperty Name="LevelofTraining" ColumnName="LevelofTraining" />
+          <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+          <ScalarProperty Name="ProfessionalDegree" ColumnName="ProfessionalDegree" />
+          <ScalarProperty Name="EduQualification" ColumnName="EduQualification" />
+          <ScalarProperty Name="ChildrenNo" ColumnName="ChildrenNo" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AshaMasters">
+      <EntityTypeMapping TypeName="rajmedicalModel.AshaMaster">
+        <MappingFragment StoreEntitySet="AshaMaster">
+          <ScalarProperty Name="AccountVerificationDate" ColumnName="AccountVerificationDate" />
+          <ScalarProperty Name="AccountVerifierRoleType" ColumnName="AccountVerifierRoleType" />
+          <ScalarProperty Name="AccountVerificationBy" ColumnName="AccountVerificationBy" />
+          <ScalarProperty Name="WorkingAtLocation" ColumnName="WorkingAtLocation" />
+          <ScalarProperty Name="ANMType" ColumnName="ANMType" />
+          <ScalarProperty Name="IFMSMapped" ColumnName="IFMSMapped" />
+          <ScalarProperty Name="VerifyMobileNo" ColumnName="VerifyMobileNo" />
+          <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+          <ScalarProperty Name="CUGMobile" ColumnName="CUGMobile" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="rename_bhamashahid" ColumnName="rename_bhamashahid" />
+          <ScalarProperty Name="VerifiedAccountByBank" ColumnName="VerifiedAccountByBank" />
+          <ScalarProperty Name="VerifiedAccount" ColumnName="VerifiedAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ANM_AddlChargeFlag" ColumnName="ANM_AddlChargeFlag" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="Bankname" ColumnName="Bankname" />
+          <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+          <ScalarProperty Name="rename_AadhaarNo" ColumnName="rename_AadhaarNo" />
+          <ScalarProperty Name="Aadhaar_EID" ColumnName="Aadhaar_EID" />
+          <ScalarProperty Name="EIDTime" ColumnName="EIDTime" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="Villagename" ColumnName="Villagename" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetanganwari" FunctionName="rajmedicalModel.Store.uspGetanganwari">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetanganwari_Result">
+          <ScalarProperty Name="NameH" ColumnName="NameH" />
+          <ScalarProperty Name="NameE" ColumnName="NameE" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetASHAForLinelist" FunctionName="rajmedicalModel.Store.GetASHAForLinelist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.GetASHAForLinelist_Result">
+          <ScalarProperty Name="ASHAName" ColumnName="ASHAName" />
+          <ScalarProperty Name="ASHAAutoid" ColumnName="ASHAAutoid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MasterCodes">
+      <EntityTypeMapping TypeName="rajmedicalModel.MasterCodes">
+        <MappingFragment StoreEntitySet="MasterCodes">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="masterID" ColumnName="masterID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspSwasthyaMitrkLocation" FunctionName="rajmedicalModel.Store.uspSwasthyaMitrkLocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspSwasthyaMitrkLocation_Result">
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="ACcode" ColumnName="ACcode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HistorySwasthyaMitrks">
+      <EntityTypeMapping TypeName="rajmedicalModel.HistorySwasthyaMitrk">
+        <MappingFragment StoreEntitySet="HistorySwasthyaMitrk">
+          <ScalarProperty Name="HistoryEntryDate" ColumnName="HistoryEntryDate" />
+          <ScalarProperty Name="UpdateValueFlag" ColumnName="UpdateValueFlag" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+          <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+          <ScalarProperty Name="HistorySwasthyaMitrkID" ColumnName="HistorySwasthyaMitrkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SwasthyaMitrks">
+      <EntityTypeMapping TypeName="rajmedicalModel.SwasthyaMitrk">
+        <MappingFragment StoreEntitySet="SwasthyaMitrk">
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+          <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspSwasthyaMitrkData" FunctionName="rajmedicalModel.Store.uspSwasthyaMitrkData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspSwasthyaMitrkData_Result">
+          <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+          <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="JanAadhaarNo" ColumnName="JanAadhaarNo" />
+          <ScalarProperty Name="Consent" ColumnName="Consent" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="PhotoType" ColumnName="PhotoType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetANMForOtherUser" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUser_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DesignationMasters">
+      <EntityTypeMapping TypeName="rajmedicalModel.DesignationMaster">
+        <MappingFragment StoreEntitySet="DesignationMaster">
+          <ScalarProperty Name="UpdateIP" ColumnName="UpdateIP" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="Updatedate" ColumnName="Updatedate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsValidtoPhysVerification" ColumnName="IsValidtoPhysVerification" />
+          <ScalarProperty Name="DesigName" ColumnName="DesigName" />
+          <ScalarProperty Name="DesigID" ColumnName="DesigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitTypeMasters">
+      <EntityTypeMapping TypeName="rajmedicalModel.UnitTypeMaster">
+        <MappingFragment StoreEntitySet="UnitTypeMaster">
+          <ScalarProperty Name="IsOtherDept" ColumnName="IsOtherDept" />
+          <ScalarProperty Name="HRUnitTypeName" ColumnName="HRUnitTypeName" />
+          <ScalarProperty Name="UnitTypeNameAbbr" ColumnName="UnitTypeNameAbbr" />
+          <ScalarProperty Name="MCTS_FacilityType" ColumnName="MCTS_FacilityType" />
+          <ScalarProperty Name="UnittypeNameHindi" ColumnName="UnittypeNameHindi" />
+          <ScalarProperty Name="UnitLevel" ColumnName="UnitLevel" />
+          <ScalarProperty Name="UnittypeName" ColumnName="UnittypeName" />
+          <ScalarProperty Name="UnitTypeCode" ColumnName="UnitTypeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitMasters">
+      <EntityTypeMapping TypeName="rajmedicalModel.UnitMaster">
+        <MappingFragment StoreEntitySet="UnitMaster">
+          <ScalarProperty Name="HmisPrivateDataType" ColumnName="HmisPrivateDataType" />
+          <ScalarProperty Name="Funcational" ColumnName="Funcational" />
+          <ScalarProperty Name="RCHFacility" ColumnName="RCHFacility" />
+          <ScalarProperty Name="IsBloodStorageUnit" ColumnName="IsBloodStorageUnit" />
+          <ScalarProperty Name="IsRevenueBlock" ColumnName="IsRevenueBlock" />
+          <ScalarProperty Name="CLMCFlag" ColumnName="CLMCFlag" />
+          <ScalarProperty Name="GPCode" ColumnName="GPCode" />
+          <ScalarProperty Name="EstablishmentYear" ColumnName="EstablishmentYear" />
+          <ScalarProperty Name="IsBloodBank" ColumnName="IsBloodBank" />
+          <ScalarProperty Name="IsTraumaCentre" ColumnName="IsTraumaCentre" />
+          <ScalarProperty Name="IsMCH" ColumnName="IsMCH" />
+          <ScalarProperty Name="PSCode" ColumnName="PSCode" />
+          <ScalarProperty Name="Cemonc" ColumnName="Cemonc" />
+          <ScalarProperty Name="OfficeFlag" ColumnName="OfficeFlag" />
+          <ScalarProperty Name="TspArea" ColumnName="TspArea" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DDOCodeVerificationDate" ColumnName="DDOCodeVerificationDate" />
+          <ScalarProperty Name="DDOCode" ColumnName="DDOCode" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TehsilID" ColumnName="TehsilID" />
+          <ScalarProperty Name="PehchanSubRegistrarCode" ColumnName="PehchanSubRegistrarCode" />
+          <ScalarProperty Name="HmisID" ColumnName="HmisID" />
+          <ScalarProperty Name="BlockCode" ColumnName="BlockCode" />
+          <ScalarProperty Name="DistrictCode" ColumnName="DistrictCode" />
+          <ScalarProperty Name="WellnessCenter" ColumnName="WellnessCenter" />
+          <ScalarProperty Name="AppLongitude" ColumnName="AppLongitude" />
+          <ScalarProperty Name="AppLatitude" ColumnName="AppLatitude" />
+          <ScalarProperty Name="FRU" ColumnName="FRU" />
+          <ScalarProperty Name="PHC_24Hour" ColumnName="PHC_24Hour" />
+          <ScalarProperty Name="StaticsCenter" ColumnName="StaticsCenter" />
+          <ScalarProperty Name="NBCC" ColumnName="NBCC" />
+          <ScalarProperty Name="NBSU" ColumnName="NBSU" />
+          <ScalarProperty Name="NUHMUrban" ColumnName="NUHMUrban" />
+          <ScalarProperty Name="VillageAutoID_P" ColumnName="VillageAutoID_P" />
+          <ScalarProperty Name="AccreditationYear" ColumnName="AccreditationYear" />
+          <ScalarProperty Name="BSBY" ColumnName="BSBY" />
+          <ScalarProperty Name="Beds" ColumnName="Beds" />
+          <ScalarProperty Name="ReportingUnitID" ColumnName="ReportingUnitID" />
+          <ScalarProperty Name="SNCU" ColumnName="SNCU" />
+          <ScalarProperty Name="MTC" ColumnName="MTC" />
+          <ScalarProperty Name="AWCID" ColumnName="AWCID" />
+          <ScalarProperty Name="deliveryPoint" ColumnName="deliveryPoint" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="PrivateHospitalType11" ColumnName="PrivateHospitalType11" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="PPUID" ColumnName="PPUID" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+          <ScalarProperty Name="building" ColumnName="building" />
+          <ScalarProperty Name="RuralUrban" ColumnName="RuralUrban" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsCHC" ColumnName="IsCHC" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UnitContactNo" ColumnName="UnitContactNo" />
+          <ScalarProperty Name="UnitIncharge" ColumnName="UnitIncharge" />
+          <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+          <ScalarProperty Name="PCcode" ColumnName="PCcode" />
+          <ScalarProperty Name="ACcode" ColumnName="ACcode" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetANMForOtherUserNew" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUserNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUserNew_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Villages">
+      <EntityTypeMapping TypeName="rajmedicalModel.Village">
+        <MappingFragment StoreEntitySet="Villages">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Pop_transgender" ColumnName="Pop_transgender" />
+          <ScalarProperty Name="IsRevenue" ColumnName="IsRevenue" />
+          <ScalarProperty Name="RCHVcode" ColumnName="RCHVcode" />
+          <ScalarProperty Name="SVID" ColumnName="SVID" />
+          <ScalarProperty Name="VillageLgCode" ColumnName="VillageLgCode" />
+          <ScalarProperty Name="CensusCode2011" ColumnName="CensusCode2011" />
+          <ScalarProperty Name="OtherLocation" ColumnName="OtherLocation" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Pop_ST" ColumnName="Pop_ST" />
+          <ScalarProperty Name="Pop_SC" ColumnName="Pop_SC" />
+          <ScalarProperty Name="Pop_female" ColumnName="Pop_female" />
+          <ScalarProperty Name="Pop_male" ColumnName="Pop_male" />
+          <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+          <ScalarProperty Name="ACCode" ColumnName="ACCode" />
+          <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="VillageID" ColumnName="VillageID" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAshaDetails" FunctionName="rajmedicalModel.Store.uspGetAshaDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetAshaDetails_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="PCHCHCName" ColumnName="PCHCHCName" />
+          <ScalarProperty Name="PCHCHCAbbr" ColumnName="PCHCHCAbbr" />
+          <ScalarProperty Name="UnitAbbr" ColumnName="UnitAbbr" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+          <ScalarProperty Name="Anganwariname" ColumnName="Anganwariname" />
+          <ScalarProperty Name="AshaRole" ColumnName="AshaRole" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetANMForOtherUserNewDemo" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUserNewDemo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUserNewDemo_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UspHealthunitphoto" FunctionName="rajmedicalModel.Store.UspHealthunitphoto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.UspHealthunitphoto_Result">
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HealthUnitPhotoes">
+      <EntityTypeMapping TypeName="rajmedicalModel.HealthUnitPhoto">
+        <MappingFragment StoreEntitySet="HealthUnitPhoto">
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Unitid" ColumnName="Unitid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="rajmedicalModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="CLMCRoleID" ColumnName="CLMCRoleID" />
+          <ScalarProperty Name="DepartmentFlag" ColumnName="DepartmentFlag" />
+          <ScalarProperty Name="MTPRoleID" ColumnName="MTPRoleID" />
+          <ScalarProperty Name="AidsRoleID" ColumnName="AidsRoleID" />
+          <ScalarProperty Name="VerifiedEmail" ColumnName="VerifiedEmail" />
+          <ScalarProperty Name="VerifiedMobile" ColumnName="VerifiedMobile" />
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="SsoID" ColumnName="SsoID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="HRRoleID" ColumnName="HRRoleID" />
+          <ScalarProperty Name="AppRoleID" ColumnName="AppRoleID" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="IsAppUser" ColumnName="IsAppUser" />
+          <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="AppPassword" ColumnName="AppPassword" />
+          <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+          <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+          <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+          <ScalarProperty Name="resetpwd" ColumnName="resetpwd" />
+          <ScalarProperty Name="EctsRoleID" ColumnName="EctsRoleID" />
+          <ScalarProperty Name="PctsRoleID" ColumnName="PctsRoleID" />
+          <ScalarProperty Name="OJSPMRoleID" ColumnName="OJSPMRoleID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ExpireOn" ColumnName="ExpireOn" />
+          <ScalarProperty Name="AshaRoleId" ColumnName="AshaRoleId" />
+          <ScalarProperty Name="PwdUpdatedDate" ColumnName="PwdUpdatedDate" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="old1pwd" ColumnName="old1pwd" />
+          <ScalarProperty Name="old2pwd" ColumnName="old2pwd" />
+          <ScalarProperty Name="ApplicationNos" ColumnName="ApplicationNos" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="UserContactNo" ColumnName="UserContactNo" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVillageByAshaID" FunctionName="rajmedicalModel.Store.uspGetVillageByAshaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetVillageByAshaID_Result">
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AppUsers">
+      <EntityTypeMapping TypeName="rajmedicalModel.AppUser">
+        <MappingFragment StoreEntitySet="AppUsers">
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+          <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetANMDetails" FunctionName="rajmedicalModel.Store.uspGetANMDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMDetails_Result">
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="PCHCHCName" ColumnName="PCHCHCName" />
+          <ScalarProperty Name="PCHCHCAbbr" ColumnName="PCHCHCAbbr" />
+          <ScalarProperty Name="UnitAbbr" ColumnName="UnitAbbr" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AppHistories">
+      <EntityTypeMapping TypeName="rajmedicalModel.AppHistory">
+        <MappingFragment StoreEntitySet="AppHistory">
+          <ScalarProperty Name="LiveFlag" ColumnName="LiveFlag" />
+          <ScalarProperty Name="VersionID" ColumnName="VersionID" />
+          <ScalarProperty Name="AppFlag" ColumnName="AppFlag" />
+          <ScalarProperty Name="NewAddition" ColumnName="NewAddition" />
+          <ScalarProperty Name="BugFixes" ColumnName="BugFixes" />
+          <ScalarProperty Name="RealeaseDate" ColumnName="RealeaseDate" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

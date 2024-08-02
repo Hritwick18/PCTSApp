@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHSurveyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DHSurveyModelStoreContainer">
+    <EntitySet Name="Couple_Master_Temp" EntityType="DHSurveyModel.Store.Couple_Master_Temp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiseaseDetails" EntityType="DHSurveyModel.Store.DiseaseDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ECdetails" EntityType="DHSurveyModel.Store.ECdetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HouseFamily" EntityType="DHSurveyModel.Store.HouseFamily" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MasterCodes" EntityType="DHSurveyModel.Store.MasterCodes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberDetails" EntityType="DHSurveyModel.Store.MemberDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberPhoto" EntityType="DHSurveyModel.Store.MemberPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnMarriedGirlsDetail" EntityType="DHSurveyModel.Store.UnMarriedGirlsDetail" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__DiseaseDe__Membe__3587F3E0" Association="DHSurveyModel.Store.FK__DiseaseDe__Membe__3587F3E0">
+      <End Role="MemberDetails" EntitySet="MemberDetails" />
+      <End Role="DiseaseDetails" EntitySet="DiseaseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECdetails" Association="DHSurveyModel.Store.FK_ECdetails">
+      <End Role="MemberDetails" EntitySet="MemberDetails" />
+      <End Role="ECdetails" EntitySet="ECdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonDetail" Association="DHSurveyModel.Store.FK_PersonDetail">
+      <End Role="HouseFamily" EntitySet="HouseFamily" />
+      <End Role="MemberDetails" EntitySet="MemberDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPhoto" Association="DHSurveyModel.Store.FK_PersonPhoto">
+      <End Role="MemberDetails" EntitySet="MemberDetails" />
+      <End Role="MemberPhoto" EntitySet="MemberPhoto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnMarriedGirlsDetail" Association="DHSurveyModel.Store.FK_UnMarriedGirlsDetail">
+      <End Role="MemberDetails" EntitySet="MemberDetails" />
+      <End Role="UnMarriedGirlsDetail" EntitySet="UnMarriedGirlsDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Couple_Master_Temp">
+    <Key>
+      <PropertyRef Name="rowId" />
+    </Key>
+    <Property Name="rowId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MotherID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="HusbName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileNo_P" Type="varchar" MaxLength="10" />
+    <Property Name="PCTSID_P" Type="varchar" MaxLength="20" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="20" />
+    <Property Name="Ifsc_Code" Type="varchar" MaxLength="25" />
+    <Property Name="AadhaarNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="VillageAutoID" Type="int" />
+    <Property Name="SurveyId" Type="int" Nullable="false" />
+    <Property Name="VillId" Type="int" />
+    <Property Name="WifeName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="HusbandName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileNo_E" Type="varchar" MaxLength="50" />
+    <Property Name="PCTSID_E" Type="varchar" MaxLength="20" />
+    <Property Name="AnganwadiId" Type="int" />
+    <Property Name="WifeAccountNo" Type="varchar" MaxLength="50" />
+    <Property Name="WifeIFSC_Code" Type="varchar" MaxLength="25" />
+    <Property Name="WifeAadhaarNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="MatchFlag" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiseaseDetails">
+    <Key>
+      <PropertyRef Name="MemberID" />
+      <PropertyRef Name="DiseaseCode" />
+    </Key>
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="DiseaseCode" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ECdetails">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RationCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="IFSCCode" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="BhamashahID" Type="varchar" MaxLength="50" />
+    <Property Name="PCTSID" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="tinyint" />
+    <Property Name="Bpl" Type="tinyint" />
+    <Property Name="MarraigeDate" Type="date" />
+    <Property Name="AgeOnMarraige" Type="tinyint" />
+    <Property Name="HusbandAgeOnMarraige" Type="tinyint" />
+    <Property Name="TotalBirth" Type="int" />
+    <Property Name="Boys" Type="tinyint" />
+    <Property Name="Girls" Type="tinyint" />
+    <Property Name="Transgender" Type="tinyint" />
+    <Property Name="Nisanthan" Type="tinyint" />
+    <Property Name="DeliveryInLastYear" Type="tinyint" />
+    <Property Name="InfantDeathBelow5YearInLastYear" Type="tinyint" />
+    <Property Name="LMPDate" Type="date" />
+    <Property Name="WantBaby" Type="tinyint" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryByUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HouseFamily">
+    <Key>
+      <PropertyRef Name="HouseFamilyID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="HouseNo" Type="int" Nullable="false" />
+    <Property Name="FamiliyNo" Type="int" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterCodes">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="masterID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MemberDetails">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="int" Nullable="false" />
+    <Property Name="Caste" Type="tinyint" Nullable="false" />
+    <Property Name="Religion" Type="tinyint" Nullable="false" />
+    <Property Name="Permanent_Residence" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Age" Type="tinyint" Nullable="false" />
+    <Property Name="Sex" Type="tinyint" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="AadhaarNo" Type="varchar" MaxLength="15" />
+    <Property Name="Profession" Type="tinyint" Nullable="false" />
+    <Property Name="RelationToHead" Type="tinyint" Nullable="false" />
+    <Property Name="FuelType" Type="tinyint" Nullable="false" />
+    <Property Name="PollutionHazards" Type="tinyint" Nullable="false" />
+    <Property Name="MaritalStatus" Type="tinyint" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SpouseID" Type="int" Nullable="false" />
+    <Property Name="Education" Type="tinyint" />
+    <Property Name="MobileNoBelongsToWhom" Type="tinyint" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryByUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="int" Nullable="false" />
+    <Property Name="DiseasesCodes" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="MemberPhoto">
+    <Key>
+      <PropertyRef Name="MemberlD" />
+    </Key>
+    <Property Name="MemberlD" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varbinary" Nullable="false" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="UnMarriedGirlsDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="tinyint" Nullable="false" />
+    <Property Name="Duration" Type="tinyint" Nullable="false" />
+    <Property Name="Used" Type="tinyint" Nullable="false" />
+    <Property Name="Cleaning" Type="tinyint" Nullable="false" />
+    <Property Name="TypeOfCleaningCloths" Type="tinyint" />
+    <Property Name="FamiliyConcept" Type="varchar" MaxLength="100" />
+    <Property Name="PhysicalProblem" Type="varchar" MaxLength="100" />
+    <Property Name="AdviceFrom" Type="tinyint" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__DiseaseDe__Membe__3587F3E0">
+    <End Role="MemberDetails" Type="DHSurveyModel.Store.MemberDetails" Multiplicity="1" />
+    <End Role="DiseaseDetails" Type="DHSurveyModel.Store.DiseaseDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetails">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="DiseaseDetails">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECdetails">
+    <End Role="MemberDetails" Type="DHSurveyModel.Store.MemberDetails" Multiplicity="1" />
+    <End Role="ECdetails" Type="DHSurveyModel.Store.ECdetails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetails">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="ECdetails">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonDetail">
+    <End Role="HouseFamily" Type="DHSurveyModel.Store.HouseFamily" Multiplicity="1" />
+    <End Role="MemberDetails" Type="DHSurveyModel.Store.MemberDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HouseFamily">
+        <PropertyRef Name="HouseFamilyID" />
+      </Principal>
+      <Dependent Role="MemberDetails">
+        <PropertyRef Name="HouseFamilyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPhoto">
+    <End Role="MemberDetails" Type="DHSurveyModel.Store.MemberDetails" Multiplicity="1" />
+    <End Role="MemberPhoto" Type="DHSurveyModel.Store.MemberPhoto" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetails">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="MemberPhoto">
+        <PropertyRef Name="MemberlD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnMarriedGirlsDetail">
+    <End Role="MemberDetails" Type="DHSurveyModel.Store.MemberDetails" Multiplicity="1" />
+    <End Role="UnMarriedGirlsDetail" Type="DHSurveyModel.Store.UnMarriedGirlsDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetails">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="UnMarriedGirlsDetail">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetUnitmasterData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_Loginunitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

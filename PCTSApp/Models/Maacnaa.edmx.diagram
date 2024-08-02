@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2608077487c44a1bbbc1998cd478b0bd" Name="Diagram1">
+        <EntityTypeShape EntityType="MaacnaaModel.ComplainSuggestion" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaacnaaModel.PehchanBirth" Width="1.5" PointX="6.6099317011469658" PointY="21.322506258880026" />
+        <EntityTypeShape EntityType="MaacnaaModel.SMS_Log" Width="1.5" PointX="1.039636262245307" PointY="5.0118089043590279" />
+        <EntityTypeShape EntityType="MaacnaaModel.SMSDetails2020" Width="1.5" PointX="7.331185925440483" PointY="27.21204776838983" />
+        <EntityTypeShape EntityType="MaacnaaModel.OTP" Width="1.5" PointX="9.95269656272265" PointY="21.466894994241603" />
+        <EntityTypeShape EntityType="MaacnaaModel.OtpLog" Width="1.5" PointX="1.171636194536293" PointY="9.3230055912039269" />
+        <EntityTypeShape EntityType="MaacnaaModel.PinDetail" Width="1.5" PointX="3.4417026282482333" PointY="16.021007023761516" />
+        <EntityTypeShape EntityType="MaacnaaModel.UserTrailLog" Width="1.5" PointX="11.677944766207574" PointY="21.911444674204777" />
+        <EntityTypeShape EntityType="MaacnaaModel.MaaVideoDetail" Width="1.5" PointX="1.1255583358581915" PointY="15.269427977162147" />
+        <EntityTypeShape EntityType="MaacnaaModel.MaaToken" Width="1.5" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHSurveyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ChildInformations" EntityType="DHSurveyModel.ChildInformation" />
+    <EntitySet Name="DHSMasterCodes" EntityType="DHSurveyModel.DHSMasterCode" />
+    <EntitySet Name="DiseaseDetails" EntityType="DHSurveyModel.DiseaseDetail" />
+    <EntitySet Name="ECdetails" EntityType="DHSurveyModel.ECdetail" />
+    <EntitySet Name="HouseFamilies" EntityType="DHSurveyModel.HouseFamily" />
+    <EntitySet Name="MemberDetails" EntityType="DHSurveyModel.MemberDetail" />
+    <EntitySet Name="MemberPhotoes" EntityType="DHSurveyModel.MemberPhoto" />
+    <EntitySet Name="UnitMasters" EntityType="DHSurveyModel.UnitMaster" />
+    <EntitySet Name="UnMarriedGirlsDetails" EntityType="DHSurveyModel.UnMarriedGirlsDetail" />
+    <FunctionImport Name="GetUnitmasterData" ReturnType="Collection(DHSurveyModel.GetUnitmasterData_Result)">
+      <Parameter Name="Perm_Loginunitcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetAllTables" ReturnType="Collection(DHSurveyModel.uspGetAllTables_Result)" />
+  </EntityContainer>
+  <EntityType Name="ChildInformation">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Male" Type="Byte" />
+    <Property Name="Female" Type="Byte" />
+    <Property Name="Transgender" Type="Byte" />
+  </EntityType>
+  <EntityType Name="DHSMasterCode">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="masterID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="OrderNo" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="gender" Type="Byte" />
+  </EntityType>
+  <EntityType Name="DiseaseDetail">
+    <Key>
+      <PropertyRef Name="SurveyYear" />
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="DiseasesCodes" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ECdetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="Int32" Nullable="false" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="AnganwariNo" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="IFSCCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PCTSID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MarraigeDate" Type="DateTime" Precision="0" />
+    <Property Name="AgeOnMarraige" Type="Byte" />
+    <Property Name="HusbandAgeOnMarraige" Type="Byte" />
+    <Property Name="Nisanthan" Type="Byte" />
+    <Property Name="DeliveryInLastYear" Type="Byte" />
+    <Property Name="InfantDeathBelow5YearInLastYear" Type="Byte" />
+    <Property Name="LMPDate" Type="DateTime" Precision="0" />
+    <Property Name="WantBaby" Type="Byte" />
+    <Property Name="Entrydate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryByUserNo" Type="Int32" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="Int32" Nullable="false" />
+    <Property Name="CoupleNo" Type="Int32" Nullable="false" />
+    <Property Name="BhamashahID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Entrydate_online" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate_online" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="HouseFamily">
+    <Key>
+      <PropertyRef Name="HouseFamilyID" />
+    </Key>
+    <Property Name="SurveyYear" Type="Int32" Nullable="false" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="AnganwariNo" Type="Int32" Nullable="false" />
+    <Property Name="HouseNo" Type="Int32" Nullable="false" />
+    <Property Name="FamiliyNo" Type="Int32" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Bpl" Type="Byte" Nullable="false" />
+    <Property Name="BhamashahID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Entrydate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Caste" Type="Byte" Nullable="false" />
+    <Property Name="Religion" Type="Byte" Nullable="false" />
+    <Property Name="Permanent_Residence" Type="Byte" Nullable="false" />
+    <Property Name="FuelType" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Entrydate_online" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate_online" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MemberDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="Int32" Nullable="false" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="AnganwariNo" Type="Int32" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Age" Type="Byte" Nullable="false" />
+    <Property Name="Sex" Type="Byte" Nullable="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="AadhaarNo" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Profession" Type="Byte" Nullable="false" />
+    <Property Name="RelationToHead" Type="Byte" Nullable="false" />
+    <Property Name="PollutionHazards" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MaritalStatus" Type="Byte" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Education" Type="Byte" Nullable="false" />
+    <Property Name="MobileNoBelongsToWhom" Type="Byte" />
+    <Property Name="Entrydate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryByUserNo" Type="Int32" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="Int32" Nullable="false" />
+    <Property Name="RationCardNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DiseasesCodes" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SpouseID" Type="Int32" />
+    <Property Name="Entrydate_online" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate_online" Type="DateTime" Precision="3" />
+    <Property Name="Fatherid" Type="Int32" />
+    <Property Name="Motherid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MemberPhoto">
+    <Key>
+      <PropertyRef Name="MemberlD" />
+    </Key>
+    <Property Name="MemberlD" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" Nullable="false" MaxLength="400" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UnitMaster">
+    <Key>
+      <PropertyRef Name="UnitCode" />
+    </Key>
+    <Property Name="UnitCode" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="true" />
+    <Property Name="UnitType" Type="Int16" Nullable="false" />
+    <Property Name="UnitName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACcode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PCcode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CensusCode" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="UnitIncharge" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UnitContactNo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsCHC" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="RuralUrban" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="building" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="UnitNameHindi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="BID" Type="Int16" />
+    <Property Name="PID" Type="Int16" />
+    <Property Name="SID" Type="Int16" />
+    <Property Name="PPUID" Type="Int16" />
+    <Property Name="mobileno" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Latitude" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Longitude" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="pincode" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="PrivateHospitalType11" Type="Byte" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="deliveryPoint" Type="Byte" />
+    <Property Name="AWCID" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="MTC" Type="Byte" Nullable="false" />
+    <Property Name="SNCU" Type="Byte" Nullable="false" />
+    <Property Name="ReportingUnitID" Type="Int32" Nullable="false" />
+    <Property Name="Beds" Type="Int32" />
+    <Property Name="BSBY" Type="Int32" />
+    <Property Name="AccreditationYear" Type="Int32" />
+    <Property Name="VillageAutoID_P" Type="Int32" Nullable="false" />
+    <Property Name="NUHMUrban" Type="Byte" Nullable="false" />
+    <Property Name="NBSU" Type="Byte" />
+    <Property Name="NBCC" Type="Byte" />
+    <Property Name="StaticsCenter" Type="Byte" />
+    <Property Name="PHC_24Hour" Type="Byte" />
+    <Property Name="FRU" Type="Byte" />
+    <Property Name="AppLatitude" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AppLongitude" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="WellnessCenter" Type="Byte" />
+  </EntityType>
+  <EntityType Name="UnMarriedGirlsDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="AnganwariNo" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Byte" Nullable="false" />
+    <Property Name="Duration" Type="Byte" Nullable="false" />
+    <Property Name="Used" Type="Byte" Nullable="false" />
+    <Property Name="Cleaning" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TypeOfCleaningCloths" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FamiliyConcept" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PhysicalProblem" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AdviceFrom" Type="Byte" />
+    <Property Name="DistroyNapkin" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Entrydate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SurveyYear" Type="Int32" Nullable="false" />
+    <Property Name="Entrydate_online" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate_online" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="GetUnitmasterData_Result">
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UnitNameHindi" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int16" Name="UnitType" Nullable="false" />
+    <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspGetAllTables_Result">
+    <Property Type="String" Name="TableName" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="ColumnName" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="IsNullable" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DataType" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Columnlength" Nullable="true" />
+    <Property Type="String" Name="DefaultValue" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="PkColumnName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="UkColumnName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TargetTableName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TargetColumnName" Nullable="true" MaxLength="100" />
+    <Property Type="Byte" Name="AutoColumn" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://pctsrajmedical.raj.nic.in/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://pctsrajmedical.raj.nic.in/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://pctsrajmedical.raj.nic.in/">
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contenttype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InnerPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetIn">
+    <wsdl:part name="AppID" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Contenttype" type="s:string" />
+    <wsdl:part name="SenderID" type="s:string" />
+    <wsdl:part name="MobileNo" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+    <wsdl:part name="InnerPassword" type="s:string" />
+    <wsdl:part name="Salt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SendSMSSoap">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SendSMSHttpGet">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSMSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendSMSSoap" type="tns:SendSMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="https://pctsrajmedical.raj.nic.in/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSSoap12" type="tns:SendSMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="https://pctsrajmedical.raj.nic.in/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSHttpGet" type="tns:SendSMSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendSMS">
+      <http:operation location="/SendSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendSMS">
+    <wsdl:port name="SendSMSSoap" binding="tns:SendSMSSoap">
+      <soap:address location="http://pctsrajmedical.rajasthan.gov.in/public/sms/sendsms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSSoap12" binding="tns:SendSMSSoap12">
+      <soap12:address location="http://pctsrajmedical.rajasthan.gov.in/public/sms/sendsms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSHttpGet" binding="tns:SendSMSHttpGet">
+      <http:address location="http://pctsrajmedical.rajasthan.gov.in/public/sms/sendsms.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

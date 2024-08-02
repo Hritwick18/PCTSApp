@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16A540EE-9E5B-4ABE-9ECE-B478E801450F}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCTSApp</RootNamespace>
+    <AssemblyName>PCTSApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.6.0\lib\net45\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.4\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.4\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.4.0.0\lib\net40\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BeneficiaryController.cs" />
+    <Compile Include="Controllers\FamilyPlanningController.cs" />
+    <Compile Include="Controllers\NHPController.cs" />
+    <Compile Include="Controllers\PCTSAppController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ANCDetail.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ANCDetails_Log.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ANCRegDetail.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnganwariMaster.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Anganwari_Village.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppHistory.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppUser.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASHADetail.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AshaMaster.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASHA_AddlCharge.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bank.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChildInformation.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cnaa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cnaa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cnaa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cnaa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cnaa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Common.cs" />
+    <Compile Include="Models\ComplainSuggestion.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Connect_DB.cs" />
+    <Compile Include="Models\DeathDetail.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeathReason.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DesignationMaster.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeviceToken.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DHSMasterCode.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DHSSurvey.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DHSSurvey.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DHSSurvey.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DHSSurvey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DHSSurvey.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiseaseDetail.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ECdetail.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ErrorHandler.cs" />
+    <Compile Include="Models\ExceptionHandler .cs" />
+    <Compile Include="Models\GetANMForLinelist_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetASHAForLinelist_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetUnitmasterData_Result.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HBPNC.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HBPNC_Log.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HBYC.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HBYC_Log.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\header.cs" />
+    <Compile Include="Models\HealthUnitPhoto.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HighRiskCas.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HighRiskCasesLog.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HistorySwasthyaMitrk.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HouseFamily.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Immunization.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImmunizationMaster.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Immunization_Log.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infant.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InfantImmu.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InMemoryMultipartFormDataStreamProvider .cs" />
+    <Compile Include="Models\InsertUpdateImmunization_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Maacnaa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maacnaa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Maacnaa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Maacnaa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maacnaa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaaImmunizationSchedule_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaaToken.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaaVideoDetail.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MasterCode.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MasterCodes.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MemberDetail.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MemberPhoto.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mother.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MotherStatu.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mother_App.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHP.cs" />
+    <Compile Include="Models\OTP.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OtpLog.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PctsToken.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PehchanBirth.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PinDetail.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rajmedical.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rajmedical.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rajmedical.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rajmedical.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rajmedical.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMSDetails2020.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMS_Log.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SwasthyaMitrk.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TokenManager.cs" />
+    <Compile Include="Models\Transport.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnitMaster.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnitTypeMaster.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnMarriedGirlsDetail.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersTrailLog.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserTrailLog.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANClist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANCSchedule_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMAppDataCount_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMAppDataDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMASHADetailsByPCTSID_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMNotusageDetailsDayWise_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMNotusageDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMPerformanceApp_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMPlanForImmunization_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMPlan_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMusageDayWise1_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMusageDayWise_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMusageDetailsDayWise_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMusageDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspANMusage_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspAppData_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspAshaDeshbord_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPAshaIncentivesApp_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspAshaPlanForImmunization_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspAshaPlan_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPAshasoftClick_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspBirthCertificateList_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspCheckPCTSIDByTagName_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspCheckPCTSIDForDelivery_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardIndicatorsPerformance_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardIndicatorsPerformance_Subcenter_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardIndicators_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardIndicators_Subcenter_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardPie_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardPie_SubCenter_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardSerail_Subcenter_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardSerial_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboardVacc_Subcenter_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDashboard_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDataforManageANC_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDataforManageHBYCList_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDataforManagePNC_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDataforPNCWomanDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDeathData_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPDeathListForInfant_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPDeathList_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDeliveryDetails_Delplacecode_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDeliverylist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDueListForANMVerification1_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspDueListForANMVerification_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetAllTables_Result.cs">
+      <DependentUpon>DHSSurvey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetanganwari_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetANMDetails_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetANMForOtherUserNewDemo_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetANMForOtherUserNew_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetANMForOtherUser_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetAshaDetails_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetMotherDetailsByMobileno_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetOtherUnitDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetRequestByPCTSID_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetUnitName_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspGetVillageByAshaID_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspHBYClist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspHealthunitphoto_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPHelpDesk_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspHighRisklist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspImmunizationListByInfantID_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspImmunizationListForAdd_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspImmunizationSchedule_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantDataforInfantDeathByInfantID_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantDataforInfantDeath_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantDetailsByInfantID_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantlistForBirthCertificatByPCTSID_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantlistForImmunizationByPCTSID_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantlistForImmunization_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspInfantlistForWomanDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspLatitudeLongitude_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspLineListDeliveryDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspLineListInfantDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspListForANMVerifyTotal_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspListForANMVerify_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspMaaAdvanceSearch_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspMamtaCard_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspManageHighRiskCases_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspMotherDataforMaternalDeath_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspMotherlist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspNearestFacility_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspPNClist_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspPNCSchedule_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordvarificationReportsDetails_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerificationANC_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerificationImmunization_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerificationList_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerificationPersonalinfo_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerificationPNC_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USPRecordverificationReports_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspRecordVerification_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspReferFromUnitName_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspReferUnitName_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspSwasthyaMitrkData_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspSwasthyaMitrkLocation_Result.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspUserAuthenticate_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UspverifyOfficer_Result.cs">
+      <DependentUpon>cnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspWomendetail_Result.cs">
+      <DependentUpon>Maacnaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Village.cs">
+      <DependentUpon>rajmedical.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SMSApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon\1.png" />
+    <Content Include="AppIcon\10.png" />
+    <Content Include="AppIcon\11.png" />
+    <Content Include="AppIcon\12.png" />
+    <Content Include="AppIcon\13.png" />
+    <Content Include="AppIcon\14.png" />
+    <Content Include="AppIcon\15.png" />
+    <Content Include="AppIcon\16.png" />
+    <Content Include="AppIcon\17.png" />
+    <Content Include="AppIcon\18.png" />
+    <Content Include="AppIcon\19.png" />
+    <Content Include="AppIcon\2.png" />
+    <Content Include="AppIcon\20.png" />
+    <Content Include="AppIcon\21.png" />
+    <Content Include="AppIcon\22.png" />
+    <Content Include="AppIcon\23.png" />
+    <Content Include="AppIcon\24.png" />
+    <Content Include="AppIcon\25.png" />
+    <Content Include="AppIcon\26.png" />
+    <Content Include="AppIcon\27.png" />
+    <Content Include="AppIcon\28.png" />
+    <Content Include="AppIcon\29.png" />
+    <Content Include="AppIcon\3.png" />
+    <Content Include="AppIcon\30.png" />
+    <Content Include="AppIcon\31.png" />
+    <Content Include="AppIcon\32.png" />
+    <Content Include="AppIcon\33.png" />
+    <Content Include="AppIcon\34.png" />
+    <Content Include="AppIcon\35.png" />
+    <Content Include="AppIcon\36.png" />
+    <Content Include="AppIcon\37.png" />
+    <Content Include="AppIcon\38.png" />
+    <Content Include="AppIcon\39.png" />
+    <Content Include="AppIcon\4.png" />
+    <Content Include="AppIcon\40.png" />
+    <Content Include="AppIcon\41.png" />
+    <Content Include="AppIcon\42.png" />
+    <Content Include="AppIcon\43.png" />
+    <Content Include="AppIcon\44.png" />
+    <Content Include="AppIcon\45.png" />
+    <Content Include="AppIcon\46.png" />
+    <Content Include="AppIcon\47.png" />
+    <Content Include="AppIcon\48.png" />
+    <Content Include="AppIcon\49.png" />
+    <Content Include="AppIcon\5.png" />
+    <Content Include="AppIcon\50.png" />
+    <Content Include="AppIcon\51.png" />
+    <Content Include="AppIcon\52.png" />
+    <Content Include="AppIcon\53.png" />
+    <Content Include="AppIcon\54.png" />
+    <Content Include="AppIcon\55.png" />
+    <Content Include="AppIcon\56.png" />
+    <Content Include="AppIcon\57.png" />
+    <Content Include="AppIcon\58.png" />
+    <Content Include="AppIcon\59.png" />
+    <Content Include="AppIcon\6.png" />
+    <Content Include="AppIcon\60.png" />
+    <Content Include="AppIcon\61.png" />
+    <Content Include="AppIcon\62.png" />
+    <Content Include="AppIcon\63.png" />
+    <Content Include="AppIcon\64.png" />
+    <Content Include="AppIcon\65.png" />
+    <Content Include="AppIcon\66.png" />
+    <Content Include="AppIcon\67.png" />
+    <Content Include="AppIcon\68.png" />
+    <Content Include="AppIcon\69.png" />
+    <Content Include="AppIcon\7.png" />
+    <Content Include="AppIcon\70.png" />
+    <Content Include="AppIcon\71.png" />
+    <Content Include="AppIcon\72.png" />
+    <Content Include="AppIcon\73.png" />
+    <Content Include="AppIcon\74.png" />
+    <Content Include="AppIcon\75.png" />
+    <Content Include="AppIcon\76.png" />
+    <Content Include="AppIcon\77.png" />
+    <Content Include="AppIcon\78.png" />
+    <Content Include="AppIcon\8.png" />
+    <Content Include="AppIcon\9.png" />
+    <Content Include="AppIcon\ChildHealthServices.png" />
+    <Content Include="AppIcon\FamilyPlanningServices.png" />
+    <Content Include="AppIcon\ImmunizationServices.png" />
+    <Content Include="AppIcon\MaternalHealthServices.png" />
+    <Content Include="AppIcon\MonthlyMeetings.png" />
+    <Content Include="AppIcon\NationalProgramme.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\cnaa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>cnaa.edmx</DependentUpon>
+      <LastGenOutput>cnaa.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\cnaa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>cnaa.edmx</DependentUpon>
+      <LastGenOutput>cnaa.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DHSSurvey.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DHSSurvey.edmx</DependentUpon>
+      <LastGenOutput>DHSSurvey.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DHSSurvey.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DHSSurvey.edmx</DependentUpon>
+      <LastGenOutput>DHSSurvey.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Maacnaa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Maacnaa.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Maacnaa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Maacnaa.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\rajmedical.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rajmedical.edmx</DependentUpon>
+      <LastGenOutput>rajmedical.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\rajmedical.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rajmedical.edmx</DependentUpon>
+      <LastGenOutput>rajmedical.cs</LastGenOutput>
+    </Content>
+    <Content Include="OnError.htm" />
+    <None Include="Service References\SMSApi\sendsms.disco" />
+    <None Include="Service References\SMSApi\configuration91.svcinfo" />
+    <None Include="Service References\SMSApi\configuration.svcinfo" />
+    <None Include="Service References\SMSApi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BirthCertificates\" />
+    <Folder Include="Content\" />
+    <Folder Include="Error\" />
+    <Folder Include="SwasthyaMitrkPhoto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\cnaa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>cnaa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\cnaa.edmx.diagram">
+      <DependentUpon>cnaa.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\rajmedical.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>rajmedical.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\rajmedical.edmx.diagram">
+      <DependentUpon>rajmedical.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Maacnaa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Maacnaa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Maacnaa.edmx.diagram">
+      <DependentUpon>Maacnaa.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\DHSSurvey.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DHSSurvey.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DHSSurvey.edmx.diagram">
+      <DependentUpon>DHSSurvey.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\PCTSApp.pubxml" />
+    <None Include="Service References\SMSApi\sendsms.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SMSApi\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19529</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17269/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

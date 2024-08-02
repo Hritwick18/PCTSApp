@@ -1,0 +1,11 @@
+Time: 01/01/2024 05:10:03 PM
+-----------------------------------------------------------
+Message: Error in post userSystem.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries. ---> System.Data.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries.
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at PCTSApp.Controllers.PCTSAppController.LogoutToken(UserAuthenticate u) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 12474
+-----------------------------------------------------------
+

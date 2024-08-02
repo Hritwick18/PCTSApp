@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="09f188925cac45debcd2ea5df423d080" Name="Diagram1" ZoomLevel="68">
+        <EntityTypeShape EntityType="OfflineCnaaModel.ANCDetails_Offline" Width="1.5" PointX="9.7612076372658869" PointY="6.2596154093088652" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.DeliveryDetails_Offline" Width="1.5" PointX="5.3640529724601906" PointY="31.949396118498125" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.HBPNC_Offline" Width="1.5" PointX="8.4886292109678632" PointY="21.525738755951515" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.ImmunizationMaster_Offline" Width="1.5" PointX="10.729832885195423" PointY="14.355049631723691" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.Infant_Offline" Width="1.5" PointX="9.0371850882830032" PointY="17.714829676651782" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.InfantImmu_Offline" Width="1.5" PointX="0.60581209352510612" PointY="29.191100685480563" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.MasterCodes_Offline" Width="1.5" PointX="3.7326191755629234" PointY="25.603520077468605" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.UnitMaster_Offline" Width="1.5" PointX="9.1227990654869" PointY="20.9525896557386" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.Villages_Offline" Width="1.5" PointX="8.3294874189093182" PointY="25.590325143928791" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.Immunization_Offline" Width="1.5" PointX="10.017335179269935" PointY="19.154118978955839" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.ANCRegDetail_Offline" Width="1.5" PointX="7.6771623285846609" PointY="3.2149765655468108" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.Mother_Offline" Width="1.5" PointX="5.5768058586757654" PointY="12.41529839318958" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.AshaMaster_Offline" Width="1.5" PointX="7.2473477717709489" PointY="21.503432179569934" />
+        <EntityTypeShape EntityType="OfflineCnaaModel.AnganwariMaster_Offline" Width="1.5" PointX="9.4655947375416734" PointY="19.735123032580653" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

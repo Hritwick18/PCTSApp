@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rajmedicalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Anganwari_Village">
+    <Key>
+      <PropertyRef Name="AnganwariNo" />
+      <PropertyRef Name="VillageAutoID" />
+    </Key>
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnganwariMaster">
+    <Key>
+      <PropertyRef Name="AWCID" />
+    </Key>
+    <Property Name="AnganwariNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="renameVillageAutoID" Type="int" />
+    <Property Name="NameE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NameH" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Population" Type="int" />
+    <Property Name="LastUpdated" Type="date" />
+    <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+    <Property Name="ICDSCode" Type="varchar" MaxLength="11" />
+    <Property Name="AWCID" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+    <Property Name="RuralUrban" Type="tinyint" />
+    <Property Name="unitid" Type="int" Nullable="false" />
+    <Property Name="ECCount" Type="int" />
+    <Property Name="Population2011" Type="int" />
+    <Property Name="HouseHoldCount" Type="int" />
+    <Property Name="FamilyCount" Type="int" />
+    <Property Name="MiniAnganwari" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="AppHistory">
+    <Key>
+      <PropertyRef Name="VersionName" />
+    </Key>
+    <Property Name="VersionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RealeaseDate" Type="datetime" Nullable="false" />
+    <Property Name="BugFixes" Type="varchar(max)" />
+    <Property Name="NewAddition" Type="varchar(max)" />
+    <Property Name="AppFlag" Type="tinyint" Nullable="false" />
+    <Property Name="VersionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LiveFlag" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppUsers">
+    <Key>
+      <PropertyRef Name="Saltcreatedon" />
+      <PropertyRef Name="UserNo" />
+    </Key>
+    <Property Name="Saltvalue" Type="varchar" MaxLength="128" />
+    <Property Name="Saltcreatedon" Type="date" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="50" />
+    <Property Name="UserNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASHA_AddlCharge">
+    <Key>
+      <PropertyRef Name="AshaAutoID" />
+      <PropertyRef Name="AnganwariNo" />
+      <PropertyRef Name="FromDate" />
+    </Key>
+    <Property Name="AshaAutoID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="FromDate" Type="datetime" Nullable="false" />
+    <Property Name="Todate" Type="smalldatetime" />
+    <Property Name="AdditionalChargeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainAnganwari" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASHADetails">
+    <Key>
+      <PropertyRef Name="ashaAutoID" />
+    </Key>
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="IsFather" Type="tinyint" Nullable="false" />
+    <Property Name="Category" Type="tinyint" />
+    <Property Name="MaritalStatus" Type="tinyint" />
+    <Property Name="ChildrenNo" Type="tinyint" />
+    <Property Name="EduQualification" Type="tinyint" />
+    <Property Name="ProfessionalDegree" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOJ" Type="date" />
+    <Property Name="LevelofTraining" Type="tinyint" />
+    <Property Name="FatherHusbandName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RetirementDate" Type="date" />
+    <Property Name="TrainingDate" Type="date" />
+    <Property Name="IsExtend" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="AshaMaster">
+    <Key>
+      <PropertyRef Name="ashaAutoID" />
+    </Key>
+    <Property Name="unitcode" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="AshaName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AshaPhone" Type="varchar" MaxLength="20" />
+    <Property Name="IsDeleted" Type="char" MaxLength="1" />
+    <Property Name="Villagename" Type="nvarchar" MaxLength="100" />
+    <Property Name="type" Type="tinyint" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="VillageAutoID" Type="int" />
+    <Property Name="EIDTime" Type="datetime" />
+    <Property Name="Aadhaar_EID" Type="varchar" MaxLength="14" />
+    <Property Name="rename_AadhaarNo" Type="varchar" MaxLength="12" />
+    <Property Name="Ifsc_code" Type="varchar" MaxLength="25" />
+    <Property Name="Accountno" Type="varchar" MaxLength="20" />
+    <Property Name="Accounttype" Type="char" MaxLength="1" />
+    <Property Name="Bankname" Type="nvarchar" MaxLength="100" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="ANM_AddlChargeFlag" Type="tinyint" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="VerifiedAccount" Type="tinyint" />
+    <Property Name="VerifiedAccountByBank" Type="tinyint" Nullable="false" />
+    <Property Name="rename_bhamashahid" Type="varchar" MaxLength="20" />
+    <Property Name="Entrydate" Type="date" />
+    <Property Name="CUGMobile" Type="varchar" MaxLength="10" />
+    <Property Name="RationCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="VerifyMobileNo" Type="tinyint" Nullable="false" />
+    <Property Name="IFMSMapped" Type="tinyint" />
+    <Property Name="ANMType" Type="tinyint" />
+    <Property Name="WorkingAtLocation" Type="tinyint" />
+    <Property Name="AccountVerificationBy" Type="varchar" MaxLength="20" />
+    <Property Name="AccountVerifierRoleType" Type="tinyint" />
+    <Property Name="AccountVerificationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DesignationMaster">
+    <Key>
+      <PropertyRef Name="DesigID" />
+    </Key>
+    <Property Name="DesigID" Type="int" Nullable="false" />
+    <Property Name="DesigName" Type="varchar" MaxLength="100" />
+    <Property Name="IsValidtoPhysVerification" Type="tinyint" />
+    <Property Name="IsDeleted" Type="tinyint" />
+    <Property Name="Entrydate" Type="smalldatetime" />
+    <Property Name="Updatedate" Type="smalldatetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateIP" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HealthUnitPhoto">
+    <Key>
+      <PropertyRef Name="Unitid" />
+    </Key>
+    <Property Name="Unitid" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" Nullable="false" />
+    <Property Name="EntryDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistorySwasthyaMitrk">
+    <Key>
+      <PropertyRef Name="HistorySwasthyaMitrkID" />
+    </Key>
+    <Property Name="HistorySwasthyaMitrkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SwasthyaMitrkID" Type="int" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sex" Type="tinyint" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="WhatsAppNo" Type="varchar" MaxLength="10" />
+    <Property Name="Qualification" Type="tinyint" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="IsFather" Type="tinyint" />
+    <Property Name="FatherHusbandName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="Experience" Type="float" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pincode" Type="varchar" MaxLength="6" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="Media" Type="tinyint" Nullable="false" />
+    <Property Name="EntryUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateValueFlag" Type="varchar" MaxLength="50" />
+    <Property Name="HistoryEntryDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterCodes">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="masterID" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SwasthyaMitrk">
+    <Key>
+      <PropertyRef Name="SwasthyaMitrkID" />
+    </Key>
+    <Property Name="SwasthyaMitrkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sex" Type="tinyint" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="WhatsAppNo" Type="varchar" MaxLength="10" />
+    <Property Name="Qualification" Type="tinyint" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="IsFather" Type="tinyint" />
+    <Property Name="FatherHusbandName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="Experience" Type="float" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pincode" Type="varchar" MaxLength="6" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="Media" Type="tinyint" Nullable="false" />
+    <Property Name="EntryUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateUserNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnitMaster">
+    <Key>
+      <PropertyRef Name="UnitCode" />
+    </Key>
+    <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="UnitType" Type="smallint" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ACcode" Type="varchar" MaxLength="10" />
+    <Property Name="PCcode" Type="varchar" MaxLength="10" />
+    <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+    <Property Name="UnitIncharge" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitContactNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="IsCHC" Type="char" MaxLength="1" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="RuralUrban" Type="varchar" MaxLength="1" />
+    <Property Name="building" Type="varchar" MaxLength="1" />
+    <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+    <Property Name="BID" Type="smallint" />
+    <Property Name="PID" Type="smallint" />
+    <Property Name="SID" Type="smallint" />
+    <Property Name="PPUID" Type="smallint" />
+    <Property Name="mobileno" Type="char" MaxLength="10" />
+    <Property Name="Latitude" Type="varchar" MaxLength="10" />
+    <Property Name="Longitude" Type="varchar" MaxLength="10" />
+    <Property Name="pincode" Type="varchar" MaxLength="6" />
+    <Property Name="PrivateHospitalType11" Type="tinyint" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="deliveryPoint" Type="tinyint" />
+    <Property Name="AWCID" Type="varchar" MaxLength="11" />
+    <Property Name="MTC" Type="tinyint" Nullable="false" />
+    <Property Name="SNCU" Type="tinyint" Nullable="false" />
+    <Property Name="ReportingUnitID" Type="int" Nullable="false" />
+    <Property Name="Beds" Type="int" />
+    <Property Name="BSBY" Type="int" />
+    <Property Name="AccreditationYear" Type="int" />
+    <Property Name="VillageAutoID_P" Type="int" Nullable="false" />
+    <Property Name="NUHMUrban" Type="tinyint" Nullable="false" />
+    <Property Name="NBSU" Type="tinyint" />
+    <Property Name="NBCC" Type="tinyint" />
+    <Property Name="StaticsCenter" Type="tinyint" />
+    <Property Name="PHC_24Hour" Type="tinyint" />
+    <Property Name="FRU" Type="tinyint" />
+    <Property Name="AppLatitude" Type="varchar" MaxLength="20" />
+    <Property Name="AppLongitude" Type="varchar" MaxLength="20" />
+    <Property Name="WellnessCenter" Type="tinyint" />
+    <Property Name="DistrictCode" Type="int" />
+    <Property Name="BlockCode" Type="int" />
+    <Property Name="HmisID" Type="int" />
+    <Property Name="PehchanSubRegistrarCode" Type="int" />
+    <Property Name="TehsilID" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="DDOCode" Type="varchar" MaxLength="80" />
+    <Property Name="DDOCodeVerificationDate" Type="smalldatetime" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="TspArea" Type="tinyint" Nullable="false" />
+    <Property Name="OfficeFlag" Type="tinyint" Nullable="false" />
+    <Property Name="Cemonc" Type="int" />
+    <Property Name="PSCode" Type="int" />
+    <Property Name="IsMCH" Type="bit" />
+    <Property Name="IsTraumaCentre" Type="bit" />
+    <Property Name="IsBloodBank" Type="bit" />
+    <Property Name="EstablishmentYear" Type="int" />
+    <Property Name="GPCode" Type="int" />
+    <Property Name="CLMCFlag" Type="tinyint" />
+    <Property Name="IsRevenueBlock" Type="tinyint" />
+    <Property Name="IsBloodStorageUnit" Type="bit" />
+    <Property Name="RCHFacility" Type="tinyint" />
+    <Property Name="Funcational" Type="tinyint" Nullable="false" />
+    <Property Name="HmisPrivateDataType" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnitTypeMaster">
+    <Key>
+      <PropertyRef Name="UnitTypeCode" />
+    </Key>
+    <Property Name="UnitTypeCode" Type="tinyint" Nullable="false" />
+    <Property Name="UnittypeName" Type="varchar" MaxLength="30" />
+    <Property Name="UnitLevel" Type="tinyint" Nullable="false" />
+    <Property Name="UnittypeNameHindi" Type="nvarchar" MaxLength="30" />
+    <Property Name="MCTS_FacilityType" Type="int" />
+    <Property Name="UnitTypeNameAbbr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="HRUnitTypeName" Type="varchar" MaxLength="30" />
+    <Property Name="IsOtherDept" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="IsDeleted" />
+    </Key>
+    <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+    <Property Name="ApplicationNos" Type="varchar" MaxLength="250" />
+    <Property Name="old2pwd" Type="varchar" MaxLength="128" />
+    <Property Name="old1pwd" Type="varchar" MaxLength="128" />
+    <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="PwdUpdatedDate" Type="smalldatetime" />
+    <Property Name="AshaRoleId" Type="tinyint" Nullable="false" />
+    <Property Name="ExpireOn" Type="datetime" />
+    <Property Name="Active" Type="tinyint" Nullable="false" />
+    <Property Name="OJSPMRoleID" Type="tinyint" Nullable="false" />
+    <Property Name="PctsRoleID" Type="tinyint" Nullable="false" />
+    <Property Name="EctsRoleID" Type="tinyint" Nullable="false" />
+    <Property Name="resetpwd" Type="tinyint" Nullable="false" />
+    <Property Name="Saltvalue" Type="varchar" MaxLength="128" />
+    <Property Name="Saltcreatedon" Type="datetime" />
+    <Property Name="AppVersion" Type="float" />
+    <Property Name="AppPassword" Type="varchar" MaxLength="128" />
+    <Property Name="Imei" Type="varchar" MaxLength="20" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="ANMAutoID" Type="int" Nullable="false" />
+    <Property Name="IsAppUser" Type="tinyint" Nullable="false" />
+    <Property Name="UserNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppRoleID" Type="tinyint" Nullable="false" />
+    <Property Name="HRRoleID" Type="tinyint" Nullable="false" />
+    <Property Name="OfficeID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="SsoID" Type="varchar" MaxLength="100" />
+    <Property Name="LastUpdated" Type="smalldatetime" />
+    <Property Name="DesignationID" Type="int" />
+    <Property Name="VerifiedMobile" Type="int" Nullable="false" />
+    <Property Name="VerifiedEmail" Type="int" Nullable="false" />
+    <Property Name="AidsRoleID" Type="int" Nullable="false" />
+    <Property Name="MTPRoleID" Type="int" Nullable="false" />
+    <Property Name="DepartmentFlag" Type="tinyint" Nullable="false" />
+    <Property Name="CLMCRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Villages">
+    <Key>
+      <PropertyRef Name="VillageAutoID" />
+    </Key>
+    <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="VillageID" Type="int" />
+    <Property Name="VillageName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+    <Property Name="ACCode" Type="varchar" MaxLength="10" />
+    <Property Name="PCCode" Type="varchar" MaxLength="10" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Pop_male" Type="varchar" MaxLength="10" />
+    <Property Name="Pop_female" Type="varchar" MaxLength="10" />
+    <Property Name="Pop_SC" Type="varchar" MaxLength="10" />
+    <Property Name="Pop_ST" Type="varchar" MaxLength="10" />
+    <Property Name="Latitude" Type="varchar" MaxLength="10" />
+    <Property Name="Longitude" Type="varchar" MaxLength="10" />
+    <Property Name="pincode" Type="varchar" MaxLength="6" />
+    <Property Name="type" Type="tinyint" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="OtherLocation" Type="tinyint" Nullable="false" />
+    <Property Name="CensusCode2011" Type="varchar" MaxLength="8" />
+    <Property Name="VillageLgCode" Type="int" />
+    <Property Name="SVID" Type="int" />
+    <Property Name="RCHVcode" Type="int" Nullable="false" />
+    <Property Name="IsRevenue" Type="tinyint" />
+    <Property Name="Pop_transgender" Type="int" />
+    <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Function Name="GetANMForLinelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ashaautoid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetASHAForLinelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+    <Parameter Name="Perm_villageautoid" Type="int" Mode="In" />
+    <Parameter Name="Perm_deliveryplaceunitid" Type="int" Mode="In" />
+    <Parameter Name="Perm_LoginUnitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetanganwari" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ashaautoid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspGetANMDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+    <Parameter Name="PermType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="uspGetANMForOtherUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetANMForOtherUserNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetANMForOtherUserNewDemo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+    <Parameter Name="AshaType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="uspGetAshaDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspGetUnitName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="distcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetVillageByAshaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ashaautoid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UspHealthunitphoto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="unitid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspSwasthyaMitrkData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspSwasthyaMitrkLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="rajmedicalModelStoreContainer">
+    <EntitySet Name="Anganwari_Village" EntityType="Self.Anganwari_Village" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnganwariMaster" EntityType="Self.AnganwariMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppHistory" EntityType="Self.AppHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUsers" EntityType="Self.AppUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASHA_AddlCharge" EntityType="Self.ASHA_AddlCharge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASHADetails" EntityType="Self.ASHADetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AshaMaster" EntityType="Self.AshaMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesignationMaster" EntityType="Self.DesignationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HealthUnitPhoto" EntityType="Self.HealthUnitPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorySwasthyaMitrk" EntityType="Self.HistorySwasthyaMitrk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterCodes" EntityType="Self.MasterCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SwasthyaMitrk" EntityType="Self.SwasthyaMitrk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitMaster" EntityType="Self.UnitMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitTypeMaster" EntityType="Self.UnitTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Villages" EntityType="Self.Villages" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

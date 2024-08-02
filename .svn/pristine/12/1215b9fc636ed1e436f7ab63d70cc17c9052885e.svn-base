@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHSurveyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DHSurveyEntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="GetUnitmasterData" ReturnType="Collection(DHSurveyModel.GetUnitmasterData_Result)">
+      <Parameter Name="Perm_Loginunitcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Couple_Master_Temp" EntityType="DHSurveyModel.Couple_Master_Temp" />
+    <EntitySet Name="DiseaseDetails" EntityType="DHSurveyModel.DiseaseDetail" />
+    <EntitySet Name="HouseFamilies" EntityType="DHSurveyModel.HouseFamily" />
+    <EntitySet Name="UnMarriedGirlsDetails" EntityType="DHSurveyModel.UnMarriedGirlsDetail" />
+    <EntitySet Name="ECdetails" EntityType="DHSurveyModel.ECdetail" />
+    <EntitySet Name="MemberPhotoes" EntityType="DHSurveyModel.MemberPhoto" />
+    <EntitySet Name="MasterCodes" EntityType="DHSurveyModel.MasterCode" />
+    <EntitySet Name="MemberDetails" EntityType="DHSurveyModel.MemberDetail" />
+    <AssociationSet Name="FK__DiseaseDe__Membe__3587F3E0" Association="DHSurveyModel.FK__DiseaseDe__Membe__3587F3E0">
+      <End Role="MemberDetail" EntitySet="MemberDetails" />
+      <End Role="DiseaseDetail" EntitySet="DiseaseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECdetails" Association="DHSurveyModel.FK_ECdetails">
+      <End Role="MemberDetail" EntitySet="MemberDetails" />
+      <End Role="ECdetail" EntitySet="ECdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonDetail" Association="DHSurveyModel.FK_PersonDetail">
+      <End Role="HouseFamily" EntitySet="HouseFamilies" />
+      <End Role="MemberDetail" EntitySet="MemberDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPhoto" Association="DHSurveyModel.FK_PersonPhoto">
+      <End Role="MemberDetail" EntitySet="MemberDetails" />
+      <End Role="MemberPhoto" EntitySet="MemberPhotoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnMarriedGirlsDetail" Association="DHSurveyModel.FK_UnMarriedGirlsDetail">
+      <End Role="MemberDetail" EntitySet="MemberDetails" />
+      <End Role="UnMarriedGirlsDetail" EntitySet="UnMarriedGirlsDetails" />
+    </AssociationSet>
+    <FunctionImport Name="uspGetAllTables" ReturnType="Collection(DHSurveyModel.uspGetAllTables_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetUnitmasterData_Result">
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UnitNameHindi" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int16" Name="UnitType" Nullable="false" />
+    <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="Couple_Master_Temp">
+    <Key>
+      <PropertyRef Name="rowId" />
+    </Key>
+    <Property Type="Int32" Name="rowId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MotherID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HusbName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo_P" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PCTSID_P" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccountNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Ifsc_Code" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AadhaarNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="VillageAutoID" />
+    <Property Type="Int32" Name="SurveyId" Nullable="false" />
+    <Property Type="Int32" Name="VillId" />
+    <Property Type="String" Name="WifeName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HusbandName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo_E" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PCTSID_E" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AnganwadiId" />
+    <Property Type="String" Name="WifeAccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WifeIFSC_Code" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WifeAadhaarNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="MatchFlag" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiseaseDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+      <PropertyRef Name="DiseaseCode" />
+    </Key>
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="Byte" Name="DiseaseCode" Nullable="false" />
+    <NavigationProperty Name="MemberDetail" Relationship="DHSurveyModel.FK__DiseaseDe__Membe__3587F3E0" FromRole="DiseaseDetail" ToRole="MemberDetail" />
+  </EntityType>
+  <EntityType Name="HouseFamily">
+    <Key>
+      <PropertyRef Name="HouseFamilyID" />
+    </Key>
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+    <Property Type="Int32" Name="HouseNo" Nullable="false" />
+    <Property Type="Int32" Name="FamiliyNo" Nullable="false" />
+    <Property Type="Int32" Name="HouseFamilyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Entrydate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberDetails" Relationship="DHSurveyModel.FK_PersonDetail" FromRole="HouseFamily" ToRole="MemberDetail" />
+  </EntityType>
+  <EntityType Name="UnMarriedGirlsDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="Byte" Name="Flag" Nullable="false" />
+    <Property Type="Byte" Name="Duration" Nullable="false" />
+    <Property Type="Byte" Name="Used" Nullable="false" />
+    <Property Type="Byte" Name="Cleaning" Nullable="false" />
+    <Property Type="Byte" Name="TypeOfCleaningCloths" />
+    <Property Type="String" Name="FamiliyConcept" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhysicalProblem" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="AdviceFrom" />
+    <Property Type="DateTime" Name="Entrydate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberDetail" Relationship="DHSurveyModel.FK_UnMarriedGirlsDetail" FromRole="UnMarriedGirlsDetail" ToRole="MemberDetail" />
+  </EntityType>
+  <EntityType Name="ECdetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="String" Name="RationCardNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IFSCCode" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BhamashahID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PCTSID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="State" />
+    <Property Type="Byte" Name="Bpl" />
+    <Property Type="DateTime" Name="MarraigeDate" Precision="0" />
+    <Property Type="Byte" Name="AgeOnMarraige" />
+    <Property Type="Byte" Name="HusbandAgeOnMarraige" />
+    <Property Type="Int32" Name="TotalBirth" />
+    <Property Type="Byte" Name="Boys" />
+    <Property Type="Byte" Name="Girls" />
+    <Property Type="Byte" Name="Transgender" />
+    <Property Type="Byte" Name="Nisanthan" />
+    <Property Type="Byte" Name="DeliveryInLastYear" />
+    <Property Type="Byte" Name="InfantDeathBelow5YearInLastYear" />
+    <Property Type="DateTime" Name="LMPDate" Precision="0" />
+    <Property Type="Byte" Name="WantBaby" />
+    <Property Type="DateTime" Name="Entrydate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="EntryByUserNo" Nullable="false" />
+    <Property Type="Int32" Name="UpdateByUserNo" Nullable="false" />
+    <NavigationProperty Name="MemberDetail" Relationship="DHSurveyModel.FK_ECdetails" FromRole="ECdetail" ToRole="MemberDetail" />
+  </EntityType>
+  <EntityType Name="MemberPhoto">
+    <Key>
+      <PropertyRef Name="MemberlD" />
+    </Key>
+    <Property Type="Int32" Name="MemberlD" Nullable="false" />
+    <Property Type="Binary" Name="Photo" Nullable="false" MaxLength="400" FixedLength="false" />
+    <NavigationProperty Name="MemberDetail" Relationship="DHSurveyModel.FK_PersonPhoto" FromRole="MemberPhoto" ToRole="MemberDetail" />
+  </EntityType>
+  <EntityType Name="MasterCode">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Type="Int32" Name="ParentID" Nullable="false" />
+    <Property Type="Int32" Name="masterID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OrderNo" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MemberDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+    <Property Type="Int32" Name="HouseFamilyID" Nullable="false" />
+    <Property Type="Byte" Name="Caste" Nullable="false" />
+    <Property Type="Byte" Name="Religion" Nullable="false" />
+    <Property Type="Byte" Name="Permanent_Residence" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="Age" Nullable="false" />
+    <Property Type="Byte" Name="Sex" Nullable="false" />
+    <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AadhaarNo" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Profession" Nullable="false" />
+    <Property Type="Byte" Name="RelationToHead" Nullable="false" />
+    <Property Type="Byte" Name="FuelType" Nullable="false" />
+    <Property Type="Byte" Name="PollutionHazards" Nullable="false" />
+    <Property Type="Byte" Name="MaritalStatus" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SpouseID" Nullable="false" />
+    <Property Type="Byte" Name="Education" />
+    <Property Type="Byte" Name="MobileNoBelongsToWhom" />
+    <Property Type="DateTime" Name="Entrydate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="EntryByUserNo" Nullable="false" />
+    <Property Type="Int32" Name="UpdateByUserNo" Nullable="false" />
+    <Property Type="String" Name="DiseasesCodes" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DiseaseDetails" Relationship="DHSurveyModel.FK__DiseaseDe__Membe__3587F3E0" FromRole="MemberDetail" ToRole="DiseaseDetail" />
+    <NavigationProperty Name="ECdetail" Relationship="DHSurveyModel.FK_ECdetails" FromRole="MemberDetail" ToRole="ECdetail" />
+    <NavigationProperty Name="HouseFamily" Relationship="DHSurveyModel.FK_PersonDetail" FromRole="MemberDetail" ToRole="HouseFamily" />
+    <NavigationProperty Name="MemberPhoto" Relationship="DHSurveyModel.FK_PersonPhoto" FromRole="MemberDetail" ToRole="MemberPhoto" />
+    <NavigationProperty Name="UnMarriedGirlsDetail" Relationship="DHSurveyModel.FK_UnMarriedGirlsDetail" FromRole="MemberDetail" ToRole="UnMarriedGirlsDetail" />
+  </EntityType>
+  <Association Name="FK__DiseaseDe__Membe__3587F3E0">
+    <End Type="DHSurveyModel.MemberDetail" Role="MemberDetail" Multiplicity="1" />
+    <End Type="DHSurveyModel.DiseaseDetail" Role="DiseaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetail">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="DiseaseDetail">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECdetails">
+    <End Type="DHSurveyModel.MemberDetail" Role="MemberDetail" Multiplicity="1" />
+    <End Type="DHSurveyModel.ECdetail" Role="ECdetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetail">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="ECdetail">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonDetail">
+    <End Type="DHSurveyModel.HouseFamily" Role="HouseFamily" Multiplicity="1" />
+    <End Type="DHSurveyModel.MemberDetail" Role="MemberDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HouseFamily">
+        <PropertyRef Name="HouseFamilyID" />
+      </Principal>
+      <Dependent Role="MemberDetail">
+        <PropertyRef Name="HouseFamilyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPhoto">
+    <End Type="DHSurveyModel.MemberDetail" Role="MemberDetail" Multiplicity="1" />
+    <End Type="DHSurveyModel.MemberPhoto" Role="MemberPhoto" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetail">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="MemberPhoto">
+        <PropertyRef Name="MemberlD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnMarriedGirlsDetail">
+    <End Type="DHSurveyModel.MemberDetail" Role="MemberDetail" Multiplicity="1" />
+    <End Type="DHSurveyModel.UnMarriedGirlsDetail" Role="UnMarriedGirlsDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MemberDetail">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="UnMarriedGirlsDetail">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="uspGetAllTables_Result">
+    <Property Type="String" Name="TableName" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="ColumnName" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="IsNullable" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DataType" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Columnlength" Nullable="true" />
+    <Property Type="String" Name="DefaultValue" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="PkColumnName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="UkColumnName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TargetTableName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TargetColumnName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AutoIncrement" Nullable="true" />
+  </ComplexType>
+</Schema>

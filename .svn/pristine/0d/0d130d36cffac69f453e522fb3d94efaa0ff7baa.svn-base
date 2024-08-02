@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MaacnaaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ComplainSuggestion">
+    <Key>
+      <PropertyRef Name="ComplainID" />
+    </Key>
+    <Property Name="ComplainID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="motherid" Type="int" Nullable="false" />
+    <Property Name="ComplainSuggestionDate" Type="date" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReplyMessage" Type="nvarchar(max)" />
+    <Property Name="Userno" Type="int" />
+    <Property Name="Replydate" Type="smalldatetime" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MaaTokens">
+    <Key>
+      <PropertyRef Name="Mobileno" />
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="Mobileno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeviceID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Salt" Type="varchar" MaxLength="128" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaaVideoDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="VideoType" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="VideoType" Type="smallint" Nullable="false" />
+    <Property Name="Descrption" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VideoName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Extension" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="UploadeDate" Type="datetime" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="OTP">
+    <Key>
+      <PropertyRef Name="MobileNo" />
+      <PropertyRef Name="SmsFlag" />
+    </Key>
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SmsFlag" Type="tinyint" Nullable="false" />
+    <Property Name="OTPNo" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OtpLog">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="Sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotherID" Type="int" Nullable="false" />
+    <Property Name="Infantid" Type="int" Nullable="false" />
+    <Property Name="ErrorDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="PushDate" Type="datetime" />
+    <Property Name="SentDate" Type="datetime" />
+    <Property Name="ErrorID" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="100" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="MessageId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ResponseStatus" Type="varchar" MaxLength="250" />
+    <Property Name="Msgtype" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PehchanBirth">
+    <Key>
+      <PropertyRef Name="InfantID" />
+    </Key>
+    <Property Name="InfantID" Type="int" Nullable="false" />
+    <Property Name="RegNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="RegDate" Type="date" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="RegistrationYear" Type="int" />
+    <Property Name="Mode" Type="tinyint" />
+    <Property Name="MethodFlag" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="PinDetails">
+    <Key>
+      <PropertyRef Name="MobileNo" />
+    </Key>
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Pin" Type="varchar" MaxLength="128" />
+    <Property Name="SentDate" Type="datetime" Nullable="false" />
+    <Property Name="DeviceID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="trail" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SMS_Log">
+    <Key>
+      <PropertyRef Name="SNo" />
+    </Key>
+    <Property Name="SNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unitcode" Type="varchar" MaxLength="11" />
+    <Property Name="UserID" Type="varchar" MaxLength="50" />
+    <Property Name="IPAddress" Type="char" MaxLength="20" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="MsgType" Type="tinyint" />
+    <Property Name="ReceiverUnitcode" Type="text" />
+    <Property Name="MthYr" Type="int" />
+    <Property Name="smsCount" Type="int" />
+    <Property Name="MessageText" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="SMSDetails2020">
+    <Key>
+      <PropertyRef Name="SNO" />
+      <PropertyRef Name="ANMInfantID" />
+      <PropertyRef Name="resend" />
+    </Key>
+    <Property Name="SNO" Type="int" Nullable="false" />
+    <Property Name="ANMInfantID" Type="int" Nullable="false" />
+    <Property Name="ErrorID" Type="int" />
+    <Property Name="ErrorDescription" Type="varchar" MaxLength="250" />
+    <Property Name="PushDate" Type="datetime" />
+    <Property Name="MID" Type="varchar" MaxLength="30" />
+    <Property Name="SentDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryDate" Type="datetime" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="VillageAutoID" Type="int" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="MessageId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ResponseStatus" Type="varchar" MaxLength="250" />
+    <Property Name="resend" Type="tinyint" Nullable="false" />
+    <Property Name="SecondCovidSMSFlag" Type="tinyint" />
+    <Property Name="CompositeIndex" Type="float" />
+    <Property Name="PHSCallDate" Type="date" />
+  </EntityType>
+  <EntityType Name="UserTrailLog">
+    <Key>
+      <PropertyRef Name="Sno" />
+    </Key>
+    <Property Name="Sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeviceID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="ApiCode" Type="smallint" />
+    <Property Name="ResponseTime" Type="datetime" />
+  </EntityType>
+  <Function Name="uspANCSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspANMASHADetailsByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_PCTSID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetMotherDetailsByMobileno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_mobileno" Type="varchar" Mode="In" />
+    <Parameter Name="DeviceID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspImmunizationSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_infantid" Type="int" Mode="In" />
+    <Parameter Name="Perm_flag" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="uspInfantDetailsByInfantID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_infantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspInfantlistForBirthCertificatByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspInfantlistForImmunizationByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UspMaaAdvanceSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspMamtaCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspNearestFacility" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspPNCSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspWomendetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="MaacnaaModelStoreContainer">
+    <EntitySet Name="ComplainSuggestion" EntityType="Self.ComplainSuggestion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaaTokens" EntityType="Self.MaaTokens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaaVideoDetails" EntityType="Self.MaaVideoDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OTP" EntityType="Self.OTP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OtpLog" EntityType="Self.OtpLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PehchanBirth" EntityType="Self.PehchanBirth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PinDetails" EntityType="Self.PinDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS_Log" EntityType="Self.SMS_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSDetails2020" EntityType="Self.SMSDetails2020" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTrailLog" EntityType="Self.UserTrailLog" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="08de7d89b4a24d5782a53896abc5d557" Name="Diagram1" ZoomLevel="121">
+        <EntityTypeShape EntityType="rajmedicalModel.Anganwari_Village" Width="1.5" PointX="9.375" PointY="19.875" />
+        <EntityTypeShape EntityType="rajmedicalModel.AnganwariMaster" Width="1.5" PointX="4.9276891764847974" PointY="17.710052677295195" />
+        <EntityTypeShape EntityType="rajmedicalModel.ASHA_AddlCharge" Width="1.5" PointX="8.8705152742893034" PointY="22.778986971256781" />
+        <EntityTypeShape EntityType="rajmedicalModel.ASHADetail" Width="1.5" PointX="3.0368040441706796" PointY="11.261534740804478" />
+        <EntityTypeShape EntityType="rajmedicalModel.AshaMaster" Width="1.5" PointX="1.4059164679636789" PointY="25.149333220510432" />
+        <EntityTypeShape EntityType="rajmedicalModel.MasterCodes" Width="1.5" PointX="2" PointY="17.25" />
+        <EntityTypeShape EntityType="rajmedicalModel.HistorySwasthyaMitrk" Width="1.5" PointX="7.0059315594872142" PointY="10.699922343110629" />
+        <EntityTypeShape EntityType="rajmedicalModel.SwasthyaMitrk" Width="1.5" PointX="9.0053739831807889" PointY="3.3875359461584762" />
+        <EntityTypeShape EntityType="rajmedicalModel.DesignationMaster" Width="1.5" PointX="1.625" PointY="7.375" />
+        <EntityTypeShape EntityType="rajmedicalModel.UnitTypeMaster" Width="1.5" PointX="0.5" PointY="13.5" />
+        <EntityTypeShape EntityType="rajmedicalModel.UnitMaster" Width="1.5" PointX="9.8878579930811465" PointY="8.6357597599903873" />
+        <EntityTypeShape EntityType="rajmedicalModel.Village" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="rajmedicalModel.HealthUnitPhoto" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="rajmedicalModel.User" Width="1.5" PointX="12.375" PointY="3.75" />
+        <EntityTypeShape EntityType="rajmedicalModel.AppUser" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="rajmedicalModel.AppHistory" Width="1.5" PointX="3.375" PointY="3.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

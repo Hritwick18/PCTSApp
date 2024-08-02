@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OfflineCnaaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="OfflineCnaaModelStoreContainer">
+    <EntitySet Name="ANCDetails_Offline" EntityType="OfflineCnaaModel.Store.ANCDetails_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ANCRegDetail_Offline" EntityType="OfflineCnaaModel.Store.ANCRegDetail_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AnganwariMaster_Offline" EntityType="OfflineCnaaModel.Store.AnganwariMaster_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AshaMaster_Offline" EntityType="OfflineCnaaModel.Store.AshaMaster_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeliveryDetails_Offline" EntityType="OfflineCnaaModel.Store.DeliveryDetails_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HBPNC_Offline" EntityType="OfflineCnaaModel.Store.HBPNC_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Immunization_Offline" EntityType="OfflineCnaaModel.Store.Immunization_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImmunizationMaster_Offline" EntityType="OfflineCnaaModel.Store.ImmunizationMaster_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Infant_Offline" EntityType="OfflineCnaaModel.Store.Infant_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InfantImmu_Offline" EntityType="OfflineCnaaModel.Store.InfantImmu_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MasterCodes_Offline" EntityType="OfflineCnaaModel.Store.MasterCodes_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mother_Offline" EntityType="OfflineCnaaModel.Store.Mother_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnitMaster_Offline" EntityType="OfflineCnaaModel.Store.UnitMaster_Offline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Villages_Offline" EntityType="OfflineCnaaModel.Store.Villages_Offline" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ANCDetails_Offline">
+    <Key>
+      <PropertyRef Name="ANCRegID" />
+      <PropertyRef Name="ANCFlag" />
+    </Key>
+    <Property Name="ANCRegID" Type="int" Nullable="false" />
+    <Property Name="ANCFlag" Type="tinyint" Nullable="false" />
+    <Property Name="ANCDate" Type="date" Nullable="false" />
+    <Property Name="TT1" Type="date" />
+    <Property Name="TT2" Type="date" />
+    <Property Name="TTB" Type="date" />
+    <Property Name="IFA" Type="date" />
+    <Property Name="HB" Type="float" />
+    <Property Name="CompL" Type="varchar" MaxLength="30" />
+    <Property Name="RTI" Type="tinyint" />
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="anganwariNo" Type="int" Nullable="false" />
+    <Property Name="motherid" Type="int" Nullable="false" />
+    <Property Name="ReferUnitID" Type="int" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="BloodPressureS" Type="int" />
+    <Property Name="BloodPressureD" Type="int" />
+    <Property Name="UrineA" Type="tinyint" />
+    <Property Name="UrineS" Type="tinyint" />
+    <Property Name="TreatmentCode" Type="int" />
+    <Property Name="ALBE400" Type="date" />
+    <Property Name="CAL500" Type="date" />
+    <Property Name="Entrydate" Type="datetime" />
+    <Property Name="NormalLodingIronSucrose1" Type="tinyint" />
+    <Property Name="IronSucrose1" Type="date" />
+    <Property Name="IronSucrose2" Type="date" />
+    <Property Name="IronSucrose3" Type="date" />
+    <Property Name="IronSucrose4" Type="date" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="Media" Type="tinyint" Nullable="false" />
+    <Property Name="Latitude" Type="varchar" MaxLength="20" />
+    <Property Name="Longitude" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateUserNo" Type="int" />
+    <Property Name="EntryUserNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ANCRegDetail_Offline">
+    <Key>
+      <PropertyRef Name="MotherID" />
+      <PropertyRef Name="RegDate" />
+    </Key>
+    <Property Name="ANCRegID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MotherID" Type="int" Nullable="false" />
+    <Property Name="RegDate" Type="date" Nullable="false" />
+    <Property Name="LMPDT" Type="date" Nullable="false" />
+    <Property Name="DelFlag" Type="tinyint" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="HighRisk" Type="tinyint" Nullable="false" />
+    <Property Name="Freeze_AadhaarBankInfo" Type="tinyint" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="BPL" Type="tinyint" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AnganwariMaster_Offline">
+    <Key>
+      <PropertyRef Name="AnganwariNo" />
+    </Key>
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="NameE" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NameH" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="unitid" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="date" />
+    <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+    <Property Name="RuralUrban" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="AshaMaster_Offline">
+    <Key>
+      <PropertyRef Name="ashaAutoID" />
+    </Key>
+    <Property Name="AshaName" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="unitid" Type="int" Nullable="false" />
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="type" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="DeliveryDetails_Offline">
+    <Key>
+      <PropertyRef Name="ANCRegID" />
+      <PropertyRef Name="MotherID" />
+    </Key>
+    <Property Name="ANCRegID" Type="int" Nullable="false" />
+    <Property Name="MotherID" Type="int" Nullable="false" />
+    <Property Name="Prasav_date" Type="smalldatetime" Nullable="false" />
+    <Property Name="DischargeDT" Type="smalldatetime" />
+    <Property Name="Deltype" Type="tinyint" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DelplaceCode" Type="int" />
+    <Property Name="DeathDate" Type="date" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HBPNC_Offline">
+    <Key>
+      <PropertyRef Name="Ancregid" />
+      <PropertyRef Name="PNCFlag" />
+    </Key>
+    <Property Name="Motherid" Type="int" Nullable="false" />
+    <Property Name="Ancregid" Type="int" Nullable="false" />
+    <Property Name="PNCFlag" Type="tinyint" Nullable="false" />
+    <Property Name="PNCComp" Type="tinyint" />
+    <Property Name="entrydate" Type="date" />
+    <Property Name="PNCDate" Type="date" />
+    <Property Name="Ashaautoid" Type="int" />
+    <Property Name="ReferUnitID" Type="int" />
+    <Property Name="Child1_InfantID" Type="int" />
+    <Property Name="Child1_Weight" Type="float" />
+    <Property Name="Child2_InfantID" Type="int" />
+    <Property Name="Child2_Comp" Type="tinyint" />
+    <Property Name="Child2_Weight" Type="float" />
+    <Property Name="Child3_InfantID" Type="int" />
+    <Property Name="Child3_Comp" Type="tinyint" />
+    <Property Name="Child3_Weight" Type="float" />
+    <Property Name="Child4_InfantID" Type="int" />
+    <Property Name="Child4_Comp" Type="tinyint" />
+    <Property Name="Child4_Weight" Type="float" />
+    <Property Name="Child5_InfantID" Type="int" />
+    <Property Name="Child5_Comp" Type="tinyint" />
+    <Property Name="Child5_Weight" Type="float" />
+    <Property Name="Child1_Comp" Type="tinyint" />
+    <Property Name="Freeze" Type="int" Nullable="false" />
+    <Property Name="S_mthyr" Type="int" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="ANMautoid" Type="int" Nullable="false" />
+    <Property Name="Child1_IsLive" Type="tinyint" />
+    <Property Name="Child2_IsLive" Type="tinyint" />
+    <Property Name="Child3_IsLive" Type="tinyint" />
+    <Property Name="Child4_IsLive" Type="tinyint" />
+    <Property Name="Child5_IsLive" Type="tinyint" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="Media" Type="tinyint" Nullable="false" />
+    <Property Name="Latitude" Type="varchar" MaxLength="20" />
+    <Property Name="Longitude" Type="varchar" MaxLength="20" />
+    <Property Name="EntryUserNo" Type="int" />
+    <Property Name="UpdateUserNo" Type="int" />
+  </EntityType>
+  <EntityType Name="Immunization_Offline">
+    <Key>
+      <PropertyRef Name="InfantID" />
+      <PropertyRef Name="ImmuCode" />
+    </Key>
+    <Property Name="InfantID" Type="int" Nullable="false" />
+    <Property Name="immudate" Type="date" Nullable="false" />
+    <Property Name="ImmuCode" Type="tinyint" Nullable="false" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="ashaAutoID" Type="int" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="Media" Type="tinyint" Nullable="false" />
+    <Property Name="EntryUnitID" Type="int" Nullable="false" />
+    <Property Name="Latitude" Type="varchar" MaxLength="20" />
+    <Property Name="Longitude" Type="varchar" MaxLength="20" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="EntryUserNo" Type="int" />
+    <Property Name="UpdateUserNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ImmunizationMaster_Offline">
+    <Key>
+      <PropertyRef Name="ImmuCode" />
+    </Key>
+    <Property Name="ImmuCode" Type="tinyint" Nullable="false" />
+    <Property Name="ImmuName" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="ImmuNameH" Type="nvarchar" MaxLength="20" />
+    <Property Name="duedays" Type="int" />
+    <Property Name="MaxDays" Type="int" />
+    <Property Name="DistrictCode" Type="varchar" MaxLength="175" />
+  </EntityType>
+  <EntityType Name="Infant_Offline">
+    <Key>
+      <PropertyRef Name="InfantID" />
+    </Key>
+    <Property Name="MotherID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="InfantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ChildName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sex" Type="tinyint" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="Bfeed" Type="tinyint" />
+    <Property Name="BloodGroup" Type="tinyint" />
+    <Property Name="Birth_date" Type="date" Nullable="false" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="LastUpdated" Type="smalldatetime" />
+    <Property Name="ANCRegID" Type="int" Nullable="false" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InfantImmu_Offline">
+    <Key>
+      <PropertyRef Name="InfantID" />
+    </Key>
+    <Property Name="InfantID" Type="int" Nullable="false" />
+    <Property Name="PartImmuDate" Type="date" Nullable="false" />
+    <Property Name="FullImmuDate" Type="date" />
+    <Property Name="FullImmuAshaautoid" Type="int" Nullable="false" />
+    <Property Name="BoosterDosesDate" Type="date" />
+    <Property Name="BoosterAshaautoid" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="smalldatetime" Nullable="false" />
+    <Property Name="Entrydate" Type="datetime" />
+    <Property Name="DPTPentaFlag" Type="varchar" MaxLength="1" />
+    <Property Name="VillageAutoID" Type="int" />
+  </EntityType>
+  <EntityType Name="MasterCodes_Offline">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="masterID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="Name_E" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mother_Offline">
+    <Key>
+      <PropertyRef Name="pctsid" />
+    </Key>
+    <Property Name="MotherID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ECID" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Age" Type="tinyint" Nullable="false" />
+    <Property Name="Cast" Type="tinyint" Nullable="false" />
+    <Property Name="LiveChild" Type="tinyint" Nullable="false" />
+    <Property Name="Mobileno" Type="varchar" MaxLength="10" />
+    <Property Name="Husbname" Type="nvarchar" MaxLength="100" />
+    <Property Name="pctsid" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ancregid" Type="int" Nullable="false" />
+    <Property Name="IsHusband" Type="tinyint" Nullable="false" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnitMaster_Offline">
+    <Key>
+      <PropertyRef Name="UnitCode" />
+    </Key>
+    <Property Name="UnitCode" Type="char" Nullable="false" MaxLength="11" />
+    <Property Name="UnitType" Type="smallint" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Latitude" Type="varchar" MaxLength="10" />
+    <Property Name="Longitude" Type="varchar" MaxLength="10" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AppLatitude" Type="varchar" MaxLength="20" />
+    <Property Name="AppLongitude" Type="varchar" MaxLength="20" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Villages_Offline">
+    <Key>
+      <PropertyRef Name="VillageAutoID" />
+    </Key>
+    <Property Name="UnitCode" Type="char" Nullable="false" MaxLength="11" />
+    <Property Name="VillageName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Latitude" Type="varchar" MaxLength="10" />
+    <Property Name="Longitude" Type="varchar" MaxLength="10" />
+    <Property Name="type" Type="tinyint" />
+    <Property Name="unitid" Type="int" />
+    <Property Name="VillageAutoID" Type="int" Nullable="false" />
+    <Property Name="OtherLocation" Type="tinyint" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <Function Name="uspGetAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetANCData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+    <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="uspGetHBPNCData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+    <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="uspGetInfantData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+    <Parameter Name="Perm_year1" Type="int" Mode="In" />
+    <Parameter Name="Perm_year2" Type="int" Mode="In" />
+    <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+  </Function>
+</Schema>

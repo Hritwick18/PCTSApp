@@ -1,0 +1,1414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OfflineCnaaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OfflineCnaaModelStoreContainer">
+          <EntitySet Name="ANCDetails_Offline" EntityType="OfflineCnaaModel.Store.ANCDetails_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ANCRegDetail_Offline" EntityType="OfflineCnaaModel.Store.ANCRegDetail_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AnganwariMaster_Offline" EntityType="OfflineCnaaModel.Store.AnganwariMaster_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AshaMaster_Offline" EntityType="OfflineCnaaModel.Store.AshaMaster_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeliveryDetails_Offline" EntityType="OfflineCnaaModel.Store.DeliveryDetails_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HBPNC_Offline" EntityType="OfflineCnaaModel.Store.HBPNC_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Immunization_Offline" EntityType="OfflineCnaaModel.Store.Immunization_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImmunizationMaster_Offline" EntityType="OfflineCnaaModel.Store.ImmunizationMaster_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Infant_Offline" EntityType="OfflineCnaaModel.Store.Infant_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InfantImmu_Offline" EntityType="OfflineCnaaModel.Store.InfantImmu_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MasterCodes_Offline" EntityType="OfflineCnaaModel.Store.MasterCodes_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mother_Offline" EntityType="OfflineCnaaModel.Store.Mother_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UnitMaster_Offline" EntityType="OfflineCnaaModel.Store.UnitMaster_Offline" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Villages_Offline" EntityType="OfflineCnaaModel.Store.Villages_Offline" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ANCDetails_Offline">
+          <Key>
+            <PropertyRef Name="ANCRegID" />
+            <PropertyRef Name="ANCFlag" />
+          </Key>
+          <Property Name="ANCRegID" Type="int" Nullable="false" />
+          <Property Name="ANCFlag" Type="tinyint" Nullable="false" />
+          <Property Name="ANCDate" Type="date" Nullable="false" />
+          <Property Name="TT1" Type="date" />
+          <Property Name="TT2" Type="date" />
+          <Property Name="TTB" Type="date" />
+          <Property Name="IFA" Type="date" />
+          <Property Name="HB" Type="float" />
+          <Property Name="CompL" Type="varchar" MaxLength="30" />
+          <Property Name="RTI" Type="tinyint" />
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="anganwariNo" Type="int" Nullable="false" />
+          <Property Name="motherid" Type="int" Nullable="false" />
+          <Property Name="ReferUnitID" Type="int" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="BloodPressureS" Type="int" />
+          <Property Name="BloodPressureD" Type="int" />
+          <Property Name="UrineA" Type="tinyint" />
+          <Property Name="UrineS" Type="tinyint" />
+          <Property Name="TreatmentCode" Type="int" />
+          <Property Name="ALBE400" Type="date" />
+          <Property Name="CAL500" Type="date" />
+          <Property Name="Entrydate" Type="datetime" />
+          <Property Name="NormalLodingIronSucrose1" Type="tinyint" />
+          <Property Name="IronSucrose1" Type="date" />
+          <Property Name="IronSucrose2" Type="date" />
+          <Property Name="IronSucrose3" Type="date" />
+          <Property Name="IronSucrose4" Type="date" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="Media" Type="tinyint" Nullable="false" />
+          <Property Name="Latitude" Type="varchar" MaxLength="20" />
+          <Property Name="Longitude" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateUserNo" Type="int" />
+          <Property Name="EntryUserNo" Type="int" />
+        </EntityType>
+        <EntityType Name="ANCRegDetail_Offline">
+          <Key>
+            <PropertyRef Name="MotherID" />
+            <PropertyRef Name="RegDate" />
+          </Key>
+          <Property Name="ANCRegID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MotherID" Type="int" Nullable="false" />
+          <Property Name="RegDate" Type="date" Nullable="false" />
+          <Property Name="LMPDT" Type="date" Nullable="false" />
+          <Property Name="DelFlag" Type="tinyint" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="HighRisk" Type="tinyint" Nullable="false" />
+          <Property Name="Freeze_AadhaarBankInfo" Type="tinyint" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="BPL" Type="tinyint" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="AnganwariMaster_Offline">
+          <Key>
+            <PropertyRef Name="AnganwariNo" />
+          </Key>
+          <Property Name="AnganwariNo" Type="int" Nullable="false" />
+          <Property Name="NameE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="NameH" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="unitid" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="date" />
+          <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+          <Property Name="RuralUrban" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="AshaMaster_Offline">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Name="AshaName" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="unitid" Type="int" Nullable="false" />
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="type" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="DeliveryDetails_Offline">
+          <Key>
+            <PropertyRef Name="ANCRegID" />
+            <PropertyRef Name="MotherID" />
+          </Key>
+          <Property Name="ANCRegID" Type="int" Nullable="false" />
+          <Property Name="MotherID" Type="int" Nullable="false" />
+          <Property Name="Prasav_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="DischargeDT" Type="smalldatetime" />
+          <Property Name="Deltype" Type="tinyint" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DelplaceCode" Type="int" />
+          <Property Name="DeathDate" Type="date" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HBPNC_Offline">
+          <Key>
+            <PropertyRef Name="Ancregid" />
+            <PropertyRef Name="PNCFlag" />
+          </Key>
+          <Property Name="Motherid" Type="int" Nullable="false" />
+          <Property Name="Ancregid" Type="int" Nullable="false" />
+          <Property Name="PNCFlag" Type="tinyint" Nullable="false" />
+          <Property Name="PNCComp" Type="tinyint" />
+          <Property Name="entrydate" Type="date" />
+          <Property Name="PNCDate" Type="date" />
+          <Property Name="Ashaautoid" Type="int" />
+          <Property Name="ReferUnitID" Type="int" />
+          <Property Name="Child1_InfantID" Type="int" />
+          <Property Name="Child1_Weight" Type="float" />
+          <Property Name="Child2_InfantID" Type="int" />
+          <Property Name="Child2_Comp" Type="tinyint" />
+          <Property Name="Child2_Weight" Type="float" />
+          <Property Name="Child3_InfantID" Type="int" />
+          <Property Name="Child3_Comp" Type="tinyint" />
+          <Property Name="Child3_Weight" Type="float" />
+          <Property Name="Child4_InfantID" Type="int" />
+          <Property Name="Child4_Comp" Type="tinyint" />
+          <Property Name="Child4_Weight" Type="float" />
+          <Property Name="Child5_InfantID" Type="int" />
+          <Property Name="Child5_Comp" Type="tinyint" />
+          <Property Name="Child5_Weight" Type="float" />
+          <Property Name="Child1_Comp" Type="tinyint" />
+          <Property Name="Freeze" Type="int" Nullable="false" />
+          <Property Name="S_mthyr" Type="int" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="ANMautoid" Type="int" Nullable="false" />
+          <Property Name="Child1_IsLive" Type="tinyint" />
+          <Property Name="Child2_IsLive" Type="tinyint" />
+          <Property Name="Child3_IsLive" Type="tinyint" />
+          <Property Name="Child4_IsLive" Type="tinyint" />
+          <Property Name="Child5_IsLive" Type="tinyint" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="Media" Type="tinyint" Nullable="false" />
+          <Property Name="Latitude" Type="varchar" MaxLength="20" />
+          <Property Name="Longitude" Type="varchar" MaxLength="20" />
+          <Property Name="EntryUserNo" Type="int" />
+          <Property Name="UpdateUserNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Immunization_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+            <PropertyRef Name="ImmuCode" />
+          </Key>
+          <Property Name="InfantID" Type="int" Nullable="false" />
+          <Property Name="immudate" Type="date" Nullable="false" />
+          <Property Name="ImmuCode" Type="tinyint" Nullable="false" />
+          <Property Name="EntryDate" Type="smalldatetime" />
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="Media" Type="tinyint" Nullable="false" />
+          <Property Name="EntryUnitID" Type="int" Nullable="false" />
+          <Property Name="Latitude" Type="varchar" MaxLength="20" />
+          <Property Name="Longitude" Type="varchar" MaxLength="20" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="EntryUserNo" Type="int" />
+          <Property Name="UpdateUserNo" Type="int" />
+        </EntityType>
+        <EntityType Name="ImmunizationMaster_Offline">
+          <Key>
+            <PropertyRef Name="ImmuCode" />
+          </Key>
+          <Property Name="ImmuCode" Type="tinyint" Nullable="false" />
+          <Property Name="ImmuName" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="ImmuNameH" Type="nvarchar" MaxLength="20" />
+          <Property Name="duedays" Type="int" />
+          <Property Name="MaxDays" Type="int" />
+          <Property Name="DistrictCode" Type="varchar" MaxLength="175" />
+        </EntityType>
+        <EntityType Name="Infant_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Name="MotherID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="InfantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ChildName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="tinyint" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="Bfeed" Type="tinyint" />
+          <Property Name="BloodGroup" Type="tinyint" />
+          <Property Name="Birth_date" Type="date" Nullable="false" />
+          <Property Name="EntryDate" Type="smalldatetime" />
+          <Property Name="LastUpdated" Type="smalldatetime" />
+          <Property Name="ANCRegID" Type="int" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InfantImmu_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Name="InfantID" Type="int" Nullable="false" />
+          <Property Name="PartImmuDate" Type="date" Nullable="false" />
+          <Property Name="FullImmuDate" Type="date" />
+          <Property Name="FullImmuAshaautoid" Type="int" Nullable="false" />
+          <Property Name="BoosterDosesDate" Type="date" />
+          <Property Name="BoosterAshaautoid" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="smalldatetime" Nullable="false" />
+          <Property Name="Entrydate" Type="datetime" />
+          <Property Name="DPTPentaFlag" Type="varchar" MaxLength="1" />
+          <Property Name="VillageAutoID" Type="int" />
+        </EntityType>
+        <EntityType Name="MasterCodes_Offline">
+          <Key>
+            <PropertyRef Name="ParentID" />
+            <PropertyRef Name="masterID" />
+          </Key>
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="masterID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="OrderNo" Type="int" />
+          <Property Name="Name_E" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Mother_Offline">
+          <Key>
+            <PropertyRef Name="pctsid" />
+          </Key>
+          <Property Name="MotherID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ECID" Type="varchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Age" Type="tinyint" Nullable="false" />
+          <Property Name="Cast" Type="tinyint" Nullable="false" />
+          <Property Name="LiveChild" Type="tinyint" Nullable="false" />
+          <Property Name="Mobileno" Type="varchar" MaxLength="10" />
+          <Property Name="Husbname" Type="nvarchar" MaxLength="100" />
+          <Property Name="pctsid" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ancregid" Type="int" Nullable="false" />
+          <Property Name="IsHusband" Type="tinyint" Nullable="false" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UnitMaster_Offline">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Name="UnitCode" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="UnitType" Type="smallint" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Latitude" Type="varchar" MaxLength="10" />
+          <Property Name="Longitude" Type="varchar" MaxLength="10" />
+          <Property Name="UnitID" Type="int" Nullable="false" />
+          <Property Name="AppLatitude" Type="varchar" MaxLength="20" />
+          <Property Name="AppLongitude" Type="varchar" MaxLength="20" />
+          <Property Name="LastUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Villages_Offline">
+          <Key>
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Name="UnitCode" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="VillageName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Latitude" Type="varchar" MaxLength="10" />
+          <Property Name="Longitude" Type="varchar" MaxLength="10" />
+          <Property Name="type" Type="tinyint" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="OtherLocation" Type="tinyint" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" />
+        </EntityType>
+        <Function Name="uspGetAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetANCData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+          <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="uspGetHBPNCData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+          <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="uspGetInfantData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+          <Parameter Name="Perm_year1" Type="int" Mode="In" />
+          <Parameter Name="Perm_year2" Type="int" Mode="In" />
+          <Parameter Name="Perm_lastSyncDate" Type="date" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OfflineCnaaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OfflineCnaaEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ANCDetails_Offline" EntityType="OfflineCnaaModel.ANCDetails_Offline" />
+          <EntitySet Name="DeliveryDetails_Offline" EntityType="OfflineCnaaModel.DeliveryDetails_Offline" />
+          <EntitySet Name="HBPNC_Offline" EntityType="OfflineCnaaModel.HBPNC_Offline" />
+          <EntitySet Name="ImmunizationMaster_Offline" EntityType="OfflineCnaaModel.ImmunizationMaster_Offline" />
+          <EntitySet Name="Infant_Offline" EntityType="OfflineCnaaModel.Infant_Offline" />
+          <EntitySet Name="InfantImmu_Offline" EntityType="OfflineCnaaModel.InfantImmu_Offline" />
+          <EntitySet Name="MasterCodes_Offline" EntityType="OfflineCnaaModel.MasterCodes_Offline" />
+          <EntitySet Name="UnitMaster_Offline" EntityType="OfflineCnaaModel.UnitMaster_Offline" />
+          <EntitySet Name="Villages_Offline" EntityType="OfflineCnaaModel.Villages_Offline" />
+          <EntitySet Name="Immunization_Offline" EntityType="OfflineCnaaModel.Immunization_Offline" />
+          <FunctionImport Name="uspGetAllTables" ReturnType="Collection(OfflineCnaaModel.uspGetAllTables_Result)" />
+          <EntitySet Name="ANCRegDetail_Offline" EntityType="OfflineCnaaModel.ANCRegDetail_Offline" />
+          <EntitySet Name="Mother_Offline" EntityType="OfflineCnaaModel.Mother_Offline" />
+          <FunctionImport Name="uspGetANCData" ReturnType="Collection(OfflineCnaaModel.uspGetANCData_Result)">
+            <Parameter Name="Perm_unitid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_lastSyncDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetHBPNCData" ReturnType="Collection(OfflineCnaaModel.uspGetHBPNCData_Result)">
+            <Parameter Name="Perm_unitid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_lastSyncDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetInfantData" ReturnType="Collection(OfflineCnaaModel.uspGetInfantData_Result)">
+            <Parameter Name="Perm_unitid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_year1" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_year2" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_lastSyncDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="AshaMaster_Offline" EntityType="OfflineCnaaModel.AshaMaster_Offline" />
+          <EntitySet Name="AnganwariMaster_Offline" EntityType="OfflineCnaaModel.AnganwariMaster_Offline" />
+          </EntityContainer>
+        <EntityType Name="ANCDetails_Offline">
+          <Key>
+            <PropertyRef Name="ANCRegID" />
+            <PropertyRef Name="ANCFlag" />
+          </Key>
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="Byte" Name="ANCFlag" Nullable="false" />
+          <Property Type="DateTime" Name="ANCDate" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="TT1" Precision="0" />
+          <Property Type="DateTime" Name="TT2" Precision="0" />
+          <Property Type="DateTime" Name="TTB" Precision="0" />
+          <Property Type="DateTime" Name="IFA" Precision="0" />
+          <Property Type="Double" Name="HB" />
+          <Property Type="String" Name="CompL" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="RTI" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="Double" Name="Weight" />
+          <Property Type="Int32" Name="anganwariNo" Nullable="false" />
+          <Property Type="Int32" Name="motherid" Nullable="false" />
+          <Property Type="Int32" Name="ReferUnitID" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="Int32" Name="BloodPressureS" />
+          <Property Type="Int32" Name="BloodPressureD" />
+          <Property Type="Byte" Name="UrineA" />
+          <Property Type="Byte" Name="UrineS" />
+          <Property Type="Int32" Name="TreatmentCode" />
+          <Property Type="DateTime" Name="ALBE400" Precision="0" />
+          <Property Type="DateTime" Name="CAL500" Precision="0" />
+          <Property Type="DateTime" Name="Entrydate" Precision="3" />
+          <Property Type="Byte" Name="NormalLodingIronSucrose1" />
+          <Property Type="DateTime" Name="IronSucrose1" Precision="0" />
+          <Property Type="DateTime" Name="IronSucrose2" Precision="0" />
+          <Property Type="DateTime" Name="IronSucrose3" Precision="0" />
+          <Property Type="DateTime" Name="IronSucrose4" Precision="0" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="Byte" Name="Media" Nullable="false" />
+          <Property Type="String" Name="Latitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UpdateUserNo" />
+          <Property Type="Int32" Name="EntryUserNo" />
+        </EntityType>
+        <EntityType Name="DeliveryDetails_Offline">
+          <Key>
+            <PropertyRef Name="ANCRegID" />
+            <PropertyRef Name="MotherID" />
+          </Key>
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="Prasav_date" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="DischargeDT" Precision="0" />
+          <Property Type="Byte" Name="Deltype" />
+          <Property Type="DateTime" Name="EntryDate" Precision="3" />
+          <Property Type="Int32" Name="DelplaceCode" />
+          <Property Type="DateTime" Name="DeathDate" Precision="0" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+        </EntityType>
+        <EntityType Name="HBPNC_Offline">
+          <Key>
+            <PropertyRef Name="Ancregid" />
+            <PropertyRef Name="PNCFlag" />
+          </Key>
+          <Property Type="Int32" Name="Motherid" Nullable="false" />
+          <Property Type="Int32" Name="Ancregid" Nullable="false" />
+          <Property Type="Byte" Name="PNCFlag" Nullable="false" />
+          <Property Type="Byte" Name="PNCComp" />
+          <Property Type="DateTime" Name="entrydate" Precision="0" />
+          <Property Type="DateTime" Name="PNCDate" Precision="0" />
+          <Property Type="Int32" Name="Ashaautoid" />
+          <Property Type="Int32" Name="ReferUnitID" />
+          <Property Type="Int32" Name="Child1_InfantID" />
+          <Property Type="Double" Name="Child1_Weight" />
+          <Property Type="Int32" Name="Child2_InfantID" />
+          <Property Type="Byte" Name="Child2_Comp" />
+          <Property Type="Double" Name="Child2_Weight" />
+          <Property Type="Int32" Name="Child3_InfantID" />
+          <Property Type="Byte" Name="Child3_Comp" />
+          <Property Type="Double" Name="Child3_Weight" />
+          <Property Type="Int32" Name="Child4_InfantID" />
+          <Property Type="Byte" Name="Child4_Comp" />
+          <Property Type="Double" Name="Child4_Weight" />
+          <Property Type="Int32" Name="Child5_InfantID" />
+          <Property Type="Byte" Name="Child5_Comp" />
+          <Property Type="Double" Name="Child5_Weight" />
+          <Property Type="Byte" Name="Child1_Comp" />
+          <Property Type="Int32" Name="Freeze" Nullable="false" />
+          <Property Type="Int32" Name="S_mthyr" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="Int32" Name="ANMautoid" Nullable="false" />
+          <Property Type="Byte" Name="Child1_IsLive" />
+          <Property Type="Byte" Name="Child2_IsLive" />
+          <Property Type="Byte" Name="Child3_IsLive" />
+          <Property Type="Byte" Name="Child4_IsLive" />
+          <Property Type="Byte" Name="Child5_IsLive" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="Byte" Name="Media" Nullable="false" />
+          <Property Type="String" Name="Latitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EntryUserNo" />
+          <Property Type="Int32" Name="UpdateUserNo" />
+        </EntityType>
+        <EntityType Name="ImmunizationMaster_Offline">
+          <Key>
+            <PropertyRef Name="ImmuCode" />
+          </Key>
+          <Property Type="Byte" Name="ImmuCode" Nullable="false" />
+          <Property Type="String" Name="ImmuName" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImmuNameH" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="duedays" />
+          <Property Type="Int32" Name="MaxDays" />
+          <Property Type="String" Name="DistrictCode" MaxLength="175" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Infant_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="Byte" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="InfantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ChildName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Sex" />
+          <Property Type="Double" Name="Weight" />
+          <Property Type="Byte" Name="Bfeed" />
+          <Property Type="Byte" Name="BloodGroup" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="EntryDate" Precision="0" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="0" />
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InfantImmu_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Type="Int32" Name="InfantID" Nullable="false" />
+          <Property Type="DateTime" Name="PartImmuDate" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FullImmuDate" Precision="0" />
+          <Property Type="Int32" Name="FullImmuAshaautoid" Nullable="false" />
+          <Property Type="DateTime" Name="BoosterDosesDate" Precision="0" />
+          <Property Type="Int32" Name="BoosterAshaautoid" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="Entrydate" Precision="3" />
+          <Property Type="String" Name="DPTPentaFlag" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="VillageAutoID" />
+        </EntityType>
+        <EntityType Name="MasterCodes_Offline">
+          <Key>
+            <PropertyRef Name="ParentID" />
+            <PropertyRef Name="masterID" />
+          </Key>
+          <Property Type="Int32" Name="ParentID" Nullable="false" />
+          <Property Type="Int32" Name="masterID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OrderNo" />
+          <Property Type="String" Name="Name_E" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UnitMaster_Offline">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Type="Int16" Name="UnitType" Nullable="false" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitNameHindi" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Latitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UnitID" Nullable="false" />
+          <Property Type="String" Name="AppLatitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AppLongitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+        </EntityType>
+        <EntityType Name="Villages_Offline">
+          <Key>
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="VillageName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UnitNameHindi" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Latitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="type" />
+          <Property Type="Int32" Name="unitid" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="OtherLocation" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+        </EntityType>
+        <EntityType Name="Immunization_Offline">
+          <Key>
+            <PropertyRef Name="InfantID" />
+            <PropertyRef Name="ImmuCode" />
+          </Key>
+          <Property Type="Int32" Name="InfantID" Nullable="false" />
+          <Property Type="DateTime" Name="immudate" Nullable="false" Precision="0" />
+          <Property Type="Byte" Name="ImmuCode" Nullable="false" />
+          <Property Type="DateTime" Name="EntryDate" Precision="0" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="Byte" Name="Media" Nullable="false" />
+          <Property Type="Int32" Name="EntryUnitID" Nullable="false" />
+          <Property Type="String" Name="Latitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Weight" />
+          <Property Type="Int32" Name="EntryUserNo" />
+          <Property Type="Int32" Name="UpdateUserNo" />
+        </EntityType>
+        <ComplexType Name="uspGetAllTables_Result">
+          <Property Type="String" Name="TableName" Nullable="false" MaxLength="128" />
+          <Property Type="String" Name="ColumnName" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="IsNullable" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="DataType" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Columnlength" Nullable="true" />
+          <Property Type="String" Name="DefaultValue" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="PkColumnName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="UkColumnName" Nullable="true" MaxLength="200" />
+        </ComplexType>
+        <EntityType Name="ANCRegDetail_Offline">
+          <Key>
+            <PropertyRef Name="MotherID" />
+            <PropertyRef Name="RegDate" />
+          </Key>
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="RegDate" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="LMPDT" Nullable="false" Precision="0" />
+          <Property Type="Byte" Name="DelFlag" Nullable="false" />
+          <Property Type="DateTime" Name="EntryDate" Precision="3" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="Byte" Name="HighRisk" Nullable="false" />
+          <Property Type="Byte" Name="Freeze_AadhaarBankInfo" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="BPL" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+        </EntityType>
+        <EntityType Name="Mother_Offline">
+          <Key>
+            <PropertyRef Name="pctsid" />
+          </Key>
+          <Property Type="Int32" Name="MotherID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ECID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Age" Nullable="false" />
+          <Property Type="Byte" Name="Cast" Nullable="false" />
+          <Property Type="Byte" Name="LiveChild" Nullable="false" />
+          <Property Type="String" Name="Mobileno" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Husbname" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ancregid" Nullable="false" />
+          <Property Type="Byte" Name="IsHusband" Nullable="false" />
+          <Property Type="Int32" Name="Height" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspGetANCData_Result">
+          <Property Type="Int32" Name="Mother_MotherID" Nullable="false" />
+          <Property Type="String" Name="Mother_ECID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Mother_Address" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="Mother_Age" Nullable="false" />
+          <Property Type="Byte" Name="Mother_Cast" Nullable="false" />
+          <Property Type="Byte" Name="Mother_LiveChild" Nullable="false" />
+          <Property Type="String" Name="Mother_Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Mother_pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Mother_ancregid" Nullable="false" />
+          <Property Type="Byte" Name="Mother_IsHusband" Nullable="false" />
+          <Property Type="Int32" Name="Mother_Height" Nullable="true" />
+          <Property Type="Byte" Name="Mother_Status" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_RegDate" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LMPDT" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_DelFlag" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_EntryDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegDetail_ashaAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_HighRisk" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_Freeze_AadhaarBankInfo" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_bpl" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegID_1" Nullable="true" />
+          <Property Type="Byte" Name="ANCFlag_1" Nullable="true" />
+          <Property Type="DateTime" Name="ANCDate_1" Nullable="true" />
+          <Property Type="DateTime" Name="TT1_1" Nullable="true" />
+          <Property Type="DateTime" Name="TT2_1" Nullable="true" />
+          <Property Type="DateTime" Name="TTB_1" Nullable="true" />
+          <Property Type="DateTime" Name="IFA_1" Nullable="true" />
+          <Property Type="Double" Name="HB_1" Nullable="true" />
+          <Property Type="String" Name="CompL_1" Nullable="true" MaxLength="30" />
+          <Property Type="Byte" Name="RTI_1" Nullable="true" />
+          <Property Type="Int32" Name="ashaAutoID_1" Nullable="false" />
+          <Property Type="Double" Name="Weight_1" Nullable="true" />
+          <Property Type="Int32" Name="anganwariNo_1" Nullable="true" />
+          <Property Type="Int32" Name="motherid_1" Nullable="true" />
+          <Property Type="Int32" Name="ReferUnitID_1" Nullable="true" />
+          <Property Type="Int32" Name="VillageAutoID_1" Nullable="true" />
+          <Property Type="Int32" Name="BloodPressureS_1" Nullable="true" />
+          <Property Type="Int32" Name="BloodPressureD_1" Nullable="true" />
+          <Property Type="Byte" Name="UrineA_1" Nullable="true" />
+          <Property Type="Byte" Name="UrineS_1" Nullable="true" />
+          <Property Type="Int32" Name="TreatmentCode_1" Nullable="true" />
+          <Property Type="DateTime" Name="ALBE400_1" Nullable="true" />
+          <Property Type="DateTime" Name="CAL500_1" Nullable="true" />
+          <Property Type="DateTime" Name="Entrydate_1" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="NormalLodingIronSucrose1_1" Nullable="true" />
+          <Property Type="DateTime" Name="IronSucrose1_1" Nullable="true" />
+          <Property Type="DateTime" Name="IronSucrose2_1" Nullable="true" />
+          <Property Type="DateTime" Name="IronSucrose3_1" Nullable="true" />
+          <Property Type="DateTime" Name="IronSucrose4_1" Nullable="true" />
+          <Property Type="DateTime" Name="LastUpdated_1" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="Media_1" Nullable="true" />
+          <Property Type="String" Name="Latitude_1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Longitude_1" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="UpdateUserNo_1" Nullable="true" />
+          <Property Type="Int32" Name="EntryUserNo_1" Nullable="true" />
+          <Property Type="Int32" Name="Freeze_ANC3Checkup" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspGetHBPNCData_Result">
+          <Property Type="Int32" Name="Mother_MotherID" Nullable="false" />
+          <Property Type="String" Name="Mother_ECID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Mother_Address" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="Mother_Age" Nullable="false" />
+          <Property Type="Byte" Name="Mother_Cast" Nullable="false" />
+          <Property Type="Byte" Name="Mother_LiveChild" Nullable="false" />
+          <Property Type="String" Name="Mother_Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Mother_pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Mother_ancregid" Nullable="false" />
+          <Property Type="Byte" Name="Mother_IsHusband" Nullable="false" />
+          <Property Type="Int32" Name="Mother_Height" Nullable="true" />
+          <Property Type="Byte" Name="Mother_Status" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_RegDate" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LMPDT" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_DelFlag" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_EntryDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegDetail_ashaAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_HighRisk" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_Freeze_AadhaarBankInfo" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_BPL" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegDetail_EntryUserNo" Nullable="true" />
+          <Property Type="Int32" Name="ANCRegDetail_UpdateUserNo" Nullable="true" />
+          <Property Type="Int32" Name="DeliveryDetails_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="DeliveryDetails_MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="DeliveryDetails_Prasav_date" Nullable="true" />
+          <Property Type="Byte" Name="DeliveryDetails_Deltype" Nullable="true" />
+          <Property Type="DateTime" Name="DeliveryDetails_EntryDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DeliveryDetails_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="DeliveryDetails_DelplaceCode" Nullable="true" />
+          <Property Type="DateTime" Name="DeliveryDetails_DeathDate" Nullable="true" />
+          <Property Type="Int32" Name="DeliveryDetails_villageautoid" Nullable="false" />
+          <Property Type="Int32" Name="Transport_ANCRegID" Nullable="true" />
+          <Property Type="DateTime" Name="Transport_DischargeDT" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="Prasav_date" Nullable="false" Precision="16" />
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="DateTime" Name="pncEntryDate" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Motherid" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Ancregid" Nullable="true" />
+          <Property Type="Byte" Name="pnc_PNCFlag" Nullable="true" />
+          <Property Type="Byte" Name="pnc_PNCComp" Nullable="true" />
+          <Property Type="DateTime" Name="pnc_entrydate" Nullable="true" />
+          <Property Type="DateTime" Name="pnc_PNCDate" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Ashaautoid" Nullable="true" />
+          <Property Type="Int32" Name="pnc_ReferUnitID" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Child1_InfantID" Nullable="true" />
+          <Property Type="Double" Name="pnc_Child1_Weight" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Child2_InfantID" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child2_Comp" Nullable="true" />
+          <Property Type="Double" Name="pnc_Child2_Weight" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Child3_InfantID" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child3_Comp" Nullable="true" />
+          <Property Type="Double" Name="pnc_Child3_Weight" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Child4_InfantID" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child4_Comp" Nullable="true" />
+          <Property Type="Double" Name="pnc_Child4_Weight" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Child5_InfantID" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child5_Comp" Nullable="true" />
+          <Property Type="Double" Name="pnc_Child5_Weight" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child1_Comp" Nullable="true" />
+          <Property Type="Int32" Name="pnc_Freeze" Nullable="true" />
+          <Property Type="Int32" Name="pnc_S_mthyr" Nullable="true" />
+          <Property Type="Int32" Name="pnc_VillageAutoID" Nullable="true" />
+          <Property Type="Int32" Name="pnc_ANMautoid" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child1_IsLive" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child2_IsLive" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child3_IsLive" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child4_IsLive" Nullable="true" />
+          <Property Type="Byte" Name="pnc_Child5_IsLive" Nullable="true" />
+          <Property Type="DateTime" Name="pnc_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="pnc_Media" Nullable="true" />
+          <Property Type="String" Name="pnc_Latitude" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="pnc_Longitude" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="pnc_EntryUserNo" Nullable="true" />
+          <Property Type="Int32" Name="pnc_UpdateUserNo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspGetInfantData_Result">
+          <Property Type="Int32" Name="Mother_MotherID" Nullable="false" />
+          <Property Type="String" Name="Mother_ECID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Mother_Address" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="Mother_Age" Nullable="false" />
+          <Property Type="Byte" Name="Mother_Cast" Nullable="false" />
+          <Property Type="Byte" Name="Mother_LiveChild" Nullable="false" />
+          <Property Type="String" Name="Mother_Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mother_Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Mother_pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Mother_ancregid" Nullable="false" />
+          <Property Type="Byte" Name="Mother_IsHusband" Nullable="false" />
+          <Property Type="Int32" Name="Mother_Height" Nullable="true" />
+          <Property Type="Byte" Name="Mother_Status" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_RegDate" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LMPDT" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_DelFlag" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_EntryDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegDetail_ashaAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_HighRisk" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_Freeze_AadhaarBankInfo" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegDetail_VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANCRegDetail_BPL" Nullable="false" />
+          <Property Type="DateTime" Name="ANCRegDetail_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ANCRegDetail_EntryUserNo" Nullable="true" />
+          <Property Type="Int32" Name="ANCRegDetail_UpdateUserNo" Nullable="true" />
+          <Property Type="Int32" Name="DeliveryDetails_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="DeliveryDetails_MotherID" Nullable="false" />
+          <Property Type="DateTime" Name="DeliveryDetails_Prasav_date" Nullable="true" />
+          <Property Type="Byte" Name="DeliveryDetails_Deltype" Nullable="true" />
+          <Property Type="DateTime" Name="DeliveryDetails_EntryDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DeliveryDetails_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="DeliveryDetails_DelplaceCode" Nullable="true" />
+          <Property Type="DateTime" Name="DeliveryDetails_DeathDate" Nullable="true" />
+          <Property Type="Int32" Name="DeliveryDetails_villageautoid" Nullable="false" />
+          <Property Type="Int32" Name="Transport_ANCRegID" Nullable="true" />
+          <Property Type="DateTime" Name="Transport_DischargeDT" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="Infant_MotherID" Nullable="false" />
+          <Property Type="Byte" Name="Infant_ID" Nullable="false" />
+          <Property Type="Int32" Name="Infant_InfantID" Nullable="false" />
+          <Property Type="String" Name="Infant_ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Infant_Sex" Nullable="true" />
+          <Property Type="Double" Name="Infant_Weight" Nullable="true" />
+          <Property Type="Byte" Name="Infant_Bfeed" Nullable="true" />
+          <Property Type="Byte" Name="Infant_BloodGroup" Nullable="true" />
+          <Property Type="DateTime" Name="Infant_Birth_date" Nullable="false" />
+          <Property Type="DateTime" Name="Infant_EntryDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="Infant_LastUpdated" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="Infant_ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="Infant_VillageAutoID" Nullable="false" />
+          <Property Type="Byte" Name="Infant_Status" Nullable="false" />
+          <Property Type="Int32" Name="immu_InfantID" Nullable="true" />
+          <Property Type="DateTime" Name="immu_immudate" Nullable="true" />
+          <Property Type="Byte" Name="immu_ImmuCode" Nullable="true" />
+          <Property Type="DateTime" Name="immu_EntryDate" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="immu_ashaAutoID" Nullable="true" />
+          <Property Type="Int32" Name="immu_VillageAutoID" Nullable="true" />
+          <Property Type="DateTime" Name="immu_LastUpdated" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="immu_Media" Nullable="true" />
+          <Property Type="String" Name="immu_Latitude" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="immu_Longitude" Nullable="true" MaxLength="20" />
+          <Property Type="Double" Name="immu_Weight" Nullable="true" />
+          <Property Type="Int32" Name="immu_EntryUserNo" Nullable="true" />
+          <Property Type="Int32" Name="immu_UpdateUserNo" Nullable="true" />
+          <Property Type="Int32" Name="immu_EntryUnitID" Nullable="true" />
+          <Property Type="Int32" Name="infimmu_InfantID" Nullable="true" />
+          <Property Type="DateTime" Name="infimmu_PartImmuDate" Nullable="true" />
+          <Property Type="DateTime" Name="infimmu_FullImmuDate" Nullable="true" />
+          <Property Type="Int32" Name="infimmu_FullImmuAshaautoid" Nullable="true" />
+          <Property Type="DateTime" Name="infimmu_BoosterDosesDate" Nullable="true" />
+          <Property Type="Int32" Name="infimmu_BoosterAshaautoid" Nullable="true" />
+          <Property Type="DateTime" Name="infimmu_LastUpdated" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="infimmu_Entrydate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="infimmu_DPTPentaFlag" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="infimmu_VillageAutoID" Nullable="true" />
+          <Property Type="Int32" Name="Freeze_Immu" Nullable="false" />
+          <Property Type="Int32" Name="Freeze_DBooster" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AshaMaster_Offline">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Type="String" Name="AshaName" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="unitid" Nullable="false" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="Byte" Name="type" />
+        </EntityType>
+        <EntityType Name="AnganwariMaster_Offline">
+          <Key>
+            <PropertyRef Name="AnganwariNo" />
+          </Key>
+          <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+          <Property Type="String" Name="NameE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NameH" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="unitid" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="0" />
+          <Property Type="Byte" Name="IsDeleted" Nullable="false" />
+          <Property Type="Byte" Name="RuralUrban" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OfflineCnaaModelStoreContainer" CdmEntityContainer="OfflineCnaaEntities">
+          <EntitySetMapping Name="ANCDetails_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.ANCDetails_Offline">
+              <MappingFragment StoreEntitySet="ANCDetails_Offline">
+                <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+                <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="IronSucrose4" ColumnName="IronSucrose4" />
+                <ScalarProperty Name="IronSucrose3" ColumnName="IronSucrose3" />
+                <ScalarProperty Name="IronSucrose2" ColumnName="IronSucrose2" />
+                <ScalarProperty Name="IronSucrose1" ColumnName="IronSucrose1" />
+                <ScalarProperty Name="NormalLodingIronSucrose1" ColumnName="NormalLodingIronSucrose1" />
+                <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+                <ScalarProperty Name="CAL500" ColumnName="CAL500" />
+                <ScalarProperty Name="ALBE400" ColumnName="ALBE400" />
+                <ScalarProperty Name="TreatmentCode" ColumnName="TreatmentCode" />
+                <ScalarProperty Name="UrineS" ColumnName="UrineS" />
+                <ScalarProperty Name="UrineA" ColumnName="UrineA" />
+                <ScalarProperty Name="BloodPressureD" ColumnName="BloodPressureD" />
+                <ScalarProperty Name="BloodPressureS" ColumnName="BloodPressureS" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+                <ScalarProperty Name="motherid" ColumnName="motherid" />
+                <ScalarProperty Name="anganwariNo" ColumnName="anganwariNo" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="RTI" ColumnName="RTI" />
+                <ScalarProperty Name="CompL" ColumnName="CompL" />
+                <ScalarProperty Name="HB" ColumnName="HB" />
+                <ScalarProperty Name="IFA" ColumnName="IFA" />
+                <ScalarProperty Name="TTB" ColumnName="TTB" />
+                <ScalarProperty Name="TT2" ColumnName="TT2" />
+                <ScalarProperty Name="TT1" ColumnName="TT1" />
+                <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+                <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryDetails_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.DeliveryDetails_Offline">
+              <MappingFragment StoreEntitySet="DeliveryDetails_Offline">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+                <ScalarProperty Name="DelplaceCode" ColumnName="DelplaceCode" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Deltype" ColumnName="Deltype" />
+                <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+                <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HBPNC_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.HBPNC_Offline">
+              <MappingFragment StoreEntitySet="HBPNC_Offline">
+                <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+                <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Child5_IsLive" ColumnName="Child5_IsLive" />
+                <ScalarProperty Name="Child4_IsLive" ColumnName="Child4_IsLive" />
+                <ScalarProperty Name="Child3_IsLive" ColumnName="Child3_IsLive" />
+                <ScalarProperty Name="Child2_IsLive" ColumnName="Child2_IsLive" />
+                <ScalarProperty Name="Child1_IsLive" ColumnName="Child1_IsLive" />
+                <ScalarProperty Name="ANMautoid" ColumnName="ANMautoid" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="S_mthyr" ColumnName="S_mthyr" />
+                <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+                <ScalarProperty Name="Child1_Comp" ColumnName="Child1_Comp" />
+                <ScalarProperty Name="Child5_Weight" ColumnName="Child5_Weight" />
+                <ScalarProperty Name="Child5_Comp" ColumnName="Child5_Comp" />
+                <ScalarProperty Name="Child5_InfantID" ColumnName="Child5_InfantID" />
+                <ScalarProperty Name="Child4_Weight" ColumnName="Child4_Weight" />
+                <ScalarProperty Name="Child4_Comp" ColumnName="Child4_Comp" />
+                <ScalarProperty Name="Child4_InfantID" ColumnName="Child4_InfantID" />
+                <ScalarProperty Name="Child3_Weight" ColumnName="Child3_Weight" />
+                <ScalarProperty Name="Child3_Comp" ColumnName="Child3_Comp" />
+                <ScalarProperty Name="Child3_InfantID" ColumnName="Child3_InfantID" />
+                <ScalarProperty Name="Child2_Weight" ColumnName="Child2_Weight" />
+                <ScalarProperty Name="Child2_Comp" ColumnName="Child2_Comp" />
+                <ScalarProperty Name="Child2_InfantID" ColumnName="Child2_InfantID" />
+                <ScalarProperty Name="Child1_Weight" ColumnName="Child1_Weight" />
+                <ScalarProperty Name="Child1_InfantID" ColumnName="Child1_InfantID" />
+                <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+                <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+                <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+                <ScalarProperty Name="entrydate" ColumnName="entrydate" />
+                <ScalarProperty Name="PNCComp" ColumnName="PNCComp" />
+                <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+                <ScalarProperty Name="Ancregid" ColumnName="Ancregid" />
+                <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImmunizationMaster_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.ImmunizationMaster_Offline">
+              <MappingFragment StoreEntitySet="ImmunizationMaster_Offline">
+                <ScalarProperty Name="DistrictCode" ColumnName="DistrictCode" />
+                <ScalarProperty Name="MaxDays" ColumnName="MaxDays" />
+                <ScalarProperty Name="duedays" ColumnName="duedays" />
+                <ScalarProperty Name="ImmuNameH" ColumnName="ImmuNameH" />
+                <ScalarProperty Name="ImmuName" ColumnName="ImmuName" />
+                <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Infant_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.Infant_Offline">
+              <MappingFragment StoreEntitySet="Infant_Offline">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="Bfeed" ColumnName="Bfeed" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InfantImmu_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.InfantImmu_Offline">
+              <MappingFragment StoreEntitySet="InfantImmu_Offline">
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="DPTPentaFlag" ColumnName="DPTPentaFlag" />
+                <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="BoosterAshaautoid" ColumnName="BoosterAshaautoid" />
+                <ScalarProperty Name="BoosterDosesDate" ColumnName="BoosterDosesDate" />
+                <ScalarProperty Name="FullImmuAshaautoid" ColumnName="FullImmuAshaautoid" />
+                <ScalarProperty Name="FullImmuDate" ColumnName="FullImmuDate" />
+                <ScalarProperty Name="PartImmuDate" ColumnName="PartImmuDate" />
+                <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterCodes_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.MasterCodes_Offline">
+              <MappingFragment StoreEntitySet="MasterCodes_Offline">
+                <ScalarProperty Name="Name_E" ColumnName="Name_E" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="masterID" ColumnName="masterID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitMaster_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.UnitMaster_Offline">
+              <MappingFragment StoreEntitySet="UnitMaster_Offline">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="AppLongitude" ColumnName="AppLongitude" />
+                <ScalarProperty Name="AppLatitude" ColumnName="AppLatitude" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Villages_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.Villages_Offline">
+              <MappingFragment StoreEntitySet="Villages_Offline">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="OtherLocation" ColumnName="OtherLocation" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Immunization_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.Immunization_Offline">
+              <MappingFragment StoreEntitySet="Immunization_Offline">
+                <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+                <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="EntryUnitID" ColumnName="EntryUnitID" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+                <ScalarProperty Name="immudate" ColumnName="immudate" />
+                <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAllTables" FunctionName="OfflineCnaaModel.Store.uspGetAllTables">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OfflineCnaaModel.uspGetAllTables_Result">
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+                <ScalarProperty Name="IsNullable" ColumnName="IsNullable" />
+                <ScalarProperty Name="DataType" ColumnName="DataType" />
+                <ScalarProperty Name="Columnlength" ColumnName="Columnlength" />
+                <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+                <ScalarProperty Name="PkColumnName" ColumnName="PkColumnName" />
+                <ScalarProperty Name="UkColumnName" ColumnName="UkColumnName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="ANCRegDetail_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.ANCRegDetail_Offline">
+              <MappingFragment StoreEntitySet="ANCRegDetail_Offline">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="BPL" ColumnName="BPL" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="Freeze_AadhaarBankInfo" ColumnName="Freeze_AadhaarBankInfo" />
+                <ScalarProperty Name="HighRisk" ColumnName="HighRisk" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mother_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.Mother_Offline">
+              <MappingFragment StoreEntitySet="Mother_Offline">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+                <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+                <ScalarProperty Name="Cast" ColumnName="Cast" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ECID" ColumnName="ECID" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetANCData" FunctionName="OfflineCnaaModel.Store.uspGetANCData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OfflineCnaaModel.uspGetANCData_Result">
+                <ScalarProperty Name="Mother_MotherID" ColumnName="Mother_MotherID" />
+                <ScalarProperty Name="Mother_ECID" ColumnName="Mother_ECID" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Mother_Address" ColumnName="Mother_Address" />
+                <ScalarProperty Name="Mother_Age" ColumnName="Mother_Age" />
+                <ScalarProperty Name="Mother_Cast" ColumnName="Mother_Cast" />
+                <ScalarProperty Name="Mother_LiveChild" ColumnName="Mother_LiveChild" />
+                <ScalarProperty Name="Mother_Mobileno" ColumnName="Mother_Mobileno" />
+                <ScalarProperty Name="Mother_Husbname" ColumnName="Mother_Husbname" />
+                <ScalarProperty Name="Mother_pctsid" ColumnName="Mother_pctsid" />
+                <ScalarProperty Name="Mother_ancregid" ColumnName="Mother_ancregid" />
+                <ScalarProperty Name="Mother_IsHusband" ColumnName="Mother_IsHusband" />
+                <ScalarProperty Name="Mother_Height" ColumnName="Mother_Height" />
+                <ScalarProperty Name="Mother_Status" ColumnName="Mother_Status" />
+                <ScalarProperty Name="ANCRegDetail_ANCRegID" ColumnName="ANCRegDetail_ANCRegID" />
+                <ScalarProperty Name="ANCRegDetail_MotherID" ColumnName="ANCRegDetail_MotherID" />
+                <ScalarProperty Name="ANCRegDetail_RegDate" ColumnName="ANCRegDetail_RegDate" />
+                <ScalarProperty Name="ANCRegDetail_LMPDT" ColumnName="ANCRegDetail_LMPDT" />
+                <ScalarProperty Name="ANCRegDetail_DelFlag" ColumnName="ANCRegDetail_DelFlag" />
+                <ScalarProperty Name="ANCRegDetail_EntryDate" ColumnName="ANCRegDetail_EntryDate" />
+                <ScalarProperty Name="ANCRegDetail_ashaAutoID" ColumnName="ANCRegDetail_ashaAutoID" />
+                <ScalarProperty Name="ANCRegDetail_HighRisk" ColumnName="ANCRegDetail_HighRisk" />
+                <ScalarProperty Name="ANCRegDetail_Freeze_AadhaarBankInfo" ColumnName="ANCRegDetail_Freeze_AadhaarBankInfo" />
+                <ScalarProperty Name="ANCRegDetail_VillageAutoID" ColumnName="ANCRegDetail_VillageAutoID" />
+                <ScalarProperty Name="ANCRegDetail_bpl" ColumnName="ANCRegDetail_bpl" />
+                <ScalarProperty Name="ANCRegDetail_LastUpdated" ColumnName="ANCRegDetail_LastUpdated" />
+                <ScalarProperty Name="ANCRegID_1" ColumnName="ANCRegID_1" />
+                <ScalarProperty Name="ANCFlag_1" ColumnName="ANCFlag_1" />
+                <ScalarProperty Name="ANCDate_1" ColumnName="ANCDate_1" />
+                <ScalarProperty Name="TT1_1" ColumnName="TT1_1" />
+                <ScalarProperty Name="TT2_1" ColumnName="TT2_1" />
+                <ScalarProperty Name="TTB_1" ColumnName="TTB_1" />
+                <ScalarProperty Name="IFA_1" ColumnName="IFA_1" />
+                <ScalarProperty Name="HB_1" ColumnName="HB_1" />
+                <ScalarProperty Name="CompL_1" ColumnName="CompL_1" />
+                <ScalarProperty Name="RTI_1" ColumnName="RTI_1" />
+                <ScalarProperty Name="ashaAutoID_1" ColumnName="ashaAutoID_1" />
+                <ScalarProperty Name="Weight_1" ColumnName="Weight_1" />
+                <ScalarProperty Name="anganwariNo_1" ColumnName="anganwariNo_1" />
+                <ScalarProperty Name="motherid_1" ColumnName="motherid_1" />
+                <ScalarProperty Name="ReferUnitID_1" ColumnName="ReferUnitID_1" />
+                <ScalarProperty Name="VillageAutoID_1" ColumnName="VillageAutoID_1" />
+                <ScalarProperty Name="BloodPressureS_1" ColumnName="BloodPressureS_1" />
+                <ScalarProperty Name="BloodPressureD_1" ColumnName="BloodPressureD_1" />
+                <ScalarProperty Name="UrineA_1" ColumnName="UrineA_1" />
+                <ScalarProperty Name="UrineS_1" ColumnName="UrineS_1" />
+                <ScalarProperty Name="TreatmentCode_1" ColumnName="TreatmentCode_1" />
+                <ScalarProperty Name="ALBE400_1" ColumnName="ALBE400_1" />
+                <ScalarProperty Name="CAL500_1" ColumnName="CAL500_1" />
+                <ScalarProperty Name="Entrydate_1" ColumnName="Entrydate_1" />
+                <ScalarProperty Name="NormalLodingIronSucrose1_1" ColumnName="NormalLodingIronSucrose1_1" />
+                <ScalarProperty Name="IronSucrose1_1" ColumnName="IronSucrose1_1" />
+                <ScalarProperty Name="IronSucrose2_1" ColumnName="IronSucrose2_1" />
+                <ScalarProperty Name="IronSucrose3_1" ColumnName="IronSucrose3_1" />
+                <ScalarProperty Name="IronSucrose4_1" ColumnName="IronSucrose4_1" />
+                <ScalarProperty Name="LastUpdated_1" ColumnName="LastUpdated_1" />
+                <ScalarProperty Name="Media_1" ColumnName="Media_1" />
+                <ScalarProperty Name="Latitude_1" ColumnName="Latitude_1" />
+                <ScalarProperty Name="Longitude_1" ColumnName="Longitude_1" />
+                <ScalarProperty Name="UpdateUserNo_1" ColumnName="UpdateUserNo_1" />
+                <ScalarProperty Name="EntryUserNo_1" ColumnName="EntryUserNo_1" />
+                <ScalarProperty Name="Freeze_ANC3Checkup" ColumnName="Freeze_ANC3Checkup" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetHBPNCData" FunctionName="OfflineCnaaModel.Store.uspGetHBPNCData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OfflineCnaaModel.uspGetHBPNCData_Result">
+                <ScalarProperty Name="Mother_MotherID" ColumnName="Mother_MotherID" />
+                <ScalarProperty Name="Mother_ECID" ColumnName="Mother_ECID" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Mother_Address" ColumnName="Mother_Address" />
+                <ScalarProperty Name="Mother_Age" ColumnName="Mother_Age" />
+                <ScalarProperty Name="Mother_Cast" ColumnName="Mother_Cast" />
+                <ScalarProperty Name="Mother_LiveChild" ColumnName="Mother_LiveChild" />
+                <ScalarProperty Name="Mother_Mobileno" ColumnName="Mother_Mobileno" />
+                <ScalarProperty Name="Mother_Husbname" ColumnName="Mother_Husbname" />
+                <ScalarProperty Name="Mother_pctsid" ColumnName="Mother_pctsid" />
+                <ScalarProperty Name="Mother_ancregid" ColumnName="Mother_ancregid" />
+                <ScalarProperty Name="Mother_IsHusband" ColumnName="Mother_IsHusband" />
+                <ScalarProperty Name="Mother_Height" ColumnName="Mother_Height" />
+                <ScalarProperty Name="Mother_Status" ColumnName="Mother_Status" />
+                <ScalarProperty Name="ANCRegDetail_ANCRegID" ColumnName="ANCRegDetail_ANCRegID" />
+                <ScalarProperty Name="ANCRegDetail_MotherID" ColumnName="ANCRegDetail_MotherID" />
+                <ScalarProperty Name="ANCRegDetail_RegDate" ColumnName="ANCRegDetail_RegDate" />
+                <ScalarProperty Name="ANCRegDetail_LMPDT" ColumnName="ANCRegDetail_LMPDT" />
+                <ScalarProperty Name="ANCRegDetail_DelFlag" ColumnName="ANCRegDetail_DelFlag" />
+                <ScalarProperty Name="ANCRegDetail_EntryDate" ColumnName="ANCRegDetail_EntryDate" />
+                <ScalarProperty Name="ANCRegDetail_ashaAutoID" ColumnName="ANCRegDetail_ashaAutoID" />
+                <ScalarProperty Name="ANCRegDetail_HighRisk" ColumnName="ANCRegDetail_HighRisk" />
+                <ScalarProperty Name="ANCRegDetail_Freeze_AadhaarBankInfo" ColumnName="ANCRegDetail_Freeze_AadhaarBankInfo" />
+                <ScalarProperty Name="ANCRegDetail_VillageAutoID" ColumnName="ANCRegDetail_VillageAutoID" />
+                <ScalarProperty Name="ANCRegDetail_BPL" ColumnName="ANCRegDetail_BPL" />
+                <ScalarProperty Name="ANCRegDetail_LastUpdated" ColumnName="ANCRegDetail_LastUpdated" />
+                <ScalarProperty Name="ANCRegDetail_EntryUserNo" ColumnName="ANCRegDetail_EntryUserNo" />
+                <ScalarProperty Name="ANCRegDetail_UpdateUserNo" ColumnName="ANCRegDetail_UpdateUserNo" />
+                <ScalarProperty Name="DeliveryDetails_ANCRegID" ColumnName="DeliveryDetails_ANCRegID" />
+                <ScalarProperty Name="DeliveryDetails_MotherID" ColumnName="DeliveryDetails_MotherID" />
+                <ScalarProperty Name="DeliveryDetails_Prasav_date" ColumnName="DeliveryDetails_Prasav_date" />
+                <ScalarProperty Name="DeliveryDetails_Deltype" ColumnName="DeliveryDetails_Deltype" />
+                <ScalarProperty Name="DeliveryDetails_EntryDate" ColumnName="DeliveryDetails_EntryDate" />
+                <ScalarProperty Name="DeliveryDetails_LastUpdated" ColumnName="DeliveryDetails_LastUpdated" />
+                <ScalarProperty Name="DeliveryDetails_DelplaceCode" ColumnName="DeliveryDetails_DelplaceCode" />
+                <ScalarProperty Name="DeliveryDetails_DeathDate" ColumnName="DeliveryDetails_DeathDate" />
+                <ScalarProperty Name="DeliveryDetails_villageautoid" ColumnName="DeliveryDetails_villageautoid" />
+                <ScalarProperty Name="Transport_ANCRegID" ColumnName="Transport_ANCRegID" />
+                <ScalarProperty Name="Transport_DischargeDT" ColumnName="Transport_DischargeDT" />
+                <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+                <ScalarProperty Name="pncEntryDate" ColumnName="pncEntryDate" />
+                <ScalarProperty Name="pnc_Motherid" ColumnName="pnc_Motherid" />
+                <ScalarProperty Name="pnc_Ancregid" ColumnName="pnc_Ancregid" />
+                <ScalarProperty Name="pnc_PNCFlag" ColumnName="pnc_PNCFlag" />
+                <ScalarProperty Name="pnc_PNCComp" ColumnName="pnc_PNCComp" />
+                <ScalarProperty Name="pnc_entrydate" ColumnName="pnc_entrydate" />
+                <ScalarProperty Name="pnc_PNCDate" ColumnName="pnc_PNCDate" />
+                <ScalarProperty Name="pnc_Ashaautoid" ColumnName="pnc_Ashaautoid" />
+                <ScalarProperty Name="pnc_ReferUnitID" ColumnName="pnc_ReferUnitID" />
+                <ScalarProperty Name="pnc_Child1_InfantID" ColumnName="pnc_Child1_InfantID" />
+                <ScalarProperty Name="pnc_Child1_Weight" ColumnName="pnc_Child1_Weight" />
+                <ScalarProperty Name="pnc_Child2_InfantID" ColumnName="pnc_Child2_InfantID" />
+                <ScalarProperty Name="pnc_Child2_Comp" ColumnName="pnc_Child2_Comp" />
+                <ScalarProperty Name="pnc_Child2_Weight" ColumnName="pnc_Child2_Weight" />
+                <ScalarProperty Name="pnc_Child3_InfantID" ColumnName="pnc_Child3_InfantID" />
+                <ScalarProperty Name="pnc_Child3_Comp" ColumnName="pnc_Child3_Comp" />
+                <ScalarProperty Name="pnc_Child3_Weight" ColumnName="pnc_Child3_Weight" />
+                <ScalarProperty Name="pnc_Child4_InfantID" ColumnName="pnc_Child4_InfantID" />
+                <ScalarProperty Name="pnc_Child4_Comp" ColumnName="pnc_Child4_Comp" />
+                <ScalarProperty Name="pnc_Child4_Weight" ColumnName="pnc_Child4_Weight" />
+                <ScalarProperty Name="pnc_Child5_InfantID" ColumnName="pnc_Child5_InfantID" />
+                <ScalarProperty Name="pnc_Child5_Comp" ColumnName="pnc_Child5_Comp" />
+                <ScalarProperty Name="pnc_Child5_Weight" ColumnName="pnc_Child5_Weight" />
+                <ScalarProperty Name="pnc_Child1_Comp" ColumnName="pnc_Child1_Comp" />
+                <ScalarProperty Name="pnc_Freeze" ColumnName="pnc_Freeze" />
+                <ScalarProperty Name="pnc_S_mthyr" ColumnName="pnc_S_mthyr" />
+                <ScalarProperty Name="pnc_VillageAutoID" ColumnName="pnc_VillageAutoID" />
+                <ScalarProperty Name="pnc_ANMautoid" ColumnName="pnc_ANMautoid" />
+                <ScalarProperty Name="pnc_Child1_IsLive" ColumnName="pnc_Child1_IsLive" />
+                <ScalarProperty Name="pnc_Child2_IsLive" ColumnName="pnc_Child2_IsLive" />
+                <ScalarProperty Name="pnc_Child3_IsLive" ColumnName="pnc_Child3_IsLive" />
+                <ScalarProperty Name="pnc_Child4_IsLive" ColumnName="pnc_Child4_IsLive" />
+                <ScalarProperty Name="pnc_Child5_IsLive" ColumnName="pnc_Child5_IsLive" />
+                <ScalarProperty Name="pnc_LastUpdated" ColumnName="pnc_LastUpdated" />
+                <ScalarProperty Name="pnc_Media" ColumnName="pnc_Media" />
+                <ScalarProperty Name="pnc_Latitude" ColumnName="pnc_Latitude" />
+                <ScalarProperty Name="pnc_Longitude" ColumnName="pnc_Longitude" />
+                <ScalarProperty Name="pnc_EntryUserNo" ColumnName="pnc_EntryUserNo" />
+                <ScalarProperty Name="pnc_UpdateUserNo" ColumnName="pnc_UpdateUserNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetInfantData" FunctionName="OfflineCnaaModel.Store.uspGetInfantData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OfflineCnaaModel.uspGetInfantData_Result">
+                <ScalarProperty Name="Mother_MotherID" ColumnName="Mother_MotherID" />
+                <ScalarProperty Name="Mother_ECID" ColumnName="Mother_ECID" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Mother_Address" ColumnName="Mother_Address" />
+                <ScalarProperty Name="Mother_Age" ColumnName="Mother_Age" />
+                <ScalarProperty Name="Mother_Cast" ColumnName="Mother_Cast" />
+                <ScalarProperty Name="Mother_LiveChild" ColumnName="Mother_LiveChild" />
+                <ScalarProperty Name="Mother_Mobileno" ColumnName="Mother_Mobileno" />
+                <ScalarProperty Name="Mother_Husbname" ColumnName="Mother_Husbname" />
+                <ScalarProperty Name="Mother_pctsid" ColumnName="Mother_pctsid" />
+                <ScalarProperty Name="Mother_ancregid" ColumnName="Mother_ancregid" />
+                <ScalarProperty Name="Mother_IsHusband" ColumnName="Mother_IsHusband" />
+                <ScalarProperty Name="Mother_Height" ColumnName="Mother_Height" />
+                <ScalarProperty Name="Mother_Status" ColumnName="Mother_Status" />
+                <ScalarProperty Name="ANCRegDetail_ANCRegID" ColumnName="ANCRegDetail_ANCRegID" />
+                <ScalarProperty Name="ANCRegDetail_MotherID" ColumnName="ANCRegDetail_MotherID" />
+                <ScalarProperty Name="ANCRegDetail_RegDate" ColumnName="ANCRegDetail_RegDate" />
+                <ScalarProperty Name="ANCRegDetail_LMPDT" ColumnName="ANCRegDetail_LMPDT" />
+                <ScalarProperty Name="ANCRegDetail_DelFlag" ColumnName="ANCRegDetail_DelFlag" />
+                <ScalarProperty Name="ANCRegDetail_EntryDate" ColumnName="ANCRegDetail_EntryDate" />
+                <ScalarProperty Name="ANCRegDetail_ashaAutoID" ColumnName="ANCRegDetail_ashaAutoID" />
+                <ScalarProperty Name="ANCRegDetail_HighRisk" ColumnName="ANCRegDetail_HighRisk" />
+                <ScalarProperty Name="ANCRegDetail_Freeze_AadhaarBankInfo" ColumnName="ANCRegDetail_Freeze_AadhaarBankInfo" />
+                <ScalarProperty Name="ANCRegDetail_VillageAutoID" ColumnName="ANCRegDetail_VillageAutoID" />
+                <ScalarProperty Name="ANCRegDetail_BPL" ColumnName="ANCRegDetail_BPL" />
+                <ScalarProperty Name="ANCRegDetail_LastUpdated" ColumnName="ANCRegDetail_LastUpdated" />
+                <ScalarProperty Name="ANCRegDetail_EntryUserNo" ColumnName="ANCRegDetail_EntryUserNo" />
+                <ScalarProperty Name="ANCRegDetail_UpdateUserNo" ColumnName="ANCRegDetail_UpdateUserNo" />
+                <ScalarProperty Name="DeliveryDetails_ANCRegID" ColumnName="DeliveryDetails_ANCRegID" />
+                <ScalarProperty Name="DeliveryDetails_MotherID" ColumnName="DeliveryDetails_MotherID" />
+                <ScalarProperty Name="DeliveryDetails_Prasav_date" ColumnName="DeliveryDetails_Prasav_date" />
+                <ScalarProperty Name="DeliveryDetails_Deltype" ColumnName="DeliveryDetails_Deltype" />
+                <ScalarProperty Name="DeliveryDetails_EntryDate" ColumnName="DeliveryDetails_EntryDate" />
+                <ScalarProperty Name="DeliveryDetails_LastUpdated" ColumnName="DeliveryDetails_LastUpdated" />
+                <ScalarProperty Name="DeliveryDetails_DelplaceCode" ColumnName="DeliveryDetails_DelplaceCode" />
+                <ScalarProperty Name="DeliveryDetails_DeathDate" ColumnName="DeliveryDetails_DeathDate" />
+                <ScalarProperty Name="DeliveryDetails_villageautoid" ColumnName="DeliveryDetails_villageautoid" />
+                <ScalarProperty Name="Transport_ANCRegID" ColumnName="Transport_ANCRegID" />
+                <ScalarProperty Name="Transport_DischargeDT" ColumnName="Transport_DischargeDT" />
+                <ScalarProperty Name="Infant_MotherID" ColumnName="Infant_MotherID" />
+                <ScalarProperty Name="Infant_ID" ColumnName="Infant_ID" />
+                <ScalarProperty Name="Infant_InfantID" ColumnName="Infant_InfantID" />
+                <ScalarProperty Name="Infant_ChildName" ColumnName="Infant_ChildName" />
+                <ScalarProperty Name="Infant_Sex" ColumnName="Infant_Sex" />
+                <ScalarProperty Name="Infant_Weight" ColumnName="Infant_Weight" />
+                <ScalarProperty Name="Infant_Bfeed" ColumnName="Infant_Bfeed" />
+                <ScalarProperty Name="Infant_BloodGroup" ColumnName="Infant_BloodGroup" />
+                <ScalarProperty Name="Infant_Birth_date" ColumnName="Infant_Birth_date" />
+                <ScalarProperty Name="Infant_EntryDate" ColumnName="Infant_EntryDate" />
+                <ScalarProperty Name="Infant_LastUpdated" ColumnName="Infant_LastUpdated" />
+                <ScalarProperty Name="Infant_ANCRegID" ColumnName="Infant_ANCRegID" />
+                <ScalarProperty Name="Infant_VillageAutoID" ColumnName="Infant_VillageAutoID" />
+                <ScalarProperty Name="Infant_Status" ColumnName="Infant_Status" />
+                <ScalarProperty Name="immu_InfantID" ColumnName="immu_InfantID" />
+                <ScalarProperty Name="immu_immudate" ColumnName="immu_immudate" />
+                <ScalarProperty Name="immu_ImmuCode" ColumnName="immu_ImmuCode" />
+                <ScalarProperty Name="immu_EntryDate" ColumnName="immu_EntryDate" />
+                <ScalarProperty Name="immu_ashaAutoID" ColumnName="immu_ashaAutoID" />
+                <ScalarProperty Name="immu_VillageAutoID" ColumnName="immu_VillageAutoID" />
+                <ScalarProperty Name="immu_LastUpdated" ColumnName="immu_LastUpdated" />
+                <ScalarProperty Name="immu_Media" ColumnName="immu_Media" />
+                <ScalarProperty Name="immu_Latitude" ColumnName="immu_Latitude" />
+                <ScalarProperty Name="immu_Longitude" ColumnName="immu_Longitude" />
+                <ScalarProperty Name="immu_Weight" ColumnName="immu_Weight" />
+                <ScalarProperty Name="immu_EntryUserNo" ColumnName="immu_EntryUserNo" />
+                <ScalarProperty Name="immu_UpdateUserNo" ColumnName="immu_UpdateUserNo" />
+                <ScalarProperty Name="immu_EntryUnitID" ColumnName="immu_EntryUnitID" />
+                <ScalarProperty Name="infimmu_InfantID" ColumnName="infimmu_InfantID" />
+                <ScalarProperty Name="infimmu_PartImmuDate" ColumnName="infimmu_PartImmuDate" />
+                <ScalarProperty Name="infimmu_FullImmuDate" ColumnName="infimmu_FullImmuDate" />
+                <ScalarProperty Name="infimmu_FullImmuAshaautoid" ColumnName="infimmu_FullImmuAshaautoid" />
+                <ScalarProperty Name="infimmu_BoosterDosesDate" ColumnName="infimmu_BoosterDosesDate" />
+                <ScalarProperty Name="infimmu_BoosterAshaautoid" ColumnName="infimmu_BoosterAshaautoid" />
+                <ScalarProperty Name="infimmu_LastUpdated" ColumnName="infimmu_LastUpdated" />
+                <ScalarProperty Name="infimmu_Entrydate" ColumnName="infimmu_Entrydate" />
+                <ScalarProperty Name="infimmu_DPTPentaFlag" ColumnName="infimmu_DPTPentaFlag" />
+                <ScalarProperty Name="infimmu_VillageAutoID" ColumnName="infimmu_VillageAutoID" />
+                <ScalarProperty Name="Freeze_Immu" ColumnName="Freeze_Immu" />
+                <ScalarProperty Name="Freeze_DBooster" ColumnName="Freeze_DBooster" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="AshaMaster_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.AshaMaster_Offline">
+              <MappingFragment StoreEntitySet="AshaMaster_Offline">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnganwariMaster_Offline">
+            <EntityTypeMapping TypeName="OfflineCnaaModel.AnganwariMaster_Offline">
+              <MappingFragment StoreEntitySet="AnganwariMaster_Offline">
+                <ScalarProperty Name="RuralUrban" ColumnName="RuralUrban" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="NameH" ColumnName="NameH" />
+                <ScalarProperty Name="NameE" ColumnName="NameE" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4fdbdb68505d464f944a0bac40953203" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="cnaaModel.DeathDetail" Width="1.5" PointX="4.4795821944622238" PointY="6.5300424129376387" />
+        <EntityTypeShape EntityType="cnaaModel.InfantImmu" Width="1.5" PointX="10.117457716780463" PointY="9.1040985030606851" />
+        <EntityTypeShape EntityType="cnaaModel.MotherStatu" Width="1.5" PointX="6.154521376897824" PointY="7.8641474432610661" />
+        <EntityTypeShape EntityType="cnaaModel.UsersTrailLog" Width="1.5" PointX="9.1484468733651774" PointY="2.361497999337268" />
+        <EntityTypeShape EntityType="cnaaModel.Mother_App" Width="1.5" PointX="2.577522409417444" PointY="14.786857090325494" />
+        <EntityTypeShape EntityType="cnaaModel.Transport" Width="1.5" PointX="12.25" PointY="30.5" />
+        <EntityTypeShape EntityType="cnaaModel.ImmunizationMaster" Width="1.5" PointX="11.858359839701262" PointY="9.6306747540974413" />
+        <EntityTypeShape EntityType="cnaaModel.MasterCode" Width="1.5" PointX="8.5391599333561778" PointY="4.8835591100545406" />
+        <EntityTypeShape EntityType="cnaaModel.Bank" Width="1.5" PointX="4.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.Immunization" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.Infant" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.DeathReason" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.HBYC" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="cnaaModel.ANCDetails_Log" Width="1.5" PointX="5.375" PointY="18.75" />
+        <EntityTypeShape EntityType="cnaaModel.HBYC_Log" Width="1.5" PointX="18.375" PointY="12.75" />
+        <EntityTypeShape EntityType="cnaaModel.DeviceToken" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="cnaaModel.PctsToken" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.HighRiskCas" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="cnaaModel.HighRiskCasesLog" Width="1.5" PointX="9.375" PointY="15.75" />
+        <EntityTypeShape EntityType="cnaaModel.HBPNC" Width="1.5" PointX="14.375" PointY="8.75" />
+        <EntityTypeShape EntityType="cnaaModel.HBPNC_Log" Width="1.5" PointX="20.375" PointY="11.75" />
+        <EntityTypeShape EntityType="cnaaModel.ANCRegDetail" Width="1.5" PointX="11.375" PointY="15.75" />
+        <EntityTypeShape EntityType="cnaaModel.Mother" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.Immunization_Log" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="cnaaModel.ANCDetail" Width="1.5" PointX="19.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

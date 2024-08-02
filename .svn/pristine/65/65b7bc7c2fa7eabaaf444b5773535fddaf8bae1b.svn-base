@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="rajmedicalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Anganwari_Village">
+          <Key>
+            <PropertyRef Name="AnganwariNo" />
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Name="AnganwariNo" Type="int" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnganwariMaster">
+          <Key>
+            <PropertyRef Name="AWCID" />
+          </Key>
+          <Property Name="AnganwariNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="renameVillageAutoID" Type="int" />
+          <Property Name="NameE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameH" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Population" Type="int" />
+          <Property Name="LastUpdated" Type="date" />
+          <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+          <Property Name="ICDSCode" Type="varchar" MaxLength="11" />
+          <Property Name="AWCID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+          <Property Name="RuralUrban" Type="tinyint" />
+          <Property Name="unitid" Type="int" Nullable="false" />
+          <Property Name="ECCount" Type="int" />
+          <Property Name="Population2011" Type="int" />
+          <Property Name="HouseHoldCount" Type="int" />
+          <Property Name="FamilyCount" Type="int" />
+          <Property Name="MiniAnganwari" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="AppHistory">
+          <Key>
+            <PropertyRef Name="VersionName" />
+          </Key>
+          <Property Name="VersionName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RealeaseDate" Type="datetime" Nullable="false" />
+          <Property Name="BugFixes" Type="varchar(max)" />
+          <Property Name="NewAddition" Type="varchar(max)" />
+          <Property Name="AppFlag" Type="tinyint" Nullable="false" />
+          <Property Name="VersionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LiveFlag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppUsers">
+          <Key>
+            <PropertyRef Name="Saltcreatedon" />
+            <PropertyRef Name="UserNo" />
+          </Key>
+          <Property Name="Saltvalue" Type="varchar" MaxLength="128" />
+          <Property Name="Saltcreatedon" Type="date" Nullable="false" />
+          <Property Name="Imei" Type="varchar" MaxLength="50" />
+          <Property Name="UserNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ASHA_AddlCharge">
+          <Key>
+            <PropertyRef Name="AshaAutoID" />
+            <PropertyRef Name="AnganwariNo" />
+            <PropertyRef Name="FromDate" />
+          </Key>
+          <Property Name="AshaAutoID" Type="int" Nullable="false" />
+          <Property Name="AnganwariNo" Type="int" Nullable="false" />
+          <Property Name="FromDate" Type="datetime" Nullable="false" />
+          <Property Name="Todate" Type="smalldatetime" />
+          <Property Name="AdditionalChargeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainAnganwari" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ASHADetails">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="AnganwariNo" Type="int" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="IsFather" Type="tinyint" Nullable="false" />
+          <Property Name="Category" Type="tinyint" />
+          <Property Name="MaritalStatus" Type="tinyint" />
+          <Property Name="ChildrenNo" Type="tinyint" />
+          <Property Name="EduQualification" Type="tinyint" />
+          <Property Name="ProfessionalDegree" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOJ" Type="date" />
+          <Property Name="LevelofTraining" Type="tinyint" />
+          <Property Name="FatherHusbandName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="RetirementDate" Type="date" />
+          <Property Name="TrainingDate" Type="date" />
+          <Property Name="IsExtend" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="AshaMaster">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Name="unitcode" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="AshaName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AshaPhone" Type="varchar" MaxLength="20" />
+          <Property Name="IsDeleted" Type="char" MaxLength="1" />
+          <Property Name="Villagename" Type="nvarchar" MaxLength="100" />
+          <Property Name="type" Type="tinyint" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="VillageAutoID" Type="int" />
+          <Property Name="EIDTime" Type="datetime" />
+          <Property Name="Aadhaar_EID" Type="varchar" MaxLength="14" />
+          <Property Name="rename_AadhaarNo" Type="varchar" MaxLength="12" />
+          <Property Name="Ifsc_code" Type="varchar" MaxLength="25" />
+          <Property Name="Accountno" Type="varchar" MaxLength="20" />
+          <Property Name="Accounttype" Type="char" MaxLength="1" />
+          <Property Name="Bankname" Type="nvarchar" MaxLength="100" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="ashaAutoID" Type="int" Nullable="false" />
+          <Property Name="ANM_AddlChargeFlag" Type="tinyint" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="VerifiedAccount" Type="tinyint" />
+          <Property Name="VerifiedAccountByBank" Type="tinyint" Nullable="false" />
+          <Property Name="rename_bhamashahid" Type="varchar" MaxLength="20" />
+          <Property Name="Entrydate" Type="date" />
+          <Property Name="CUGMobile" Type="varchar" MaxLength="10" />
+          <Property Name="RationCardNo" Type="varchar" MaxLength="50" />
+          <Property Name="VerifyMobileNo" Type="tinyint" Nullable="false" />
+          <Property Name="IFMSMapped" Type="tinyint" />
+          <Property Name="ANMType" Type="tinyint" />
+          <Property Name="WorkingAtLocation" Type="tinyint" />
+          <Property Name="AccountVerificationBy" Type="varchar" MaxLength="20" />
+          <Property Name="AccountVerifierRoleType" Type="tinyint" />
+          <Property Name="AccountVerificationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DesignationMaster">
+          <Key>
+            <PropertyRef Name="DesigID" />
+          </Key>
+          <Property Name="DesigID" Type="int" Nullable="false" />
+          <Property Name="DesigName" Type="varchar" MaxLength="100" />
+          <Property Name="IsValidtoPhysVerification" Type="tinyint" />
+          <Property Name="IsDeleted" Type="tinyint" />
+          <Property Name="Entrydate" Type="smalldatetime" />
+          <Property Name="Updatedate" Type="smalldatetime" />
+          <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+          <Property Name="UpdateIP" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="HealthUnitPhoto">
+          <Key>
+            <PropertyRef Name="Unitid" />
+          </Key>
+          <Property Name="Unitid" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="varbinary(max)" Nullable="false" />
+          <Property Name="EntryDate" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HistorySwasthyaMitrk">
+          <Key>
+            <PropertyRef Name="HistorySwasthyaMitrkID" />
+          </Key>
+          <Property Name="HistorySwasthyaMitrkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SwasthyaMitrkID" Type="int" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sex" Type="tinyint" Nullable="false" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="WhatsAppNo" Type="varchar" MaxLength="10" />
+          <Property Name="Qualification" Type="tinyint" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="IsFather" Type="tinyint" />
+          <Property Name="FatherHusbandName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailID" Type="varchar" MaxLength="100" />
+          <Property Name="Experience" Type="float" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Pincode" Type="varchar" MaxLength="6" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="Media" Type="tinyint" Nullable="false" />
+          <Property Name="EntryUserNo" Type="int" Nullable="false" />
+          <Property Name="UpdateUserNo" Type="int" Nullable="false" />
+          <Property Name="UpdateValueFlag" Type="varchar" MaxLength="50" />
+          <Property Name="HistoryEntryDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MasterCodes">
+          <Key>
+            <PropertyRef Name="ParentID" />
+            <PropertyRef Name="masterID" />
+          </Key>
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="masterID" Type="tinyint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SwasthyaMitrk">
+          <Key>
+            <PropertyRef Name="SwasthyaMitrkID" />
+          </Key>
+          <Property Name="SwasthyaMitrkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sex" Type="tinyint" Nullable="false" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="WhatsAppNo" Type="varchar" MaxLength="10" />
+          <Property Name="Qualification" Type="tinyint" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="IsFather" Type="tinyint" />
+          <Property Name="FatherHusbandName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailID" Type="varchar" MaxLength="100" />
+          <Property Name="Experience" Type="float" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Pincode" Type="varchar" MaxLength="6" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+          <Property Name="Media" Type="tinyint" Nullable="false" />
+          <Property Name="EntryUserNo" Type="int" Nullable="false" />
+          <Property Name="UpdateUserNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UnitMaster">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="UnitType" Type="smallint" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ACcode" Type="varchar" MaxLength="10" />
+          <Property Name="PCcode" Type="varchar" MaxLength="10" />
+          <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+          <Property Name="UnitIncharge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitContactNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Remarks" Type="varchar" MaxLength="50" />
+          <Property Name="IsCHC" Type="char" MaxLength="1" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="RuralUrban" Type="varchar" MaxLength="1" />
+          <Property Name="building" Type="varchar" MaxLength="1" />
+          <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+          <Property Name="BID" Type="smallint" />
+          <Property Name="PID" Type="smallint" />
+          <Property Name="SID" Type="smallint" />
+          <Property Name="PPUID" Type="smallint" />
+          <Property Name="mobileno" Type="char" MaxLength="10" />
+          <Property Name="Latitude" Type="varchar" MaxLength="10" />
+          <Property Name="Longitude" Type="varchar" MaxLength="10" />
+          <Property Name="pincode" Type="varchar" MaxLength="6" />
+          <Property Name="PrivateHospitalType11" Type="tinyint" />
+          <Property Name="UnitID" Type="int" Nullable="false" />
+          <Property Name="deliveryPoint" Type="tinyint" />
+          <Property Name="AWCID" Type="varchar" MaxLength="11" />
+          <Property Name="MTC" Type="tinyint" Nullable="false" />
+          <Property Name="SNCU" Type="tinyint" Nullable="false" />
+          <Property Name="ReportingUnitID" Type="int" Nullable="false" />
+          <Property Name="Beds" Type="int" />
+          <Property Name="BSBY" Type="int" />
+          <Property Name="AccreditationYear" Type="int" />
+          <Property Name="VillageAutoID_P" Type="int" Nullable="false" />
+          <Property Name="NUHMUrban" Type="tinyint" Nullable="false" />
+          <Property Name="NBSU" Type="tinyint" />
+          <Property Name="NBCC" Type="tinyint" />
+          <Property Name="StaticsCenter" Type="tinyint" />
+          <Property Name="PHC_24Hour" Type="tinyint" />
+          <Property Name="FRU" Type="tinyint" />
+          <Property Name="AppLatitude" Type="varchar" MaxLength="20" />
+          <Property Name="AppLongitude" Type="varchar" MaxLength="20" />
+          <Property Name="WellnessCenter" Type="tinyint" />
+          <Property Name="DistrictCode" Type="int" />
+          <Property Name="BlockCode" Type="int" />
+          <Property Name="HmisID" Type="int" />
+          <Property Name="PehchanSubRegistrarCode" Type="int" />
+          <Property Name="TehsilID" Type="int" Nullable="false" />
+          <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="EmailID" Type="varchar" MaxLength="100" />
+          <Property Name="DDOCode" Type="varchar" MaxLength="80" />
+          <Property Name="DDOCodeVerificationDate" Type="smalldatetime" />
+          <Property Name="EntryDate" Type="smalldatetime" />
+          <Property Name="TspArea" Type="tinyint" Nullable="false" />
+          <Property Name="OfficeFlag" Type="tinyint" Nullable="false" />
+          <Property Name="Cemonc" Type="int" />
+          <Property Name="PSCode" Type="int" />
+          <Property Name="IsMCH" Type="bit" />
+          <Property Name="IsTraumaCentre" Type="bit" />
+          <Property Name="IsBloodBank" Type="bit" />
+          <Property Name="EstablishmentYear" Type="int" />
+          <Property Name="GPCode" Type="int" />
+          <Property Name="CLMCFlag" Type="tinyint" />
+          <Property Name="IsRevenueBlock" Type="tinyint" />
+          <Property Name="IsBloodStorageUnit" Type="bit" />
+          <Property Name="RCHFacility" Type="tinyint" />
+          <Property Name="Funcational" Type="tinyint" Nullable="false" />
+          <Property Name="HmisPrivateDataType" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UnitTypeMaster">
+          <Key>
+            <PropertyRef Name="UnitTypeCode" />
+          </Key>
+          <Property Name="UnitTypeCode" Type="tinyint" Nullable="false" />
+          <Property Name="UnittypeName" Type="varchar" MaxLength="30" />
+          <Property Name="UnitLevel" Type="tinyint" Nullable="false" />
+          <Property Name="UnittypeNameHindi" Type="nvarchar" MaxLength="30" />
+          <Property Name="MCTS_FacilityType" Type="int" />
+          <Property Name="UnitTypeNameAbbr" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="HRUnitTypeName" Type="varchar" MaxLength="30" />
+          <Property Name="IsOtherDept" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="IsDeleted" />
+          </Key>
+          <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="Role" Type="varchar" MaxLength="50" />
+          <Property Name="ApplicationNos" Type="varchar" MaxLength="250" />
+          <Property Name="old2pwd" Type="varchar" MaxLength="128" />
+          <Property Name="old1pwd" Type="varchar" MaxLength="128" />
+          <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="PwdUpdatedDate" Type="smalldatetime" />
+          <Property Name="AshaRoleId" Type="tinyint" Nullable="false" />
+          <Property Name="ExpireOn" Type="datetime" />
+          <Property Name="Active" Type="tinyint" Nullable="false" />
+          <Property Name="OJSPMRoleID" Type="tinyint" Nullable="false" />
+          <Property Name="PctsRoleID" Type="tinyint" Nullable="false" />
+          <Property Name="EctsRoleID" Type="tinyint" Nullable="false" />
+          <Property Name="resetpwd" Type="tinyint" Nullable="false" />
+          <Property Name="Saltvalue" Type="varchar" MaxLength="128" />
+          <Property Name="Saltcreatedon" Type="datetime" />
+          <Property Name="AppVersion" Type="float" />
+          <Property Name="AppPassword" Type="varchar" MaxLength="128" />
+          <Property Name="Imei" Type="varchar" MaxLength="20" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="ANMAutoID" Type="int" Nullable="false" />
+          <Property Name="IsAppUser" Type="tinyint" Nullable="false" />
+          <Property Name="UserNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppRoleID" Type="tinyint" Nullable="false" />
+          <Property Name="HRRoleID" Type="tinyint" Nullable="false" />
+          <Property Name="OfficeID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="SsoID" Type="varchar" MaxLength="100" />
+          <Property Name="LastUpdated" Type="smalldatetime" />
+          <Property Name="DesignationID" Type="int" />
+          <Property Name="VerifiedMobile" Type="int" Nullable="false" />
+          <Property Name="VerifiedEmail" Type="int" Nullable="false" />
+          <Property Name="AidsRoleID" Type="int" Nullable="false" />
+          <Property Name="MTPRoleID" Type="int" Nullable="false" />
+          <Property Name="DepartmentFlag" Type="tinyint" Nullable="false" />
+          <Property Name="CLMCRoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Villages">
+          <Key>
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Name="UnitCode" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="VillageID" Type="int" />
+          <Property Name="VillageName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+          <Property Name="ACCode" Type="varchar" MaxLength="10" />
+          <Property Name="PCCode" Type="varchar" MaxLength="10" />
+          <Property Name="LastUpdated" Type="datetime" />
+          <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Pop_male" Type="varchar" MaxLength="10" />
+          <Property Name="Pop_female" Type="varchar" MaxLength="10" />
+          <Property Name="Pop_SC" Type="varchar" MaxLength="10" />
+          <Property Name="Pop_ST" Type="varchar" MaxLength="10" />
+          <Property Name="Latitude" Type="varchar" MaxLength="10" />
+          <Property Name="Longitude" Type="varchar" MaxLength="10" />
+          <Property Name="pincode" Type="varchar" MaxLength="6" />
+          <Property Name="type" Type="tinyint" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="VillageAutoID" Type="int" Nullable="false" />
+          <Property Name="OtherLocation" Type="tinyint" Nullable="false" />
+          <Property Name="CensusCode2011" Type="varchar" MaxLength="8" />
+          <Property Name="VillageLgCode" Type="int" />
+          <Property Name="SVID" Type="int" />
+          <Property Name="RCHVcode" Type="int" Nullable="false" />
+          <Property Name="IsRevenue" Type="tinyint" />
+          <Property Name="Pop_transgender" Type="int" />
+          <Property Name="IsDeleted" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <Function Name="GetANMForLinelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ashaautoid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetASHAForLinelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+          <Parameter Name="Perm_villageautoid" Type="int" Mode="In" />
+          <Parameter Name="Perm_deliveryplaceunitid" Type="int" Mode="In" />
+          <Parameter Name="Perm_LoginUnitcode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetanganwari" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ashaautoid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspGetANMDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+          <Parameter Name="PermType" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="uspGetANMForOtherUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetANMForOtherUserNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetANMForOtherUserNewDemo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+          <Parameter Name="AshaType" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="uspGetAshaDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspGetUnitName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="distcode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetVillageByAshaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ashaautoid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UspHealthunitphoto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="unitid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspSwasthyaMitrkData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspSwasthyaMitrkLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_anmautoid" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="rajmedicalModelStoreContainer">
+          <EntitySet Name="Anganwari_Village" EntityType="Self.Anganwari_Village" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnganwariMaster" EntityType="Self.AnganwariMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppHistory" EntityType="Self.AppHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppUsers" EntityType="Self.AppUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ASHA_AddlCharge" EntityType="Self.ASHA_AddlCharge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ASHADetails" EntityType="Self.ASHADetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AshaMaster" EntityType="Self.AshaMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DesignationMaster" EntityType="Self.DesignationMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HealthUnitPhoto" EntityType="Self.HealthUnitPhoto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HistorySwasthyaMitrk" EntityType="Self.HistorySwasthyaMitrk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MasterCodes" EntityType="Self.MasterCodes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SwasthyaMitrk" EntityType="Self.SwasthyaMitrk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UnitMaster" EntityType="Self.UnitMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UnitTypeMaster" EntityType="Self.UnitTypeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Villages" EntityType="Self.Villages" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="rajmedicalModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="rajmedicalEntities" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetANMForLinelist" ReturnType="Collection(rajmedicalModel.GetANMForLinelist_Result)">
+          <Parameter Name="ashaautoid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetUnitName" ReturnType="Collection(rajmedicalModel.uspGetUnitName_Result)">
+          <Parameter Name="distcode" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Anganwari_Village" EntityType="rajmedicalModel.Anganwari_Village" />
+          <EntitySet Name="AnganwariMasters" EntityType="rajmedicalModel.AnganwariMaster" />
+          <EntitySet Name="ASHA_AddlCharge" EntityType="rajmedicalModel.ASHA_AddlCharge" />
+          <EntitySet Name="ASHADetails" EntityType="rajmedicalModel.ASHADetail" />
+          <EntitySet Name="AshaMasters" EntityType="rajmedicalModel.AshaMaster" />
+          <FunctionImport Name="uspGetanganwari" ReturnType="Collection(rajmedicalModel.uspGetanganwari_Result)">
+          <Parameter Name="ashaautoid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetASHAForLinelist" ReturnType="Collection(rajmedicalModel.GetASHAForLinelist_Result)">
+            <Parameter Name="Perm_unitid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_villageautoid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_deliveryplaceunitid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_LoginUnitcode" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="MasterCodes" EntityType="rajmedicalModel.MasterCodes" />
+          <FunctionImport Name="uspSwasthyaMitrkLocation" ReturnType="Collection(rajmedicalModel.uspSwasthyaMitrkLocation_Result)">
+          <Parameter Name="Perm_anmautoid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="HistorySwasthyaMitrks" EntityType="rajmedicalModel.HistorySwasthyaMitrk" />
+          <EntitySet Name="SwasthyaMitrks" EntityType="rajmedicalModel.SwasthyaMitrk" />
+          <FunctionImport Name="uspSwasthyaMitrkData" ReturnType="Collection(rajmedicalModel.uspSwasthyaMitrkData_Result)">
+          <Parameter Name="Perm_unitid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetANMForOtherUser" ReturnType="Collection(rajmedicalModel.uspGetANMForOtherUser_Result)">
+          <Parameter Name="Perm_unitcode" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="DesignationMasters" EntityType="rajmedicalModel.DesignationMaster" />
+          <EntitySet Name="UnitTypeMasters" EntityType="rajmedicalModel.UnitTypeMaster" />
+          <EntitySet Name="UnitMasters" EntityType="rajmedicalModel.UnitMaster" />
+          <FunctionImport Name="uspGetANMForOtherUserNew" ReturnType="Collection(rajmedicalModel.uspGetANMForOtherUserNew_Result)">
+          <Parameter Name="Perm_unitcode" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Villages" EntityType="rajmedicalModel.Village" />
+          <FunctionImport Name="uspGetAshaDetails" ReturnType="Collection(rajmedicalModel.uspGetAshaDetails_Result)">
+          <Parameter Name="Perm_anmautoid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetANMForOtherUserNewDemo" ReturnType="Collection(rajmedicalModel.uspGetANMForOtherUserNewDemo_Result)">
+            <Parameter Name="Perm_unitcode" Mode="In" Type="String" />
+            <Parameter Name="AshaType" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="UspHealthunitphoto" ReturnType="Collection(rajmedicalModel.UspHealthunitphoto_Result)">
+          <Parameter Name="unitid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="HealthUnitPhotoes" EntityType="rajmedicalModel.HealthUnitPhoto" />
+          <EntitySet Name="Users" EntityType="rajmedicalModel.User" />
+          <FunctionImport Name="uspGetVillageByAshaID" ReturnType="Collection(rajmedicalModel.uspGetVillageByAshaID_Result)">
+          <Parameter Name="ashaautoid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="AppUsers" EntityType="rajmedicalModel.AppUser" />
+          <FunctionImport Name="uspGetANMDetails" ReturnType="Collection(rajmedicalModel.uspGetANMDetails_Result)">
+            <Parameter Name="Perm_anmautoid" Mode="In" Type="Int32" />
+            <Parameter Name="PermType" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <EntitySet Name="AppHistories" EntityType="rajmedicalModel.AppHistory" />
+          </EntityContainer>
+        <ComplexType Name="GetANMForLinelist_Result">
+          <Property Type="String" Name="AshaName" Nullable="true" MaxLength="89" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspGetUnitName_Result">
+          <Property Type="String" Name="uname" Nullable="true" MaxLength="135" />
+          <Property Type="Int16" Name="UnitType" Nullable="false" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" />
+        </ComplexType>
+        <EntityType Name="Anganwari_Village">
+          <Key>
+            <PropertyRef Name="AnganwariNo" />
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnganwariMaster">
+          <Key>
+            <PropertyRef Name="AWCID" />
+          </Key>
+          <Property Type="Int32" Name="AnganwariNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="renameVillageAutoID" />
+          <Property Type="String" Name="NameE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NameH" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Population" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="0" />
+          <Property Type="Byte" Name="IsDeleted" Nullable="false" />
+          <Property Type="String" Name="ICDSCode" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AWCID" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CensusCode" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="RuralUrban" />
+          <Property Type="Int32" Name="unitid" Nullable="false" />
+          <Property Type="Int32" Name="ECCount" />
+          <Property Type="Int32" Name="Population2011" />
+          <Property Type="Int32" Name="HouseHoldCount" />
+          <Property Type="Int32" Name="FamilyCount" />
+          <Property Name="MiniAnganwari" Type="Byte" />
+        </EntityType>
+        <EntityType Name="ASHA_AddlCharge">
+          <Key>
+            <PropertyRef Name="AshaAutoID" />
+            <PropertyRef Name="AnganwariNo" />
+            <PropertyRef Name="FromDate" />
+          </Key>
+          <Property Type="Int32" Name="AshaAutoID" Nullable="false" />
+          <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+          <Property Type="DateTime" Name="FromDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="Todate" Precision="0" />
+          <Property Type="Int32" Name="AdditionalChargeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Byte" Name="MainAnganwari" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ASHADetail">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="Int32" Name="AnganwariNo" />
+          <Property Type="DateTime" Name="BirthDate" Precision="0" />
+          <Property Type="Byte" Name="IsFather" Nullable="false" />
+          <Property Type="Byte" Name="Category" />
+          <Property Type="Byte" Name="MaritalStatus" />
+          <Property Type="Byte" Name="ChildrenNo" />
+          <Property Type="Byte" Name="EduQualification" />
+          <Property Type="String" Name="ProfessionalDegree" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DOJ" Precision="0" />
+          <Property Type="Byte" Name="LevelofTraining" />
+          <Property Type="String" Name="FatherHusbandName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RetirementDate" Precision="0" />
+          <Property Type="DateTime" Name="TrainingDate" Precision="0" />
+          <Property Name="IsExtend" Type="Byte" />
+        </EntityType>
+        <EntityType Name="AshaMaster">
+          <Key>
+            <PropertyRef Name="ashaAutoID" />
+          </Key>
+          <Property Type="String" Name="unitcode" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="AshaName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AshaPhone" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsDeleted" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Villagename" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="type" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="Int32" Name="VillageAutoID" />
+          <Property Type="DateTime" Name="EIDTime" Precision="3" />
+          <Property Type="String" Name="Aadhaar_EID" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="rename_AadhaarNo" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ifsc_code" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Accountno" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Accounttype" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Bankname" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="unitid" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="Byte" Name="ANM_AddlChargeFlag" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="Byte" Name="VerifiedAccount" />
+          <Property Type="Byte" Name="VerifiedAccountByBank" Nullable="false" />
+          <Property Type="String" Name="rename_bhamashahid" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Entrydate" Precision="0" />
+          <Property Type="String" Name="CUGMobile" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RationCardNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="VerifyMobileNo" Nullable="false" />
+          <Property Name="IFMSMapped" Type="Byte" />
+          <Property Name="ANMType" Type="Byte" />
+          <Property Name="WorkingAtLocation" Type="Byte" />
+          <Property Name="AccountVerificationBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AccountVerifierRoleType" Type="Byte" />
+          <Property Name="AccountVerificationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="uspGetanganwari_Result">
+          <Property Type="String" Name="NameH" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="NameE" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="AnganwariNo" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetASHAForLinelist_Result">
+          <Property Type="String" Name="ASHAName" Nullable="true" MaxLength="400" />
+          <Property Type="Int32" Name="ASHAAutoid" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="MasterCodes">
+          <Key>
+            <PropertyRef Name="ParentID" />
+            <PropertyRef Name="masterID" />
+          </Key>
+          <Property Type="Int32" Name="ParentID" Nullable="false" />
+          <Property Type="Byte" Name="masterID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="description" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="uspSwasthyaMitrkLocation_Result">
+          <Property Type="String" Name="DistrictName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="BlockName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ACcode" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <EntityType Name="HistorySwasthyaMitrk">
+          <Key>
+            <PropertyRef Name="HistorySwasthyaMitrkID" />
+          </Key>
+          <Property Type="Int32" Name="HistorySwasthyaMitrkID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SwasthyaMitrkID" Nullable="false" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Sex" Nullable="false" />
+          <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WhatsAppNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Qualification" />
+          <Property Type="DateTime" Name="DOB" Precision="0" />
+          <Property Type="Byte" Name="IsFather" />
+          <Property Type="String" Name="FatherHusbandName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Experience" />
+          <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pincode" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="EntryDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="3" />
+          <Property Type="Byte" Name="Media" Nullable="false" />
+          <Property Type="Int32" Name="EntryUserNo" Nullable="false" />
+          <Property Type="Int32" Name="UpdateUserNo" Nullable="false" />
+          <Property Type="String" Name="UpdateValueFlag" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="HistoryEntryDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SwasthyaMitrk">
+          <Key>
+            <PropertyRef Name="SwasthyaMitrkID" />
+          </Key>
+          <Property Type="Int32" Name="SwasthyaMitrkID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Sex" Nullable="false" />
+          <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WhatsAppNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Qualification" />
+          <Property Type="DateTime" Name="DOB" Precision="0" />
+          <Property Type="Byte" Name="IsFather" />
+          <Property Type="String" Name="FatherHusbandName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Experience" />
+          <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pincode" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="EntryDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="3" />
+          <Property Type="Byte" Name="Media" Nullable="false" />
+          <Property Type="Int32" Name="EntryUserNo" Nullable="false" />
+          <Property Type="Int32" Name="UpdateUserNo" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspSwasthyaMitrkData_Result">
+          <Property Type="Int32" Name="SwasthyaMitrkID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="Byte" Name="Sex" Nullable="false" />
+          <Property Type="Byte" Name="IsFather" Nullable="true" />
+          <Property Type="String" Name="FatherHusbandName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+          <Property Type="String" Name="VillageName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="WhatsAppNo" Nullable="true" MaxLength="10" />
+          <Property Type="Byte" Name="Qualification" Nullable="true" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+          <Property Type="DateTime" Name="DOB" Nullable="true" />
+          <Property Type="String" Name="EmailID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Pincode" Nullable="true" MaxLength="6" />
+          <Property Type="Double" Name="Experience" Nullable="true" />
+          <Property Type="String" Name="AadhaarNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="JanAadhaarNo" Nullable="true" MaxLength="10" />
+          <Property Type="Byte" Name="Consent" Nullable="true" />
+          <Property Type="Binary" Name="Photo" Nullable="true" />
+          <Property Type="String" Name="PhotoType" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspGetANMForOtherUser_Result">
+          <Property Type="String" Name="AshaName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="String" Name="AshaPhone" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <EntityType Name="DesignationMaster">
+          <Key>
+            <PropertyRef Name="DesigID" />
+          </Key>
+          <Property Type="Int32" Name="DesigID" Nullable="false" />
+          <Property Type="String" Name="DesigName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="IsValidtoPhysVerification" />
+          <Property Type="Byte" Name="IsDeleted" />
+          <Property Type="DateTime" Name="Entrydate" Precision="0" />
+          <Property Type="DateTime" Name="Updatedate" Precision="0" />
+          <Property Type="String" Name="UpdateBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UpdateIP" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UnitTypeMaster">
+          <Key>
+            <PropertyRef Name="UnitTypeCode" />
+          </Key>
+          <Property Type="Byte" Name="UnitTypeCode" Nullable="false" />
+          <Property Type="String" Name="UnittypeName" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="UnitLevel" Nullable="false" />
+          <Property Type="String" Name="UnittypeNameHindi" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MCTS_FacilityType" />
+          <Property Type="String" Name="UnitTypeNameAbbr" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HRUnitTypeName" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IsOtherDept" Type="Byte" />
+        </EntityType>
+        <EntityType Name="UnitMaster">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Type="Int16" Name="UnitType" Nullable="false" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ACcode" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PCcode" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CensusCode" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UnitIncharge" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitContactNo" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsCHC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdated" Precision="3" />
+          <Property Type="String" Name="RuralUrban" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="building" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UnitNameHindi" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="BID" />
+          <Property Type="Int16" Name="PID" />
+          <Property Type="Int16" Name="SID" />
+          <Property Type="Int16" Name="PPUID" />
+          <Property Type="String" Name="mobileno" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Latitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Longitude" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="pincode" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="PrivateHospitalType11" />
+          <Property Type="Int32" Name="UnitID" Nullable="false" />
+          <Property Type="Byte" Name="deliveryPoint" />
+          <Property Type="String" Name="AWCID" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="MTC" Nullable="false" />
+          <Property Type="Byte" Name="SNCU" Nullable="false" />
+          <Property Type="Int32" Name="ReportingUnitID" Nullable="false" />
+          <Property Type="Int32" Name="Beds" />
+          <Property Type="Int32" Name="BSBY" />
+          <Property Type="Int32" Name="AccreditationYear" />
+          <Property Type="Int32" Name="VillageAutoID_P" Nullable="false" />
+          <Property Type="Byte" Name="NUHMUrban" Nullable="false" />
+          <Property Type="Byte" Name="NBSU" />
+          <Property Type="Byte" Name="NBCC" />
+          <Property Type="Byte" Name="StaticsCenter" />
+          <Property Type="Byte" Name="PHC_24Hour" />
+          <Property Type="Byte" Name="FRU" />
+          <Property Type="String" Name="AppLatitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AppLongitude" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="WellnessCenter" />
+          <Property Type="Int32" Name="DistrictCode" />
+          <Property Type="Int32" Name="BlockCode" />
+          <Property Type="Int32" Name="HmisID" />
+          <Property Name="PehchanSubRegistrarCode" Type="Int32" />
+          <Property Name="TehsilID" Type="Int32" Nullable="false" />
+          <Property Name="IsDeleted" Type="Byte" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DDOCode" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="DDOCodeVerificationDate" Type="DateTime" Precision="0" />
+          <Property Name="EntryDate" Type="DateTime" Precision="0" />
+          <Property Name="TspArea" Type="Byte" Nullable="false" />
+          <Property Name="OfficeFlag" Type="Byte" Nullable="false" />
+          <Property Name="Cemonc" Type="Int32" />
+          <Property Name="PSCode" Type="Int32" />
+          <Property Name="IsMCH" Type="Boolean" />
+          <Property Name="IsTraumaCentre" Type="Boolean" />
+          <Property Name="IsBloodBank" Type="Boolean" />
+          <Property Name="EstablishmentYear" Type="Int32" />
+          <Property Name="GPCode" Type="Int32" />
+          <Property Name="CLMCFlag" Type="Byte" />
+          <Property Name="IsRevenueBlock" Type="Byte" />
+          <Property Name="IsBloodStorageUnit" Type="Boolean" />
+          <Property Name="RCHFacility" Type="Byte" />
+          <Property Name="Funcational" Type="Byte" Nullable="false" />
+          <Property Name="HmisPrivateDataType" Type="Byte" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspGetANMForOtherUserNew_Result">
+          <Property Type="String" Name="AshaName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="String" Name="AshaPhone" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <EntityType Name="Village">
+          <Key>
+            <PropertyRef Name="VillageAutoID" />
+          </Key>
+          <Property Name="UnitCode" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="VillageID" Type="Int32" />
+          <Property Name="VillageName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CensusCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ACCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PCCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+          <Property Name="UnitNameHindi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Pop_male" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pop_female" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pop_SC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pop_ST" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Latitude" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Longitude" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="Byte" />
+          <Property Name="unitid" Type="Int32" />
+          <Property Name="VillageAutoID" Type="Int32" Nullable="false" />
+          <Property Name="OtherLocation" Type="Byte" Nullable="false" />
+          <Property Name="CensusCode2011" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="VillageLgCode" Type="Int32" />
+          <Property Name="SVID" Type="Int32" />
+          <Property Name="RCHVcode" Type="Int32" Nullable="false" />
+          <Property Name="IsRevenue" Type="Byte" />
+          <Property Name="Pop_transgender" Type="Int32" />
+          <Property Name="IsDeleted" Type="Byte" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspGetAshaDetails_Result">
+          <Property Type="String" Name="AshaName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="unitid" Nullable="false" />
+          <Property Type="String" Name="unitcode" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="unitname" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DistrictName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BlockName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PCHCHCName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PCHCHCAbbr" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="UnitAbbr" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="UnitType" Nullable="false" />
+          <Property Type="Int32" Name="ANMAutoID" Nullable="false" />
+          <Property Type="String" Name="Anganwariname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="AshaRole" Nullable="false" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="uspGetANMForOtherUserNewDemo_Result">
+          <Property Type="String" Name="AshaName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ashaAutoID" Nullable="false" />
+          <Property Type="String" Name="AshaPhone" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="UspHealthunitphoto_Result">
+          <Property Type="String" Name="Latitude" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Longitude" Nullable="false" MaxLength="10" />
+          <Property Type="Binary" Name="Photo" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="HealthUnitPhoto">
+          <Key>
+            <PropertyRef Name="Unitid" />
+          </Key>
+          <Property Name="Unitid" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="IsDeleted" />
+          </Key>
+          <Property Name="UnitCode" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicationNos" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="old2pwd" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="old1pwd" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Byte" Nullable="false" />
+          <Property Name="unitid" Type="Int32" />
+          <Property Name="PwdUpdatedDate" Type="DateTime" Precision="0" />
+          <Property Name="AshaRoleId" Type="Byte" Nullable="false" />
+          <Property Name="ExpireOn" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Byte" Nullable="false" />
+          <Property Name="OJSPMRoleID" Type="Byte" Nullable="false" />
+          <Property Name="PctsRoleID" Type="Byte" Nullable="false" />
+          <Property Name="EctsRoleID" Type="Byte" Nullable="false" />
+          <Property Name="resetpwd" Type="Byte" Nullable="false" />
+          <Property Name="Saltvalue" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Saltcreatedon" Type="DateTime" Precision="3" />
+          <Property Name="AppVersion" Type="Double" />
+          <Property Name="AppPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Imei" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="ANMAutoID" Type="Int32" Nullable="false" />
+          <Property Name="IsAppUser" Type="Byte" Nullable="false" />
+          <Property Name="UserNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppRoleID" Type="Byte" Nullable="false" />
+          <Property Name="HRRoleID" Type="Byte" Nullable="false" />
+          <Property Name="OfficeID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SsoID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="0" />
+          <Property Name="DesignationID" Type="Int32" />
+          <Property Name="VerifiedMobile" Type="Int32" Nullable="false" />
+          <Property Name="VerifiedEmail" Type="Int32" Nullable="false" />
+          <Property Name="AidsRoleID" Type="Int32" Nullable="false" />
+          <Property Name="MTPRoleID" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentFlag" Type="Byte" Nullable="false" />
+          <Property Name="CLMCRoleID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspGetVillageByAshaID_Result">
+          <Property Type="String" Name="VillageName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="VillageAutoID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="Saltcreatedon" />
+            <PropertyRef Name="UserNo" />
+          </Key>
+          <Property Name="Saltvalue" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Saltcreatedon" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Imei" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="uspGetANMDetails_Result">
+          <Property Type="String" Name="AshaName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="unitid" Nullable="false" />
+          <Property Type="String" Name="unitcode" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="unitname" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="DistrictName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BlockName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PCHCHCName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PCHCHCAbbr" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="UnitAbbr" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="UnitType" Nullable="false" />
+          <Property Type="Int32" Name="ANMAutoID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AppHistory">
+          <Key>
+            <PropertyRef Name="VersionName" />
+          </Key>
+          <Property Name="VersionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RealeaseDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BugFixes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NewAddition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AppFlag" Type="Byte" Nullable="false" />
+          <Property Name="VersionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LiveFlag" Type="Int32" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="rajmedicalModelStoreContainer" CdmEntityContainer="rajmedicalEntities">
+          <FunctionImportMapping FunctionImportName="GetANMForLinelist" FunctionName="rajmedicalModel.Store.GetANMForLinelist">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.GetANMForLinelist_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetUnitName" FunctionName="rajmedicalModel.Store.uspGetUnitName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetUnitName_Result">
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Anganwari_Village">
+            <EntityTypeMapping TypeName="rajmedicalModel.Anganwari_Village">
+              <MappingFragment StoreEntitySet="Anganwari_Village">
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnganwariMasters">
+            <EntityTypeMapping TypeName="rajmedicalModel.AnganwariMaster">
+              <MappingFragment StoreEntitySet="AnganwariMaster">
+                <ScalarProperty Name="MiniAnganwari" ColumnName="MiniAnganwari" />
+                <ScalarProperty Name="FamilyCount" ColumnName="FamilyCount" />
+                <ScalarProperty Name="HouseHoldCount" ColumnName="HouseHoldCount" />
+                <ScalarProperty Name="Population2011" ColumnName="Population2011" />
+                <ScalarProperty Name="ECCount" ColumnName="ECCount" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="RuralUrban" ColumnName="RuralUrban" />
+                <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+                <ScalarProperty Name="AWCID" ColumnName="AWCID" />
+                <ScalarProperty Name="ICDSCode" ColumnName="ICDSCode" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="NameH" ColumnName="NameH" />
+                <ScalarProperty Name="NameE" ColumnName="NameE" />
+                <ScalarProperty Name="renameVillageAutoID" ColumnName="renameVillageAutoID" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ASHA_AddlCharge">
+            <EntityTypeMapping TypeName="rajmedicalModel.ASHA_AddlCharge">
+              <MappingFragment StoreEntitySet="ASHA_AddlCharge">
+                <ScalarProperty Name="MainAnganwari" ColumnName="MainAnganwari" />
+                <ScalarProperty Name="AdditionalChargeID" ColumnName="AdditionalChargeID" />
+                <ScalarProperty Name="Todate" ColumnName="Todate" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+                <ScalarProperty Name="AshaAutoID" ColumnName="AshaAutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ASHADetails">
+            <EntityTypeMapping TypeName="rajmedicalModel.ASHADetail">
+              <MappingFragment StoreEntitySet="ASHADetails">
+                <ScalarProperty Name="IsExtend" ColumnName="IsExtend" />
+                <ScalarProperty Name="TrainingDate" ColumnName="TrainingDate" />
+                <ScalarProperty Name="RetirementDate" ColumnName="RetirementDate" />
+                <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+                <ScalarProperty Name="LevelofTraining" ColumnName="LevelofTraining" />
+                <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+                <ScalarProperty Name="ProfessionalDegree" ColumnName="ProfessionalDegree" />
+                <ScalarProperty Name="EduQualification" ColumnName="EduQualification" />
+                <ScalarProperty Name="ChildrenNo" ColumnName="ChildrenNo" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AshaMasters">
+            <EntityTypeMapping TypeName="rajmedicalModel.AshaMaster">
+              <MappingFragment StoreEntitySet="AshaMaster">
+                <ScalarProperty Name="AccountVerificationDate" ColumnName="AccountVerificationDate" />
+                <ScalarProperty Name="AccountVerifierRoleType" ColumnName="AccountVerifierRoleType" />
+                <ScalarProperty Name="AccountVerificationBy" ColumnName="AccountVerificationBy" />
+                <ScalarProperty Name="WorkingAtLocation" ColumnName="WorkingAtLocation" />
+                <ScalarProperty Name="ANMType" ColumnName="ANMType" />
+                <ScalarProperty Name="IFMSMapped" ColumnName="IFMSMapped" />
+                <ScalarProperty Name="VerifyMobileNo" ColumnName="VerifyMobileNo" />
+                <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+                <ScalarProperty Name="CUGMobile" ColumnName="CUGMobile" />
+                <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+                <ScalarProperty Name="rename_bhamashahid" ColumnName="rename_bhamashahid" />
+                <ScalarProperty Name="VerifiedAccountByBank" ColumnName="VerifiedAccountByBank" />
+                <ScalarProperty Name="VerifiedAccount" ColumnName="VerifiedAccount" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ANM_AddlChargeFlag" ColumnName="ANM_AddlChargeFlag" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="Bankname" ColumnName="Bankname" />
+                <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
+                <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+                <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+                <ScalarProperty Name="rename_AadhaarNo" ColumnName="rename_AadhaarNo" />
+                <ScalarProperty Name="Aadhaar_EID" ColumnName="Aadhaar_EID" />
+                <ScalarProperty Name="EIDTime" ColumnName="EIDTime" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="Villagename" ColumnName="Villagename" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetanganwari" FunctionName="rajmedicalModel.Store.uspGetanganwari">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetanganwari_Result">
+                <ScalarProperty Name="NameH" ColumnName="NameH" />
+                <ScalarProperty Name="NameE" ColumnName="NameE" />
+                <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetASHAForLinelist" FunctionName="rajmedicalModel.Store.GetASHAForLinelist">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.GetASHAForLinelist_Result">
+                <ScalarProperty Name="ASHAName" ColumnName="ASHAName" />
+                <ScalarProperty Name="ASHAAutoid" ColumnName="ASHAAutoid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="MasterCodes">
+            <EntityTypeMapping TypeName="rajmedicalModel.MasterCodes">
+              <MappingFragment StoreEntitySet="MasterCodes">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="masterID" ColumnName="masterID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspSwasthyaMitrkLocation" FunctionName="rajmedicalModel.Store.uspSwasthyaMitrkLocation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspSwasthyaMitrkLocation_Result">
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="ACcode" ColumnName="ACcode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="HistorySwasthyaMitrks">
+            <EntityTypeMapping TypeName="rajmedicalModel.HistorySwasthyaMitrk">
+              <MappingFragment StoreEntitySet="HistorySwasthyaMitrk">
+                <ScalarProperty Name="HistoryEntryDate" ColumnName="HistoryEntryDate" />
+                <ScalarProperty Name="UpdateValueFlag" ColumnName="UpdateValueFlag" />
+                <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+                <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+                <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+                <ScalarProperty Name="HistorySwasthyaMitrkID" ColumnName="HistorySwasthyaMitrkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SwasthyaMitrks">
+            <EntityTypeMapping TypeName="rajmedicalModel.SwasthyaMitrk">
+              <MappingFragment StoreEntitySet="SwasthyaMitrk">
+                <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+                <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+                <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspSwasthyaMitrkData" FunctionName="rajmedicalModel.Store.uspSwasthyaMitrkData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspSwasthyaMitrkData_Result">
+                <ScalarProperty Name="SwasthyaMitrkID" ColumnName="SwasthyaMitrkID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="IsFather" ColumnName="IsFather" />
+                <ScalarProperty Name="FatherHusbandName" ColumnName="FatherHusbandName" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="WhatsAppNo" ColumnName="WhatsAppNo" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+                <ScalarProperty Name="JanAadhaarNo" ColumnName="JanAadhaarNo" />
+                <ScalarProperty Name="Consent" ColumnName="Consent" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="PhotoType" ColumnName="PhotoType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetANMForOtherUser" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUser_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="DesignationMasters">
+            <EntityTypeMapping TypeName="rajmedicalModel.DesignationMaster">
+              <MappingFragment StoreEntitySet="DesignationMaster">
+                <ScalarProperty Name="UpdateIP" ColumnName="UpdateIP" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="Updatedate" ColumnName="Updatedate" />
+                <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsValidtoPhysVerification" ColumnName="IsValidtoPhysVerification" />
+                <ScalarProperty Name="DesigName" ColumnName="DesigName" />
+                <ScalarProperty Name="DesigID" ColumnName="DesigID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitTypeMasters">
+            <EntityTypeMapping TypeName="rajmedicalModel.UnitTypeMaster">
+              <MappingFragment StoreEntitySet="UnitTypeMaster">
+                <ScalarProperty Name="IsOtherDept" ColumnName="IsOtherDept" />
+                <ScalarProperty Name="HRUnitTypeName" ColumnName="HRUnitTypeName" />
+                <ScalarProperty Name="UnitTypeNameAbbr" ColumnName="UnitTypeNameAbbr" />
+                <ScalarProperty Name="MCTS_FacilityType" ColumnName="MCTS_FacilityType" />
+                <ScalarProperty Name="UnittypeNameHindi" ColumnName="UnittypeNameHindi" />
+                <ScalarProperty Name="UnitLevel" ColumnName="UnitLevel" />
+                <ScalarProperty Name="UnittypeName" ColumnName="UnittypeName" />
+                <ScalarProperty Name="UnitTypeCode" ColumnName="UnitTypeCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitMasters">
+            <EntityTypeMapping TypeName="rajmedicalModel.UnitMaster">
+              <MappingFragment StoreEntitySet="UnitMaster">
+                <ScalarProperty Name="HmisPrivateDataType" ColumnName="HmisPrivateDataType" />
+                <ScalarProperty Name="Funcational" ColumnName="Funcational" />
+                <ScalarProperty Name="RCHFacility" ColumnName="RCHFacility" />
+                <ScalarProperty Name="IsBloodStorageUnit" ColumnName="IsBloodStorageUnit" />
+                <ScalarProperty Name="IsRevenueBlock" ColumnName="IsRevenueBlock" />
+                <ScalarProperty Name="CLMCFlag" ColumnName="CLMCFlag" />
+                <ScalarProperty Name="GPCode" ColumnName="GPCode" />
+                <ScalarProperty Name="EstablishmentYear" ColumnName="EstablishmentYear" />
+                <ScalarProperty Name="IsBloodBank" ColumnName="IsBloodBank" />
+                <ScalarProperty Name="IsTraumaCentre" ColumnName="IsTraumaCentre" />
+                <ScalarProperty Name="IsMCH" ColumnName="IsMCH" />
+                <ScalarProperty Name="PSCode" ColumnName="PSCode" />
+                <ScalarProperty Name="Cemonc" ColumnName="Cemonc" />
+                <ScalarProperty Name="OfficeFlag" ColumnName="OfficeFlag" />
+                <ScalarProperty Name="TspArea" ColumnName="TspArea" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="DDOCodeVerificationDate" ColumnName="DDOCodeVerificationDate" />
+                <ScalarProperty Name="DDOCode" ColumnName="DDOCode" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="TehsilID" ColumnName="TehsilID" />
+                <ScalarProperty Name="PehchanSubRegistrarCode" ColumnName="PehchanSubRegistrarCode" />
+                <ScalarProperty Name="HmisID" ColumnName="HmisID" />
+                <ScalarProperty Name="BlockCode" ColumnName="BlockCode" />
+                <ScalarProperty Name="DistrictCode" ColumnName="DistrictCode" />
+                <ScalarProperty Name="WellnessCenter" ColumnName="WellnessCenter" />
+                <ScalarProperty Name="AppLongitude" ColumnName="AppLongitude" />
+                <ScalarProperty Name="AppLatitude" ColumnName="AppLatitude" />
+                <ScalarProperty Name="FRU" ColumnName="FRU" />
+                <ScalarProperty Name="PHC_24Hour" ColumnName="PHC_24Hour" />
+                <ScalarProperty Name="StaticsCenter" ColumnName="StaticsCenter" />
+                <ScalarProperty Name="NBCC" ColumnName="NBCC" />
+                <ScalarProperty Name="NBSU" ColumnName="NBSU" />
+                <ScalarProperty Name="NUHMUrban" ColumnName="NUHMUrban" />
+                <ScalarProperty Name="VillageAutoID_P" ColumnName="VillageAutoID_P" />
+                <ScalarProperty Name="AccreditationYear" ColumnName="AccreditationYear" />
+                <ScalarProperty Name="BSBY" ColumnName="BSBY" />
+                <ScalarProperty Name="Beds" ColumnName="Beds" />
+                <ScalarProperty Name="ReportingUnitID" ColumnName="ReportingUnitID" />
+                <ScalarProperty Name="SNCU" ColumnName="SNCU" />
+                <ScalarProperty Name="MTC" ColumnName="MTC" />
+                <ScalarProperty Name="AWCID" ColumnName="AWCID" />
+                <ScalarProperty Name="deliveryPoint" ColumnName="deliveryPoint" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="PrivateHospitalType11" ColumnName="PrivateHospitalType11" />
+                <ScalarProperty Name="pincode" ColumnName="pincode" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="PPUID" ColumnName="PPUID" />
+                <ScalarProperty Name="SID" ColumnName="SID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="BID" ColumnName="BID" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="building" ColumnName="building" />
+                <ScalarProperty Name="RuralUrban" ColumnName="RuralUrban" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="IsCHC" ColumnName="IsCHC" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="UnitContactNo" ColumnName="UnitContactNo" />
+                <ScalarProperty Name="UnitIncharge" ColumnName="UnitIncharge" />
+                <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+                <ScalarProperty Name="PCcode" ColumnName="PCcode" />
+                <ScalarProperty Name="ACcode" ColumnName="ACcode" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetANMForOtherUserNew" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUserNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUserNew_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Villages">
+            <EntityTypeMapping TypeName="rajmedicalModel.Village">
+              <MappingFragment StoreEntitySet="Villages">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Pop_transgender" ColumnName="Pop_transgender" />
+                <ScalarProperty Name="IsRevenue" ColumnName="IsRevenue" />
+                <ScalarProperty Name="RCHVcode" ColumnName="RCHVcode" />
+                <ScalarProperty Name="SVID" ColumnName="SVID" />
+                <ScalarProperty Name="VillageLgCode" ColumnName="VillageLgCode" />
+                <ScalarProperty Name="CensusCode2011" ColumnName="CensusCode2011" />
+                <ScalarProperty Name="OtherLocation" ColumnName="OtherLocation" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="pincode" ColumnName="pincode" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Pop_ST" ColumnName="Pop_ST" />
+                <ScalarProperty Name="Pop_SC" ColumnName="Pop_SC" />
+                <ScalarProperty Name="Pop_female" ColumnName="Pop_female" />
+                <ScalarProperty Name="Pop_male" ColumnName="Pop_male" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+                <ScalarProperty Name="ACCode" ColumnName="ACCode" />
+                <ScalarProperty Name="CensusCode" ColumnName="CensusCode" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="VillageID" ColumnName="VillageID" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAshaDetails" FunctionName="rajmedicalModel.Store.uspGetAshaDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetAshaDetails_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+                <ScalarProperty Name="unitname" ColumnName="unitname" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="PCHCHCName" ColumnName="PCHCHCName" />
+                <ScalarProperty Name="PCHCHCAbbr" ColumnName="PCHCHCAbbr" />
+                <ScalarProperty Name="UnitAbbr" ColumnName="UnitAbbr" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+                <ScalarProperty Name="Anganwariname" ColumnName="Anganwariname" />
+                <ScalarProperty Name="AshaRole" ColumnName="AshaRole" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetANMForOtherUserNewDemo" FunctionName="rajmedicalModel.Store.uspGetANMForOtherUserNewDemo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMForOtherUserNewDemo_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+                <ScalarProperty Name="AshaPhone" ColumnName="AshaPhone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UspHealthunitphoto" FunctionName="rajmedicalModel.Store.UspHealthunitphoto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.UspHealthunitphoto_Result">
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="HealthUnitPhotoes">
+            <EntityTypeMapping TypeName="rajmedicalModel.HealthUnitPhoto">
+              <MappingFragment StoreEntitySet="HealthUnitPhoto">
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Unitid" ColumnName="Unitid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="rajmedicalModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="CLMCRoleID" ColumnName="CLMCRoleID" />
+                <ScalarProperty Name="DepartmentFlag" ColumnName="DepartmentFlag" />
+                <ScalarProperty Name="MTPRoleID" ColumnName="MTPRoleID" />
+                <ScalarProperty Name="AidsRoleID" ColumnName="AidsRoleID" />
+                <ScalarProperty Name="VerifiedEmail" ColumnName="VerifiedEmail" />
+                <ScalarProperty Name="VerifiedMobile" ColumnName="VerifiedMobile" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="SsoID" ColumnName="SsoID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="HRRoleID" ColumnName="HRRoleID" />
+                <ScalarProperty Name="AppRoleID" ColumnName="AppRoleID" />
+                <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+                <ScalarProperty Name="IsAppUser" ColumnName="IsAppUser" />
+                <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Imei" ColumnName="Imei" />
+                <ScalarProperty Name="AppPassword" ColumnName="AppPassword" />
+                <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+                <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+                <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+                <ScalarProperty Name="resetpwd" ColumnName="resetpwd" />
+                <ScalarProperty Name="EctsRoleID" ColumnName="EctsRoleID" />
+                <ScalarProperty Name="PctsRoleID" ColumnName="PctsRoleID" />
+                <ScalarProperty Name="OJSPMRoleID" ColumnName="OJSPMRoleID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ExpireOn" ColumnName="ExpireOn" />
+                <ScalarProperty Name="AshaRoleId" ColumnName="AshaRoleId" />
+                <ScalarProperty Name="PwdUpdatedDate" ColumnName="PwdUpdatedDate" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="old1pwd" ColumnName="old1pwd" />
+                <ScalarProperty Name="old2pwd" ColumnName="old2pwd" />
+                <ScalarProperty Name="ApplicationNos" ColumnName="ApplicationNos" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="UserContactNo" ColumnName="UserContactNo" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVillageByAshaID" FunctionName="rajmedicalModel.Store.uspGetVillageByAshaID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetVillageByAshaID_Result">
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="AppUsers">
+            <EntityTypeMapping TypeName="rajmedicalModel.AppUser">
+              <MappingFragment StoreEntitySet="AppUsers">
+                <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+                <ScalarProperty Name="Imei" ColumnName="Imei" />
+                <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+                <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetANMDetails" FunctionName="rajmedicalModel.Store.uspGetANMDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="rajmedicalModel.uspGetANMDetails_Result">
+                <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+                <ScalarProperty Name="unitname" ColumnName="unitname" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="PCHCHCName" ColumnName="PCHCHCName" />
+                <ScalarProperty Name="PCHCHCAbbr" ColumnName="PCHCHCAbbr" />
+                <ScalarProperty Name="UnitAbbr" ColumnName="UnitAbbr" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="AppHistories">
+            <EntityTypeMapping TypeName="rajmedicalModel.AppHistory">
+              <MappingFragment StoreEntitySet="AppHistory">
+                <ScalarProperty Name="LiveFlag" ColumnName="LiveFlag" />
+                <ScalarProperty Name="VersionID" ColumnName="VersionID" />
+                <ScalarProperty Name="AppFlag" ColumnName="AppFlag" />
+                <ScalarProperty Name="NewAddition" ColumnName="NewAddition" />
+                <ScalarProperty Name="BugFixes" ColumnName="BugFixes" />
+                <ScalarProperty Name="RealeaseDate" ColumnName="RealeaseDate" />
+                <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

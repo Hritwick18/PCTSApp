@@ -1,0 +1,284 @@
+Time: 22-12-2023 01:23:19 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17614
+-----------------------------------------------------------
+
+Time: 22-12-2023 01:23:39 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17614
+-----------------------------------------------------------
+
+Time: 22-12-2023 01:23:46 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17614
+-----------------------------------------------------------
+
+Time: 22-12-2023 01:24:09 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveNDDProgram(NDDProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17614
+-----------------------------------------------------------
+
+Time: 22/12/2023 02:33:57 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 02:35:14 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 02:36:36 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 02:44:56 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17070
+-----------------------------------------------------------
+
+Time: 22/12/2023 02:46:44 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:07:29 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:09:50 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:12:00 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:12:17 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:13:30 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:13:35 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:13:41 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:13:55 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:15:02 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:15:50 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17074
+-----------------------------------------------------------
+
+Time: 22/12/2023 03:23:57 PM
+-----------------------------------------------------------
+Message: Error in PUT sam FollowupSystem.Data.EntityCommandExecutionException: The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+   at System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean readerOwned)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveIDCFProgram(IDCFProgram A, Int16 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 17070
+-----------------------------------------------------------
+

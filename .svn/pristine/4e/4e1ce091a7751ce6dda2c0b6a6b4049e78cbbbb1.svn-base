@@ -1,0 +1,2343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cnaaModelStoreContainer" CdmEntityContainer="cnaaEntities">
+    <FunctionImportMapping FunctionImportName="uspGetOtherUnitDetails" FunctionName="cnaaModel.Store.uspGetOtherUnitDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspGetOtherUnitDetails_Result">
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="ecid" ColumnName="ecid" />
+          <ScalarProperty Name="regDate" ColumnName="regDate" />
+          <ScalarProperty Name="expDeliveryDate" ColumnName="expDeliveryDate" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMPlan" FunctionName="cnaaModel.Store.uspANMPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMPlan_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ancdue" ColumnName="ancdue" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="PNCDueDate" ColumnName="PNCDueDate" />
+          <ScalarProperty Name="ExpDeliveryDate" ColumnName="ExpDeliveryDate" />
+          <ScalarProperty Name="livechild" ColumnName="livechild" />
+          <ScalarProperty Name="immudue" ColumnName="immudue" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMPlanForImmunization" FunctionName="cnaaModel.Store.uspANMPlanForImmunization">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMPlanForImmunization_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ancdue" ColumnName="ancdue" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="PNCDueDate" ColumnName="PNCDueDate" />
+          <ScalarProperty Name="ExpDeliveryDate" ColumnName="ExpDeliveryDate" />
+          <ScalarProperty Name="livechild" ColumnName="livechild" />
+          <ScalarProperty Name="immudue" ColumnName="immudue" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspWomendetail" FunctionName="cnaaModel.Store.uspWomendetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspWomendetail_Result">
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="BPL" ColumnName="BPL" />
+          <ScalarProperty Name="Location_Rajasthan" ColumnName="Location_Rajasthan" />
+          <ScalarProperty Name="Ghamantu" ColumnName="Ghamantu" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="anccount" ColumnName="anccount" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="Abortion_date" ColumnName="Abortion_date" />
+          <ScalarProperty Name="outcome" ColumnName="outcome" />
+          <ScalarProperty Name="AbortionType" ColumnName="AbortionType" />
+          <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+          <ScalarProperty Name="pnccount" ColumnName="pnccount" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="motherCast" ColumnName="motherCast" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+          <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantDetailsByInfantID" FunctionName="cnaaModel.Store.uspInfantDetailsByInfantID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantDetailsByInfantID_Result">
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+          <ScalarProperty Name="immuname" ColumnName="immuname" />
+          <ScalarProperty Name="immudate" ColumnName="immudate" />
+          <ScalarProperty Name="tagname" ColumnName="tagname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMusageDayWise1" FunctionName="cnaaModel.Store.uspANMusageDayWise1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMusageDayWise1_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="anmcount" ColumnName="anmcount" />
+          <ScalarProperty Name="totalANMNotEnterd" ColumnName="totalANMNotEnterd" />
+          <ScalarProperty Name="totalANMNotUseApp" ColumnName="totalANMNotUseApp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspLatitudeLongitude" FunctionName="cnaaModel.Store.uspLatitudeLongitude">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspLatitudeLongitude_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="UnitDescription" ColumnName="UnitDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMusageDetailsDayWise" FunctionName="cnaaModel.Store.uspANMusageDetailsDayWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMusageDetailsDayWise_Result">
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="anmname" ColumnName="anmname" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="ancCount" ColumnName="ancCount" />
+          <ScalarProperty Name="pncCount" ColumnName="pncCount" />
+          <ScalarProperty Name="immuCount" ColumnName="immuCount" />
+          <ScalarProperty Name="maternalDeathount" ColumnName="maternalDeathount" />
+          <ScalarProperty Name="infantDeathount" ColumnName="infantDeathount" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="phcchcname" ColumnName="phcchcname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMNotusageDetailsDayWise" FunctionName="cnaaModel.Store.uspANMNotusageDetailsDayWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMNotusageDetailsDayWise_Result">
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="anmname" ColumnName="anmname" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="phcchcname" ColumnName="phcchcname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DeathDetails">
+      <EntityTypeMapping TypeName="cnaaModel.DeathDetail">
+        <MappingFragment StoreEntitySet="DeathDetails">
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Preventable" ColumnName="Preventable" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="EntryUnitID" ColumnName="EntryUnitID" />
+          <ScalarProperty Name="DeathUnitID" ColumnName="DeathUnitID" />
+          <ScalarProperty Name="ashaautoid" ColumnName="ashaautoid" />
+          <ScalarProperty Name="Relative_Name" ColumnName="Relative_Name" />
+          <ScalarProperty Name="MasterMobile" ColumnName="MasterMobile" />
+          <ScalarProperty Name="DeathReportDate" ColumnName="DeathReportDate" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="IsImmun" ColumnName="IsImmun" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Bfeed" ColumnName="Bfeed" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="AgeType" ColumnName="AgeType" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="DeathID" ColumnName="DeathID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfantImmus">
+      <EntityTypeMapping TypeName="cnaaModel.InfantImmu">
+        <MappingFragment StoreEntitySet="InfantImmu">
+          <ScalarProperty Name="FullImmuEntryUnitID" ColumnName="FullImmuEntryUnitID" />
+          <ScalarProperty Name="Booster2Ashaautoid" ColumnName="Booster2Ashaautoid" />
+          <ScalarProperty Name="Booster2DosesDate" ColumnName="Booster2DosesDate" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="DPTPentaFlag" ColumnName="DPTPentaFlag" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="BoosterAshaautoid" ColumnName="BoosterAshaautoid" />
+          <ScalarProperty Name="BoosterDosesDate" ColumnName="BoosterDosesDate" />
+          <ScalarProperty Name="FullImmuAshaautoid" ColumnName="FullImmuAshaautoid" />
+          <ScalarProperty Name="FullImmuDate" ColumnName="FullImmuDate" />
+          <ScalarProperty Name="PartImmuDate" ColumnName="PartImmuDate" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardSerial" FunctionName="cnaaModel.Store.uspDashboardSerial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardSerial_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardSerail_Subcenter" FunctionName="cnaaModel.Store.uspDashboardSerail_Subcenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardSerail_Subcenter_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardVacc_Subcenter" FunctionName="cnaaModel.Store.uspDashboardVacc_Subcenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardVacc_Subcenter_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardIndicatorsPerformance" FunctionName="cnaaModel.Store.uspDashboardIndicatorsPerformance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardIndicatorsPerformance_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardIndicatorsPerformance_Subcenter" FunctionName="cnaaModel.Store.uspDashboardIndicatorsPerformance_Subcenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardIndicatorsPerformance_Subcenter_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardIndicators_Subcenter" FunctionName="cnaaModel.Store.uspDashboardIndicators_Subcenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardIndicators_Subcenter_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="infantdeathCount" ColumnName="infantdeathCount" />
+          <ScalarProperty Name="maternalDeathCount" ColumnName="maternalDeathCount" />
+          <ScalarProperty Name="BcgCount" ColumnName="BcgCount" />
+          <ScalarProperty Name="PentaCount" ColumnName="PentaCount" />
+          <ScalarProperty Name="OPVCount" ColumnName="OPVCount" />
+          <ScalarProperty Name="MeaslCount" ColumnName="MeaslCount" />
+          <ScalarProperty Name="HBCount" ColumnName="HBCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardIndicators" FunctionName="cnaaModel.Store.uspDashboardIndicators">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardIndicators_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMASHADetailsByPCTSID" FunctionName="cnaaModel.Store.uspANMASHADetailsByPCTSID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMASHADetailsByPCTSID_Result">
+          <ScalarProperty Name="ashaname" ColumnName="ashaname" />
+          <ScalarProperty Name="ashaphone" ColumnName="ashaphone" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspNearestFacility" FunctionName="cnaaModel.Store.uspNearestFacility">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspNearestFacility_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspImmunizationListForAdd" FunctionName="cnaaModel.Store.uspImmunizationListForAdd">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspImmunizationListForAdd_Result">
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="ImmuName" ColumnName="ImmuName" />
+          <ScalarProperty Name="duedays" ColumnName="duedays" />
+          <ScalarProperty Name="MaxDays" ColumnName="MaxDays" />
+          <ScalarProperty Name="DiffBetweenDoses" ColumnName="DiffBetweenDoses" />
+          <ScalarProperty Name="AppliedFromDate" ColumnName="AppliedFromDate" />
+          <ScalarProperty Name="AppliedToDate" ColumnName="AppliedToDate" />
+          <ScalarProperty Name="DiffDoseCode" ColumnName="DiffDoseCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardPie" FunctionName="cnaaModel.Store.uspDashboardPie">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardPie_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboardPie_SubCenter" FunctionName="cnaaModel.Store.uspDashboardPie_SubCenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboardPie_SubCenter_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDeliveryDetails_Delplacecode" FunctionName="cnaaModel.Store.uspDeliveryDetails_Delplacecode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDeliveryDetails_Delplacecode_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="masterID" ColumnName="masterID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspReferUnitName" FunctionName="cnaaModel.Store.uspReferUnitName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspReferUnitName_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDeathData" FunctionName="cnaaModel.Store.uspDeathData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDeathData_Result">
+          <ScalarProperty Name="maternalDayCount" ColumnName="maternalDayCount" />
+          <ScalarProperty Name="maternalTwodaysCount" ColumnName="maternalTwodaysCount" />
+          <ScalarProperty Name="maternalWeekCount" ColumnName="maternalWeekCount" />
+          <ScalarProperty Name="maternalMonthCount" ColumnName="maternalMonthCount" />
+          <ScalarProperty Name="maternalYearCount" ColumnName="maternalYearCount" />
+          <ScalarProperty Name="infantDayCount" ColumnName="infantDayCount" />
+          <ScalarProperty Name="infantTwodaysCount" ColumnName="infantTwodaysCount" />
+          <ScalarProperty Name="infantWeekCount" ColumnName="infantWeekCount" />
+          <ScalarProperty Name="infantMonthCount" ColumnName="infantMonthCount" />
+          <ScalarProperty Name="infantYearCount" ColumnName="infantYearCount" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="finyear" ColumnName="finyear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDeliverylist" FunctionName="cnaaModel.Store.uspDeliverylist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDeliverylist_Result">
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="expDeliveryDate" ColumnName="expDeliveryDate" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitId" ColumnName="RegUnitId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspReferFromUnitName" FunctionName="cnaaModel.Store.uspReferFromUnitName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspReferFromUnitName_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDashboard" FunctionName="cnaaModel.Store.uspDashboard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDashboard_Result">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="TotalANCReg" ColumnName="TotalANCReg" />
+          <ScalarProperty Name="ANCRegTrimaster" ColumnName="ANCRegTrimaster" />
+          <ScalarProperty Name="DelPublic" ColumnName="DelPublic" />
+          <ScalarProperty Name="DelPrivate" ColumnName="DelPrivate" />
+          <ScalarProperty Name="DelHome" ColumnName="DelHome" />
+          <ScalarProperty Name="totalBirth" ColumnName="totalBirth" />
+          <ScalarProperty Name="LiveMale" ColumnName="LiveMale" />
+          <ScalarProperty Name="LiveFeMale" ColumnName="LiveFeMale" />
+          <ScalarProperty Name="StillBirth" ColumnName="StillBirth" />
+          <ScalarProperty Name="Abortion" ColumnName="Abortion" />
+          <ScalarProperty Name="TotalChildrenReg" ColumnName="TotalChildrenReg" />
+          <ScalarProperty Name="FullyImmunized" ColumnName="FullyImmunized" />
+          <ScalarProperty Name="PartiallyImmunized" ColumnName="PartiallyImmunized" />
+          <ScalarProperty Name="NotImmunized" ColumnName="NotImmunized" />
+          <ScalarProperty Name="Unitcode" ColumnName="Unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="districtname" ColumnName="districtname" />
+          <ScalarProperty Name="blockname" ColumnName="blockname" />
+          <ScalarProperty Name="maxvalDist" ColumnName="maxvalDist" />
+          <ScalarProperty Name="maxvalBlock" ColumnName="maxvalBlock" />
+          <ScalarProperty Name="MaternalDeathCount" ColumnName="MaternalDeathCount" />
+          <ScalarProperty Name="InfantDeathCount" ColumnName="InfantDeathCount" />
+          <ScalarProperty Name="Bcgcount" ColumnName="Bcgcount" />
+          <ScalarProperty Name="PentaCount" ColumnName="PentaCount" />
+          <ScalarProperty Name="OPVCount" ColumnName="OPVCount" />
+          <ScalarProperty Name="MeaslCount" ColumnName="MeaslCount" />
+          <ScalarProperty Name="HBCount" ColumnName="HBCount" />
+          <ScalarProperty Name="BCGFlag" ColumnName="BCGFlag" />
+          <ScalarProperty Name="PentaFlag" ColumnName="PentaFlag" />
+          <ScalarProperty Name="OPVFlag" ColumnName="OPVFlag" />
+          <ScalarProperty Name="MeaslesFlag" ColumnName="MeaslesFlag" />
+          <ScalarProperty Name="HBFlag" ColumnName="HBFlag" />
+          <ScalarProperty Name="totalSterlization" ColumnName="totalSterlization" />
+          <ScalarProperty Name="mthyr" ColumnName="mthyr" />
+          <ScalarProperty Name="totalSterlizationMonth" ColumnName="totalSterlizationMonth" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="birth_boyCount" ColumnName="birth_boyCount" />
+          <ScalarProperty Name="birth_girlCount" ColumnName="birth_girlCount" />
+          <ScalarProperty Name="ANC3P" ColumnName="ANC3P" />
+          <ScalarProperty Name="InstDelP" ColumnName="InstDelP" />
+          <ScalarProperty Name="FullImmuP" ColumnName="FullImmuP" />
+          <ScalarProperty Name="SterP" ColumnName="SterP" />
+          <ScalarProperty Name="IUDP" ColumnName="IUDP" />
+          <ScalarProperty Name="maxval" ColumnName="maxval" />
+          <ScalarProperty Name="pieUnittype" ColumnName="pieUnittype" />
+          <ScalarProperty Name="HighRisk_HighBP" ColumnName="HighRisk_HighBP" />
+          <ScalarProperty Name="HighRisk_Diabetes" ColumnName="HighRisk_Diabetes" />
+          <ScalarProperty Name="HighRisk_APH" ColumnName="HighRisk_APH" />
+          <ScalarProperty Name="HighRisk_Malaria" ColumnName="HighRisk_Malaria" />
+          <ScalarProperty Name="HighRisk_Other" ColumnName="HighRisk_Other" />
+          <ScalarProperty Name="HighRisk_Anemia" ColumnName="HighRisk_Anemia" />
+          <ScalarProperty Name="HighRisk_Age" ColumnName="HighRisk_Age" />
+          <ScalarProperty Name="HighRisk_Height" ColumnName="HighRisk_Height" />
+          <ScalarProperty Name="HighRisk_Delivery" ColumnName="HighRisk_Delivery" />
+          <ScalarProperty Name="HighRisk_LieAndBreech" ColumnName="HighRisk_LieAndBreech" />
+          <ScalarProperty Name="HighRisk_Heart" ColumnName="HighRisk_Heart" />
+          <ScalarProperty Name="HighRisk_Kidney" ColumnName="HighRisk_Kidney" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MotherStatus">
+      <EntityTypeMapping TypeName="cnaaModel.MotherStatu">
+        <MappingFragment StoreEntitySet="MotherStatus">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LiveChild_R" ColumnName="LiveChild_R" />
+          <ScalarProperty Name="Villageautoid_R" ColumnName="Villageautoid_R" />
+          <ScalarProperty Name="motherid_R" ColumnName="motherid_R" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="reasonid" ColumnName="reasonid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="cnaaModel.UsersTrailLog">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="PwdUpdatedDate" ColumnName="PwdUpdatedDate" />
+          <ScalarProperty Name="old2pwd" ColumnName="old2pwd" />
+          <ScalarProperty Name="old1pwd" ColumnName="old1pwd" />
+          <ScalarProperty Name="Trail" ColumnName="Trail" />
+          <ScalarProperty Name="TrailTime" ColumnName="TrailTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspANMAppDataCount" FunctionName="cnaaModel.Store.uspANMAppDataCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMAppDataCount_Result">
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="ChcPhcName" ColumnName="ChcPhcName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="AshaAutoID" ColumnName="AshaAutoID" />
+          <ScalarProperty Name="AnmName" ColumnName="AnmName" />
+          <ScalarProperty Name="CasesCount" ColumnName="CasesCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMAppDataDetails" FunctionName="cnaaModel.Store.uspANMAppDataDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMAppDataDetails_Result">
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="CHCPHCName" ColumnName="CHCPHCName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="AnmName" ColumnName="AnmName" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="PctsID" ColumnName="PctsID" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+          <ScalarProperty Name="PrasavDate" ColumnName="PrasavDate" />
+          <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+          <ScalarProperty Name="ImmuDate" ColumnName="ImmuDate" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="ImmuName" ColumnName="ImmuName" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Mother_App">
+      <EntityTypeMapping TypeName="cnaaModel.Mother_App">
+        <MappingFragment StoreEntitySet="Mother_App">
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="BeforeDelivery500" ColumnName="BeforeDelivery500" />
+          <ScalarProperty Name="BPLCardNo" ColumnName="BPLCardNo" />
+          <ScalarProperty Name="BPL" ColumnName="BPL" />
+          <ScalarProperty Name="NFSA" ColumnName="NFSA" />
+          <ScalarProperty Name="Ghamantu" ColumnName="Ghamantu" />
+          <ScalarProperty Name="DirectDelivery" ColumnName="DirectDelivery" />
+          <ScalarProperty Name="Location_Rajasthan" ColumnName="Location_Rajasthan" />
+          <ScalarProperty Name="EntryUnitVillage" ColumnName="EntryUnitVillage" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Consent" ColumnName="Consent" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="JanAadhaarNo" ColumnName="JanAadhaarNo" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="BHAMASHAHID" ColumnName="BHAMASHAHID" />
+          <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="CastGroup" ColumnName="CastGroup" />
+          <ScalarProperty Name="Cast" ColumnName="Cast" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="Mother_AppID" ColumnName="Mother_AppID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetRequestByPCTSID" FunctionName="cnaaModel.Store.uspGetRequestByPCTSID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspGetRequestByPCTSID_Result">
+          <ScalarProperty Name="Mother_AppID" ColumnName="Mother_AppID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Cast" ColumnName="Cast" />
+          <ScalarProperty Name="CastGroup" ColumnName="CastGroup" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+          <ScalarProperty Name="BHAMASHAHID" ColumnName="BHAMASHAHID" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="JanAadhaarNo" ColumnName="JanAadhaarNo" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="Consent" ColumnName="Consent" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUnitVillage" ColumnName="EntryUnitVillage" />
+          <ScalarProperty Name="Location_Rajasthan" ColumnName="Location_Rajasthan" />
+          <ScalarProperty Name="DirectDelivery" ColumnName="DirectDelivery" />
+          <ScalarProperty Name="Ghamantu" ColumnName="Ghamantu" />
+          <ScalarProperty Name="NFSA" ColumnName="NFSA" />
+          <ScalarProperty Name="BPL" ColumnName="BPL" />
+          <ScalarProperty Name="BPLCardNo" ColumnName="BPLCardNo" />
+          <ScalarProperty Name="BeforeDelivery500" ColumnName="BeforeDelivery500" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="ErrorMsg" ColumnName="ErrorMsg" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="CastName" ColumnName="CastName" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMPerformanceApp" FunctionName="cnaaModel.Store.uspANMPerformanceApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMPerformanceApp_Result">
+          <ScalarProperty Name="DistrictWiseRCHRank" ColumnName="DistrictWiseRCHRank" />
+          <ScalarProperty Name="BlockWiseRCHRank" ColumnName="BlockWiseRCHRank" />
+          <ScalarProperty Name="DistrictWiseRank_ANC3" ColumnName="DistrictWiseRank_ANC3" />
+          <ScalarProperty Name="DistrictWiseRank_InstDel" ColumnName="DistrictWiseRank_InstDel" />
+          <ScalarProperty Name="DistrictWiseRank_FullImmu" ColumnName="DistrictWiseRank_FullImmu" />
+          <ScalarProperty Name="DistrictWiseRank_IUD" ColumnName="DistrictWiseRank_IUD" />
+          <ScalarProperty Name="DistrictWiseRank_Ster" ColumnName="DistrictWiseRank_Ster" />
+          <ScalarProperty Name="BlockWiseRank_ANC3" ColumnName="BlockWiseRank_ANC3" />
+          <ScalarProperty Name="BlockWiseRank_InstDel" ColumnName="BlockWiseRank_InstDel" />
+          <ScalarProperty Name="BlockWiseRank_FullImmu" ColumnName="BlockWiseRank_FullImmu" />
+          <ScalarProperty Name="BlockWiseRank_IUD" ColumnName="BlockWiseRank_IUD" />
+          <ScalarProperty Name="BlockWiseRank_Ster" ColumnName="BlockWiseRank_Ster" />
+          <ScalarProperty Name="DistrictWise_TotalUnit" ColumnName="DistrictWise_TotalUnit" />
+          <ScalarProperty Name="BlockWiseRank_TotalUnit" ColumnName="BlockWiseRank_TotalUnit" />
+          <ScalarProperty Name="StateWiseTotalUnit" ColumnName="StateWiseTotalUnit" />
+          <ScalarProperty Name="StateWiseRCHRank" ColumnName="StateWiseRCHRank" />
+          <ScalarProperty Name="StateWiseRank_ANC3" ColumnName="StateWiseRank_ANC3" />
+          <ScalarProperty Name="StateWiseRank_InstDel" ColumnName="StateWiseRank_InstDel" />
+          <ScalarProperty Name="StateWiseRank_FullImmu" ColumnName="StateWiseRank_FullImmu" />
+          <ScalarProperty Name="StateWiseRank_IUD" ColumnName="StateWiseRank_IUD" />
+          <ScalarProperty Name="StateWiseRank_Ster" ColumnName="StateWiseRank_Ster" />
+          <ScalarProperty Name="StateWiseEmoji" ColumnName="StateWiseEmoji" />
+          <ScalarProperty Name="DistrictWiseEmoji" ColumnName="DistrictWiseEmoji" />
+          <ScalarProperty Name="BlockWiseEmoji" ColumnName="BlockWiseEmoji" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantlistForImmunizationByPCTSID" FunctionName="cnaaModel.Store.uspInfantlistForImmunizationByPCTSID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantlistForImmunizationByPCTSID_Result">
+          <ScalarProperty Name="PehchanRegFlag" ColumnName="PehchanRegFlag" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Transports">
+      <EntityTypeMapping TypeName="cnaaModel.Transport">
+        <MappingFragment StoreEntitySet="Transport">
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LDDFlag" ColumnName="LDDFlag" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+          <ScalarProperty Name="Amount_DOWN" ColumnName="Amount_DOWN" />
+          <ScalarProperty Name="Amount_UP" ColumnName="Amount_UP" />
+          <ScalarProperty Name="KM_DOWN" ColumnName="KM_DOWN" />
+          <ScalarProperty Name="VehichleOwnerName_DOWN" ColumnName="VehichleOwnerName_DOWN" />
+          <ScalarProperty Name="VehichleNo_DOWN" ColumnName="VehichleNo_DOWN" />
+          <ScalarProperty Name="VehichleType_DOWN" ColumnName="VehichleType_DOWN" />
+          <ScalarProperty Name="KM_UP" ColumnName="KM_UP" />
+          <ScalarProperty Name="VehichleOwnerName_UP" ColumnName="VehichleOwnerName_UP" />
+          <ScalarProperty Name="VehichleNo_UP" ColumnName="VehichleNo_UP" />
+          <ScalarProperty Name="VehichleType_UP" ColumnName="VehichleType_UP" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImmunizationMasters">
+      <EntityTypeMapping TypeName="cnaaModel.ImmunizationMaster">
+        <MappingFragment StoreEntitySet="ImmunizationMaster">
+          <ScalarProperty Name="RCHImmuName" ColumnName="RCHImmuName" />
+          <ScalarProperty Name="RCHImmuCode" ColumnName="RCHImmuCode" />
+          <ScalarProperty Name="PentaBoosterDose2Flag" ColumnName="PentaBoosterDose2Flag" />
+          <ScalarProperty Name="DPTBoosterDose2Flag" ColumnName="DPTBoosterDose2Flag" />
+          <ScalarProperty Name="BoosterDoseFlag" ColumnName="BoosterDoseFlag" />
+          <ScalarProperty Name="PentaFullImmunizationFlag" ColumnName="PentaFullImmunizationFlag" />
+          <ScalarProperty Name="DPTFullImmunizationFlag" ColumnName="DPTFullImmunizationFlag" />
+          <ScalarProperty Name="IPaddress" ColumnName="IPaddress" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="LastUpdatedate" ColumnName="LastUpdatedate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DiffDoseCode" ColumnName="DiffDoseCode" />
+          <ScalarProperty Name="DiffBetweenDoses" ColumnName="DiffBetweenDoses" />
+          <ScalarProperty Name="AppliedToDate" ColumnName="AppliedToDate" />
+          <ScalarProperty Name="AppliedFromDate" ColumnName="AppliedFromDate" />
+          <ScalarProperty Name="DistrictCode" ColumnName="DistrictCode" />
+          <ScalarProperty Name="MaxDays" ColumnName="MaxDays" />
+          <ScalarProperty Name="duedays" ColumnName="duedays" />
+          <ScalarProperty Name="ImmuNameH" ColumnName="ImmuNameH" />
+          <ScalarProperty Name="ImmuName" ColumnName="ImmuName" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterCodes">
+      <EntityTypeMapping TypeName="cnaaModel.MasterCode">
+        <MappingFragment StoreEntitySet="MasterCodes">
+          <ScalarProperty Name="PehchanCode" ColumnName="PehchanCode" />
+          <ScalarProperty Name="RCH_TableName" ColumnName="RCH_TableName" />
+          <ScalarProperty Name="RCHID" ColumnName="RCHID" />
+          <ScalarProperty Name="Name_E" ColumnName="Name_E" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="masterID" ColumnName="masterID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UspAshaDeshbord" FunctionName="cnaaModel.Store.UspAshaDeshbord">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.UspAshaDeshbord_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="AshaAutoid" ColumnName="AshaAutoid" />
+          <ScalarProperty Name="totalANC" ColumnName="totalANC" />
+          <ScalarProperty Name="ANCRegTrimaster" ColumnName="ANCRegTrimaster" />
+          <ScalarProperty Name="after90" ColumnName="after90" />
+          <ScalarProperty Name="TotalChildrenReg" ColumnName="TotalChildrenReg" />
+          <ScalarProperty Name="FullyImmunized" ColumnName="FullyImmunized" />
+          <ScalarProperty Name="PartiallyImmunized" ColumnName="PartiallyImmunized" />
+          <ScalarProperty Name="MaleCount" ColumnName="MaleCount" />
+          <ScalarProperty Name="FeMaleCount" ColumnName="FeMaleCount" />
+          <ScalarProperty Name="homeDelCount" ColumnName="homeDelCount" />
+          <ScalarProperty Name="privateDelCount" ColumnName="privateDelCount" />
+          <ScalarProperty Name="publicDelCount" ColumnName="publicDelCount" />
+          <ScalarProperty Name="stllBirthCount" ColumnName="stllBirthCount" />
+          <ScalarProperty Name="NotImmunized" ColumnName="NotImmunized" />
+          <ScalarProperty Name="BcgFlag" ColumnName="BcgFlag" />
+          <ScalarProperty Name="pentaFlag" ColumnName="pentaFlag" />
+          <ScalarProperty Name="HBFlag" ColumnName="HBFlag" />
+          <ScalarProperty Name="MeaslesFlag" ColumnName="MeaslesFlag" />
+          <ScalarProperty Name="OPVFlag" ColumnName="OPVFlag" />
+          <ScalarProperty Name="BcgCount" ColumnName="BcgCount" />
+          <ScalarProperty Name="pentaCount" ColumnName="pentaCount" />
+          <ScalarProperty Name="HBCount" ColumnName="HBCount" />
+          <ScalarProperty Name="MeaslCount" ColumnName="MeaslCount" />
+          <ScalarProperty Name="OPVCount" ColumnName="OPVCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="cnaaModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="IfscCodeBeneficiary" ColumnName="IfscCodeBeneficiary" />
+          <ScalarProperty Name="IfscCodeAsha" ColumnName="IfscCodeAsha" />
+          <ScalarProperty Name="IfscCodeAnm" ColumnName="IfscCodeAnm" />
+          <ScalarProperty Name="OldBankMasterID" ColumnName="OldBankMasterID" />
+          <ScalarProperty Name="BankMasterID" ColumnName="BankMasterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MergeBank" ColumnName="MergeBank" />
+          <ScalarProperty Name="OldBank_Name" ColumnName="OldBank_Name" />
+          <ScalarProperty Name="UpdateIP" ColumnName="UpdateIP" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="Updatedate" ColumnName="Updatedate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="RuralFlag" ColumnName="RuralFlag" />
+          <ScalarProperty Name="OldIFSC_CODE" ColumnName="OldIFSC_CODE" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="IFSC_CODE" ColumnName="IFSC_CODE" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UspBirthCertificateList" FunctionName="cnaaModel.Store.UspBirthCertificateList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.UspBirthCertificateList_Result">
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="SexName" ColumnName="SexName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="PehchanRegFlag" ColumnName="PehchanRegFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Immunizations">
+      <EntityTypeMapping TypeName="cnaaModel.Immunization">
+        <MappingFragment StoreEntitySet="Immunization">
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="EntryUnitID" ColumnName="EntryUnitID" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="immudate" ColumnName="immudate" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="ImmuID" ColumnName="ImmuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Infants">
+      <EntityTypeMapping TypeName="cnaaModel.Infant">
+        <MappingFragment StoreEntitySet="Infant">
+          <ScalarProperty Name="ChildNameE" ColumnName="ChildNameE" />
+          <ScalarProperty Name="ChildNameH" ColumnName="ChildNameH" />
+          <ScalarProperty Name="RCHID" ColumnName="RCHID" />
+          <ScalarProperty Name="BabyKit" ColumnName="BabyKit" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+          <ScalarProperty Name="NBCC_NBSU" ColumnName="NBCC_NBSU" />
+          <ScalarProperty Name="VikrtiCode" ColumnName="VikrtiCode" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Bfeed" ColumnName="Bfeed" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspDataforPNCWomanDetails" FunctionName="cnaaModel.Store.uspDataforPNCWomanDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDataforPNCWomanDetails_Result">
+          <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+          <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+          <ScalarProperty Name="ReferUniName" ColumnName="ReferUniName" />
+          <ScalarProperty Name="PNCComp" ColumnName="PNCComp" />
+          <ScalarProperty Name="Child1_IsLive" ColumnName="Child1_IsLive" />
+          <ScalarProperty Name="ChildName1" ColumnName="ChildName1" />
+          <ScalarProperty Name="ChilsID1" ColumnName="ChilsID1" />
+          <ScalarProperty Name="Child1_Weight" ColumnName="Child1_Weight" />
+          <ScalarProperty Name="Child1_Compl" ColumnName="Child1_Compl" />
+          <ScalarProperty Name="Child2_IsLive" ColumnName="Child2_IsLive" />
+          <ScalarProperty Name="ChildName2" ColumnName="ChildName2" />
+          <ScalarProperty Name="ChilsID2" ColumnName="ChilsID2" />
+          <ScalarProperty Name="Child2_Weight" ColumnName="Child2_Weight" />
+          <ScalarProperty Name="Child2_Compl" ColumnName="Child2_Compl" />
+          <ScalarProperty Name="Child3_IsLive" ColumnName="Child3_IsLive" />
+          <ScalarProperty Name="ChildName3" ColumnName="ChildName3" />
+          <ScalarProperty Name="ChilsID3" ColumnName="ChilsID3" />
+          <ScalarProperty Name="Child3_Weight" ColumnName="Child3_Weight" />
+          <ScalarProperty Name="Child3_Compl" ColumnName="Child3_Compl" />
+          <ScalarProperty Name="Child4_IsLive" ColumnName="Child4_IsLive" />
+          <ScalarProperty Name="ChildName4" ColumnName="ChildName4" />
+          <ScalarProperty Name="ChilsID4" ColumnName="ChilsID4" />
+          <ScalarProperty Name="Child4_Weight" ColumnName="Child4_Weight" />
+          <ScalarProperty Name="Child4_Compl" ColumnName="Child4_Compl" />
+          <ScalarProperty Name="Child5_IsLive" ColumnName="Child5_IsLive" />
+          <ScalarProperty Name="ChildName5" ColumnName="ChildName5" />
+          <ScalarProperty Name="ChilsID5" ColumnName="ChilsID5" />
+          <ScalarProperty Name="Child5_Weight" ColumnName="Child5_Weight" />
+          <ScalarProperty Name="Child5_Compl" ColumnName="Child5_Compl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantlistForWomanDetails" FunctionName="cnaaModel.Store.uspInfantlistForWomanDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantlistForWomanDetails_Result">
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USPAshaSoftMthyr" FunctionName="cnaaModel.Store.USPAshaSoftMthyr" />
+    <FunctionImportMapping FunctionImportName="USPAshaIncentivesApp" FunctionName="cnaaModel.Store.USPAshaIncentivesApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.USPAshaIncentivesApp_Result">
+          <ScalarProperty Name="ashaname" ColumnName="ashaname" />
+          <ScalarProperty Name="ashaphone" ColumnName="ashaphone" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ServiceEnglish" ColumnName="ServiceEnglish" />
+          <ScalarProperty Name="SeviceHindi" ColumnName="SeviceHindi" />
+          <ScalarProperty Name="activitycode" ColumnName="activitycode" />
+          <ScalarProperty Name="ActivityServiceHindi" ColumnName="ActivityServiceHindi" />
+          <ScalarProperty Name="ActivityServiceEnglish" ColumnName="ActivityServiceEnglish" />
+          <ScalarProperty Name="ServiceAmount" ColumnName="ServiceAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USPHelpDesk" FunctionName="cnaaModel.Store.USPHelpDesk">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.USPHelpDesk_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DeathReasons">
+      <EntityTypeMapping TypeName="cnaaModel.DeathReason">
+        <MappingFragment StoreEntitySet="DeathReason">
+          <ScalarProperty Name="RCHDeathReason" ColumnName="RCHDeathReason" />
+          <ScalarProperty Name="RCHDeathCauseID" ColumnName="RCHDeathCauseID" />
+          <ScalarProperty Name="ParentReasonId" ColumnName="ParentReasonId" />
+          <ScalarProperty Name="ReasonNameE" ColumnName="ReasonNameE" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="DeathType" ColumnName="DeathType" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HBYCs">
+      <EntityTypeMapping TypeName="cnaaModel.HBYC">
+        <MappingFragment StoreEntitySet="HBYC">
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Smthyr" ColumnName="Smthyr" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Refer" ColumnName="Refer" />
+          <ScalarProperty Name="GrowthLate" ColumnName="GrowthLate" />
+          <ScalarProperty Name="FoodAccordingAge" ColumnName="FoodAccordingAge" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="GrowthChart" ColumnName="GrowthChart" />
+          <ScalarProperty Name="IFASirap" ColumnName="IFASirap" />
+          <ScalarProperty Name="ORSPacket" ColumnName="ORSPacket" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="ASHAAutoID" ColumnName="ASHAAutoID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="HBYCFlag" ColumnName="HBYCFlag" />
+          <ScalarProperty Name="InfantId" ColumnName="InfantId" />
+          <ScalarProperty Name="AncRegId" ColumnName="AncRegId" />
+          <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANCDetails_Log">
+      <EntityTypeMapping TypeName="cnaaModel.ANCDetails_Log">
+        <MappingFragment StoreEntitySet="ANCDetails_Log">
+          <ScalarProperty Name="TokenNo" ColumnName="TokenNo" />
+          <ScalarProperty Name="HepatitisBReferUnitID" ColumnName="HepatitisBReferUnitID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsRecovery" ColumnName="IsRecovery" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="CovidIsolation" ColumnName="CovidIsolation" />
+          <ScalarProperty Name="CovidQuarantine" ColumnName="CovidQuarantine" />
+          <ScalarProperty Name="CovidRelativePositive" ColumnName="CovidRelativePositive" />
+          <ScalarProperty Name="CovidRelativePossibility" ColumnName="CovidRelativePossibility" />
+          <ScalarProperty Name="CovidForeignTrip" ColumnName="CovidForeignTrip" />
+          <ScalarProperty Name="CovidFromDate" ColumnName="CovidFromDate" />
+          <ScalarProperty Name="CovidCase" ColumnName="CovidCase" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="NormalLodingIronSucrose1" ColumnName="NormalLodingIronSucrose1" />
+          <ScalarProperty Name="IronSucrose4" ColumnName="IronSucrose4" />
+          <ScalarProperty Name="IronSucrose3" ColumnName="IronSucrose3" />
+          <ScalarProperty Name="IronSucrose2" ColumnName="IronSucrose2" />
+          <ScalarProperty Name="IronSucrose1" ColumnName="IronSucrose1" />
+          <ScalarProperty Name="CAL500" ColumnName="CAL500" />
+          <ScalarProperty Name="ALBE400" ColumnName="ALBE400" />
+          <ScalarProperty Name="TreatmentCode" ColumnName="TreatmentCode" />
+          <ScalarProperty Name="UrineS" ColumnName="UrineS" />
+          <ScalarProperty Name="UrineA" ColumnName="UrineA" />
+          <ScalarProperty Name="BloodPressureD" ColumnName="BloodPressureD" />
+          <ScalarProperty Name="BloodPressureS" ColumnName="BloodPressureS" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="anganwariNo" ColumnName="anganwariNo" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="RTI" ColumnName="RTI" />
+          <ScalarProperty Name="CompL" ColumnName="CompL" />
+          <ScalarProperty Name="HB" ColumnName="HB" />
+          <ScalarProperty Name="IFA" ColumnName="IFA" />
+          <ScalarProperty Name="TTB" ColumnName="TTB" />
+          <ScalarProperty Name="TT2" ColumnName="TT2" />
+          <ScalarProperty Name="TT1" ColumnName="TT1" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspAshaPlan" FunctionName="cnaaModel.Store.uspAshaPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspAshaPlan_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ancdue" ColumnName="ancdue" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="PNCDueDate" ColumnName="PNCDueDate" />
+          <ScalarProperty Name="ExpDeliveryDate" ColumnName="ExpDeliveryDate" />
+          <ScalarProperty Name="livechild" ColumnName="livechild" />
+          <ScalarProperty Name="immudue" ColumnName="immudue" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAshaPlanForImmunization" FunctionName="cnaaModel.Store.uspAshaPlanForImmunization">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspAshaPlanForImmunization_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="ancdue" ColumnName="ancdue" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="PNCDueDate" ColumnName="PNCDueDate" />
+          <ScalarProperty Name="ExpDeliveryDate" ColumnName="ExpDeliveryDate" />
+          <ScalarProperty Name="livechild" ColumnName="livechild" />
+          <ScalarProperty Name="immudue" ColumnName="immudue" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertUpdateImmunization" FunctionName="cnaaModel.Store.InsertUpdateImmunization">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.InsertUpdateImmunization_Result">
+          <ScalarProperty Name="error" ColumnName="error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspListForANMVerify" FunctionName="cnaaModel.Store.uspListForANMVerify">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspListForANMVerify_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AncPncImmuDeathDate" ColumnName="AncPncImmuDeathDate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspListForANMVerifyTotal" FunctionName="cnaaModel.Store.uspListForANMVerifyTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspListForANMVerifyTotal_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AncPncImmuDeathDate" ColumnName="AncPncImmuDeathDate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDueListForANMVerification1" FunctionName="cnaaModel.Store.uspDueListForANMVerification1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDueListForANMVerification1_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AncPncImmuDeathDate" ColumnName="AncPncImmuDeathDate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="MinFlagUnVerify" ColumnName="MinFlagUnVerify" />
+          <ScalarProperty Name="FlagValue" ColumnName="FlagValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HBYC_Log">
+      <EntityTypeMapping TypeName="cnaaModel.HBYC_Log">
+        <MappingFragment StoreEntitySet="HBYC_Log">
+          <ScalarProperty Name="HBYC_LogID" ColumnName="HBYC_LogID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="LogEntryUserNo" ColumnName="LogEntryUserNo" />
+          <ScalarProperty Name="LogEntryDate" ColumnName="LogEntryDate" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Smthyr" ColumnName="Smthyr" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Refer" ColumnName="Refer" />
+          <ScalarProperty Name="GrowthLate" ColumnName="GrowthLate" />
+          <ScalarProperty Name="FoodAccordingAge" ColumnName="FoodAccordingAge" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="GrowthChart" ColumnName="GrowthChart" />
+          <ScalarProperty Name="IFASirap" ColumnName="IFASirap" />
+          <ScalarProperty Name="ORSPacket" ColumnName="ORSPacket" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="ASHAAutoID" ColumnName="ASHAAutoID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="HBYCFlag" ColumnName="HBYCFlag" />
+          <ScalarProperty Name="InfantId" ColumnName="InfantId" />
+          <ScalarProperty Name="AncRegId" ColumnName="AncRegId" />
+          <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspDataforManageHBYCList" FunctionName="cnaaModel.Store.uspDataforManageHBYCList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDataforManageHBYCList_Result">
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="finyear" ColumnName="finyear" />
+          <ScalarProperty Name="villageautoid" ColumnName="villageautoid" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="HBYCWeight" ColumnName="HBYCWeight" />
+          <ScalarProperty Name="HBYCFlag" ColumnName="HBYCFlag" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="ORSPacket" ColumnName="ORSPacket" />
+          <ScalarProperty Name="IFASirap" ColumnName="IFASirap" />
+          <ScalarProperty Name="GrowthChart" ColumnName="GrowthChart" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="FoodAccordingAge" ColumnName="FoodAccordingAge" />
+          <ScalarProperty Name="GrowthLate" ColumnName="GrowthLate" />
+          <ScalarProperty Name="Refer" ColumnName="Refer" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="RegUnitid" ColumnName="RegUnitid" />
+          <ScalarProperty Name="RegUnittype" ColumnName="RegUnittype" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="ReferUnitcode" ColumnName="ReferUnitcode" />
+          <ScalarProperty Name="ReferUnittype" ColumnName="ReferUnittype" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DeviceTokens">
+      <EntityTypeMapping TypeName="cnaaModel.DeviceToken">
+        <MappingFragment StoreEntitySet="DeviceToken">
+          <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+          <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+          <ScalarProperty Name="TokenNo" ColumnName="TokenNo" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PctsTokens">
+      <EntityTypeMapping TypeName="cnaaModel.PctsToken">
+        <MappingFragment StoreEntitySet="PctsToken">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantDataforInfantDeathByInfantID" FunctionName="cnaaModel.Store.uspInfantDataforInfantDeathByInfantID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantDataforInfantDeathByInfantID_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="RegUnitid" ColumnName="RegUnitid" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Bfeed" ColumnName="Bfeed" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="VikrtiCode" ColumnName="VikrtiCode" />
+          <ScalarProperty Name="NBCC_NBSU" ColumnName="NBCC_NBSU" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="deathPlaceUnitcode" ColumnName="deathPlaceUnitcode" />
+          <ScalarProperty Name="deathPlaceUnittype" ColumnName="deathPlaceUnittype" />
+          <ScalarProperty Name="DeathUnitID" ColumnName="DeathUnitID" />
+          <ScalarProperty Name="RegDistrictName" ColumnName="RegDistrictName" />
+          <ScalarProperty Name="ashaautoid" ColumnName="ashaautoid" />
+          <ScalarProperty Name="regUntcode" ColumnName="regUntcode" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+          <ScalarProperty Name="AgeType" ColumnName="AgeType" />
+          <ScalarProperty Name="immucode" ColumnName="immucode" />
+          <ScalarProperty Name="Relative_Name" ColumnName="Relative_Name" />
+          <ScalarProperty Name="MasterMobile" ColumnName="MasterMobile" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="DeathReportDate" ColumnName="DeathReportDate" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspMotherDataforMaternalDeath" FunctionName="cnaaModel.Store.uspMotherDataforMaternalDeath">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspMotherDataforMaternalDeath_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitid" ColumnName="RegUnitid" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+          <ScalarProperty Name="Relative_Name" ColumnName="Relative_Name" />
+          <ScalarProperty Name="MasterMobile" ColumnName="MasterMobile" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="DeathReportDate" ColumnName="DeathReportDate" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="deathPlaceUnitcode" ColumnName="deathPlaceUnitcode" />
+          <ScalarProperty Name="deathPlaceUnittype" ColumnName="deathPlaceUnittype" />
+          <ScalarProperty Name="DeathUnitID" ColumnName="DeathUnitID" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="RegDistrictName" ColumnName="RegDistrictName" />
+          <ScalarProperty Name="ashaautoid" ColumnName="ashaautoid" />
+          <ScalarProperty Name="regUntcode" ColumnName="regUntcode" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="ParentReasonId" ColumnName="ParentReasonId" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HighRiskCases">
+      <EntityTypeMapping TypeName="cnaaModel.HighRiskCas">
+        <MappingFragment StoreEntitySet="HighRiskCases">
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="S_mthyr" ColumnName="S_mthyr" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="ContactUnitID" ColumnName="ContactUnitID" />
+          <ScalarProperty Name="DelPlaceUnitID" ColumnName="DelPlaceUnitID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="anganwariNo1" ColumnName="anganwariNo1" />
+          <ScalarProperty Name="DoctorName1" ColumnName="DoctorName1" />
+          <ScalarProperty Name="unitid1" ColumnName="unitid1" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="ANCRegid" ColumnName="ANCRegid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HighRiskCasesLogs">
+      <EntityTypeMapping TypeName="cnaaModel.HighRiskCasesLog">
+        <MappingFragment StoreEntitySet="HighRiskCasesLog">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="LogIPAddress" ColumnName="LogIPAddress" />
+          <ScalarProperty Name="LogUserNo" ColumnName="LogUserNo" />
+          <ScalarProperty Name="LogEntryDate" ColumnName="LogEntryDate" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="ContactUnitID" ColumnName="ContactUnitID" />
+          <ScalarProperty Name="DelPlaceUnitID" ColumnName="DelPlaceUnitID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="anganwariNo1" ColumnName="anganwariNo1" />
+          <ScalarProperty Name="DoctorName1" ColumnName="DoctorName1" />
+          <ScalarProperty Name="unitid1" ColumnName="unitid1" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="ANCRegid" ColumnName="ANCRegid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspManageHighRiskCases" FunctionName="cnaaModel.Store.uspManageHighRiskCases">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspManageHighRiskCases_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="LmpDate" ColumnName="LmpDate" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="AncFlag" ColumnName="AncFlag" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ContactUnitType" ColumnName="ContactUnitType" />
+          <ScalarProperty Name="ContactDistrictUnitCode" ColumnName="ContactDistrictUnitCode" />
+          <ScalarProperty Name="ContactUnitID" ColumnName="ContactUnitID" />
+          <ScalarProperty Name="DelUnitType" ColumnName="DelUnitType" />
+          <ScalarProperty Name="DelDistrictUnitCode" ColumnName="DelDistrictUnitCode" />
+          <ScalarProperty Name="DelPlaceUnitID" ColumnName="DelPlaceUnitID" />
+          <ScalarProperty Name="ReferUnitType" ColumnName="ReferUnitType" />
+          <ScalarProperty Name="ReferDistrictUnitCode" ColumnName="ReferDistrictUnitCode" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ContactUnitName" ColumnName="ContactUnitName" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="ContactUnitCode" ColumnName="ContactUnitCode" />
+          <ScalarProperty Name="DelUnitCode" ColumnName="DelUnitCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspHighRisklist" FunctionName="cnaaModel.Store.uspHighRisklist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspHighRisklist_Result">
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="villageautoid" ColumnName="villageautoid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="ecid" ColumnName="ecid" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="lmpdate" ColumnName="lmpdate" />
+          <ScalarProperty Name="NotVerifiedAncFlag" ColumnName="NotVerifiedAncFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HBPNCs">
+      <EntityTypeMapping TypeName="cnaaModel.HBPNC">
+        <MappingFragment StoreEntitySet="HBPNC">
+          <ScalarProperty Name="Freeze_HBPNC" ColumnName="Freeze_HBPNC" />
+          <ScalarProperty Name="S_mthyr_HBPNC" ColumnName="S_mthyr_HBPNC" />
+          <ScalarProperty Name="Child5_ReferTreatMent" ColumnName="Child5_ReferTreatMent" />
+          <ScalarProperty Name="Child4_ReferTreatMent" ColumnName="Child4_ReferTreatMent" />
+          <ScalarProperty Name="Child3_ReferTreatMent" ColumnName="Child3_ReferTreatMent" />
+          <ScalarProperty Name="Child2_ReferTreatMent" ColumnName="Child2_ReferTreatMent" />
+          <ScalarProperty Name="Child1_ReferTreatMent" ColumnName="Child1_ReferTreatMent" />
+          <ScalarProperty Name="Child5_TreatMent" ColumnName="Child5_TreatMent" />
+          <ScalarProperty Name="Child4_TreatMent" ColumnName="Child4_TreatMent" />
+          <ScalarProperty Name="Child3_TreatMent" ColumnName="Child3_TreatMent" />
+          <ScalarProperty Name="Child2_TreatMent" ColumnName="Child2_TreatMent" />
+          <ScalarProperty Name="Child1_TreatMent" ColumnName="Child1_TreatMent" />
+          <ScalarProperty Name="Child5_ReferUnitID" ColumnName="Child5_ReferUnitID" />
+          <ScalarProperty Name="Child4_ReferUnitID" ColumnName="Child4_ReferUnitID" />
+          <ScalarProperty Name="Child3_ReferUnitID" ColumnName="Child3_ReferUnitID" />
+          <ScalarProperty Name="Child2_ReferUnitID" ColumnName="Child2_ReferUnitID" />
+          <ScalarProperty Name="Child1_ReferUnitID" ColumnName="Child1_ReferUnitID" />
+          <ScalarProperty Name="Child5_KMC" ColumnName="Child5_KMC" />
+          <ScalarProperty Name="Child4_KMC" ColumnName="Child4_KMC" />
+          <ScalarProperty Name="Child3_KMC" ColumnName="Child3_KMC" />
+          <ScalarProperty Name="Child2_KMC" ColumnName="Child2_KMC" />
+          <ScalarProperty Name="Child1_KMC" ColumnName="Child1_KMC" />
+          <ScalarProperty Name="Child5_Breath" ColumnName="Child5_Breath" />
+          <ScalarProperty Name="Child4_Breath" ColumnName="Child4_Breath" />
+          <ScalarProperty Name="Child3_Breath" ColumnName="Child3_Breath" />
+          <ScalarProperty Name="Child2_Breath" ColumnName="Child2_Breath" />
+          <ScalarProperty Name="Child1_Breath" ColumnName="Child1_Breath" />
+          <ScalarProperty Name="Child5_Temperature" ColumnName="Child5_Temperature" />
+          <ScalarProperty Name="Child4_Temperature" ColumnName="Child4_Temperature" />
+          <ScalarProperty Name="Child3_Temperature" ColumnName="Child3_Temperature" />
+          <ScalarProperty Name="Child2_Temperature" ColumnName="Child2_Temperature" />
+          <ScalarProperty Name="Child1_Temperature" ColumnName="Child1_Temperature" />
+          <ScalarProperty Name="Child5_Condition" ColumnName="Child5_Condition" />
+          <ScalarProperty Name="Child4_Condition" ColumnName="Child4_Condition" />
+          <ScalarProperty Name="Child3_Condition" ColumnName="Child3_Condition" />
+          <ScalarProperty Name="Child2_Condition" ColumnName="Child2_Condition" />
+          <ScalarProperty Name="Child1_Condition" ColumnName="Child1_Condition" />
+          <ScalarProperty Name="MotherCondition" ColumnName="MotherCondition" />
+          <ScalarProperty Name="MotherChildHealthFlag" ColumnName="MotherChildHealthFlag" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Child5_IsLive" ColumnName="Child5_IsLive" />
+          <ScalarProperty Name="Child4_IsLive" ColumnName="Child4_IsLive" />
+          <ScalarProperty Name="Child3_IsLive" ColumnName="Child3_IsLive" />
+          <ScalarProperty Name="Child2_IsLive" ColumnName="Child2_IsLive" />
+          <ScalarProperty Name="Child1_IsLive" ColumnName="Child1_IsLive" />
+          <ScalarProperty Name="ANMautoid" ColumnName="ANMautoid" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="S_mthyr" ColumnName="S_mthyr" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Child1_Comp" ColumnName="Child1_Comp" />
+          <ScalarProperty Name="Child5_Weight" ColumnName="Child5_Weight" />
+          <ScalarProperty Name="Child5_Comp" ColumnName="Child5_Comp" />
+          <ScalarProperty Name="Child5_InfantID" ColumnName="Child5_InfantID" />
+          <ScalarProperty Name="Child4_Weight" ColumnName="Child4_Weight" />
+          <ScalarProperty Name="Child4_Comp" ColumnName="Child4_Comp" />
+          <ScalarProperty Name="Child4_InfantID" ColumnName="Child4_InfantID" />
+          <ScalarProperty Name="Child3_Weight" ColumnName="Child3_Weight" />
+          <ScalarProperty Name="Child3_Comp" ColumnName="Child3_Comp" />
+          <ScalarProperty Name="Child3_InfantID" ColumnName="Child3_InfantID" />
+          <ScalarProperty Name="Child2_Weight" ColumnName="Child2_Weight" />
+          <ScalarProperty Name="Child2_Comp" ColumnName="Child2_Comp" />
+          <ScalarProperty Name="Child2_InfantID" ColumnName="Child2_InfantID" />
+          <ScalarProperty Name="Child1_Weight" ColumnName="Child1_Weight" />
+          <ScalarProperty Name="Child1_InfantID" ColumnName="Child1_InfantID" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+          <ScalarProperty Name="entrydate" ColumnName="entrydate" />
+          <ScalarProperty Name="unitid1" ColumnName="unitid1" />
+          <ScalarProperty Name="PPCM" ColumnName="PPCM" />
+          <ScalarProperty Name="PNCComp" ColumnName="PNCComp" />
+          <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+          <ScalarProperty Name="Ancregid" ColumnName="Ancregid" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HBPNC_Log">
+      <EntityTypeMapping TypeName="cnaaModel.HBPNC_Log">
+        <MappingFragment StoreEntitySet="HBPNC_Log">
+          <ScalarProperty Name="Freeze_HBPNC" ColumnName="Freeze_HBPNC" />
+          <ScalarProperty Name="S_mthyr_HBPNC" ColumnName="S_mthyr_HBPNC" />
+          <ScalarProperty Name="Child5_ReferTreatMent" ColumnName="Child5_ReferTreatMent" />
+          <ScalarProperty Name="Child4_ReferTreatMent" ColumnName="Child4_ReferTreatMent" />
+          <ScalarProperty Name="Child3_ReferTreatMent" ColumnName="Child3_ReferTreatMent" />
+          <ScalarProperty Name="Child2_ReferTreatMent" ColumnName="Child2_ReferTreatMent" />
+          <ScalarProperty Name="Child1_ReferTreatMent" ColumnName="Child1_ReferTreatMent" />
+          <ScalarProperty Name="Child5_TreatMent" ColumnName="Child5_TreatMent" />
+          <ScalarProperty Name="Child4_TreatMent" ColumnName="Child4_TreatMent" />
+          <ScalarProperty Name="Child3_TreatMent" ColumnName="Child3_TreatMent" />
+          <ScalarProperty Name="Child2_TreatMent" ColumnName="Child2_TreatMent" />
+          <ScalarProperty Name="Child1_TreatMent" ColumnName="Child1_TreatMent" />
+          <ScalarProperty Name="Child5_ReferUnitID" ColumnName="Child5_ReferUnitID" />
+          <ScalarProperty Name="Child4_ReferUnitID" ColumnName="Child4_ReferUnitID" />
+          <ScalarProperty Name="Child3_ReferUnitID" ColumnName="Child3_ReferUnitID" />
+          <ScalarProperty Name="Child2_ReferUnitID" ColumnName="Child2_ReferUnitID" />
+          <ScalarProperty Name="Child1_ReferUnitID" ColumnName="Child1_ReferUnitID" />
+          <ScalarProperty Name="Child5_KMC" ColumnName="Child5_KMC" />
+          <ScalarProperty Name="Child4_KMC" ColumnName="Child4_KMC" />
+          <ScalarProperty Name="Child3_KMC" ColumnName="Child3_KMC" />
+          <ScalarProperty Name="Child2_KMC" ColumnName="Child2_KMC" />
+          <ScalarProperty Name="Child1_KMC" ColumnName="Child1_KMC" />
+          <ScalarProperty Name="Child5_Breath" ColumnName="Child5_Breath" />
+          <ScalarProperty Name="Child4_Breath" ColumnName="Child4_Breath" />
+          <ScalarProperty Name="Child3_Breath" ColumnName="Child3_Breath" />
+          <ScalarProperty Name="Child2_Breath" ColumnName="Child2_Breath" />
+          <ScalarProperty Name="Child1_Breath" ColumnName="Child1_Breath" />
+          <ScalarProperty Name="Child5_Temperature" ColumnName="Child5_Temperature" />
+          <ScalarProperty Name="Child4_Temperature" ColumnName="Child4_Temperature" />
+          <ScalarProperty Name="Child3_Temperature" ColumnName="Child3_Temperature" />
+          <ScalarProperty Name="Child2_Temperature" ColumnName="Child2_Temperature" />
+          <ScalarProperty Name="Child1_Temperature" ColumnName="Child1_Temperature" />
+          <ScalarProperty Name="Child5_Condition" ColumnName="Child5_Condition" />
+          <ScalarProperty Name="Child4_Condition" ColumnName="Child4_Condition" />
+          <ScalarProperty Name="Child3_Condition" ColumnName="Child3_Condition" />
+          <ScalarProperty Name="Child2_Condition" ColumnName="Child2_Condition" />
+          <ScalarProperty Name="Child1_Condition" ColumnName="Child1_Condition" />
+          <ScalarProperty Name="MotherCondition" ColumnName="MotherCondition" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="HBPNC_LogID" ColumnName="HBPNC_LogID" />
+          <ScalarProperty Name="IsRecovery" ColumnName="IsRecovery" />
+          <ScalarProperty Name="MotherChildHealthFlag" ColumnName="MotherChildHealthFlag" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Child5_IsLive" ColumnName="Child5_IsLive" />
+          <ScalarProperty Name="Child4_IsLive" ColumnName="Child4_IsLive" />
+          <ScalarProperty Name="Child3_IsLive" ColumnName="Child3_IsLive" />
+          <ScalarProperty Name="Child2_IsLive" ColumnName="Child2_IsLive" />
+          <ScalarProperty Name="Child1_IsLive" ColumnName="Child1_IsLive" />
+          <ScalarProperty Name="ANMautoid" ColumnName="ANMautoid" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="S_mthyr" ColumnName="S_mthyr" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Child1_Comp" ColumnName="Child1_Comp" />
+          <ScalarProperty Name="Child5_Weight" ColumnName="Child5_Weight" />
+          <ScalarProperty Name="Child5_Comp" ColumnName="Child5_Comp" />
+          <ScalarProperty Name="Child5_InfantID" ColumnName="Child5_InfantID" />
+          <ScalarProperty Name="Child4_Weight" ColumnName="Child4_Weight" />
+          <ScalarProperty Name="Child4_Comp" ColumnName="Child4_Comp" />
+          <ScalarProperty Name="Child4_InfantID" ColumnName="Child4_InfantID" />
+          <ScalarProperty Name="Child3_Weight" ColumnName="Child3_Weight" />
+          <ScalarProperty Name="Child3_Comp" ColumnName="Child3_Comp" />
+          <ScalarProperty Name="Child3_InfantID" ColumnName="Child3_InfantID" />
+          <ScalarProperty Name="Child2_Weight" ColumnName="Child2_Weight" />
+          <ScalarProperty Name="Child2_Comp" ColumnName="Child2_Comp" />
+          <ScalarProperty Name="Child2_InfantID" ColumnName="Child2_InfantID" />
+          <ScalarProperty Name="Child1_Weight" ColumnName="Child1_Weight" />
+          <ScalarProperty Name="Child1_InfantID" ColumnName="Child1_InfantID" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+          <ScalarProperty Name="entrydate" ColumnName="entrydate" />
+          <ScalarProperty Name="PPCM" ColumnName="PPCM" />
+          <ScalarProperty Name="PNCComp" ColumnName="PNCComp" />
+          <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+          <ScalarProperty Name="Ancregid" ColumnName="Ancregid" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspDataforManagePNC" FunctionName="cnaaModel.Store.uspDataforManagePNC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDataforManagePNC_Result">
+          <ScalarProperty Name="Child1_TreatMent" ColumnName="Child1_TreatMent" />
+          <ScalarProperty Name="Child2_TreatMent" ColumnName="Child2_TreatMent" />
+          <ScalarProperty Name="Child3_TreatMent" ColumnName="Child3_TreatMent" />
+          <ScalarProperty Name="Child4_TreatMent" ColumnName="Child4_TreatMent" />
+          <ScalarProperty Name="Child5_TreatMent" ColumnName="Child5_TreatMent" />
+          <ScalarProperty Name="Child1_ReferTreatMent" ColumnName="Child1_ReferTreatMent" />
+          <ScalarProperty Name="Child2_ReferTreatMent" ColumnName="Child2_ReferTreatMent" />
+          <ScalarProperty Name="Child3_ReferTreatMent" ColumnName="Child3_ReferTreatMent" />
+          <ScalarProperty Name="Child4_ReferTreatMent" ColumnName="Child4_ReferTreatMent" />
+          <ScalarProperty Name="Child5_ReferTreatMent" ColumnName="Child5_ReferTreatMent" />
+          <ScalarProperty Name="Child1_unittype" ColumnName="Child1_unittype" />
+          <ScalarProperty Name="Child2_unittype" ColumnName="Child2_unittype" />
+          <ScalarProperty Name="Child3_unittype" ColumnName="Child3_unittype" />
+          <ScalarProperty Name="Child4_unittype" ColumnName="Child4_unittype" />
+          <ScalarProperty Name="Child5_unittype" ColumnName="Child5_unittype" />
+          <ScalarProperty Name="Child1_unitcode" ColumnName="Child1_unitcode" />
+          <ScalarProperty Name="Child2_unitcode" ColumnName="Child2_unitcode" />
+          <ScalarProperty Name="Child3_unitcode" ColumnName="Child3_unitcode" />
+          <ScalarProperty Name="Child4_unitcode" ColumnName="Child4_unitcode" />
+          <ScalarProperty Name="Child5_unitcode" ColumnName="Child5_unitcode" />
+          <ScalarProperty Name="Child1_Condition" ColumnName="Child1_Condition" />
+          <ScalarProperty Name="Child2_Condition" ColumnName="Child2_Condition" />
+          <ScalarProperty Name="Child3_Condition" ColumnName="Child3_Condition" />
+          <ScalarProperty Name="Child4_Condition" ColumnName="Child4_Condition" />
+          <ScalarProperty Name="Child5_Condition" ColumnName="Child5_Condition" />
+          <ScalarProperty Name="Child1_Temperature" ColumnName="Child1_Temperature" />
+          <ScalarProperty Name="Child2_Temperature" ColumnName="Child2_Temperature" />
+          <ScalarProperty Name="Child3_Temperature" ColumnName="Child3_Temperature" />
+          <ScalarProperty Name="Child4_Temperature" ColumnName="Child4_Temperature" />
+          <ScalarProperty Name="Child5_Temperature" ColumnName="Child5_Temperature" />
+          <ScalarProperty Name="Child1_Breath" ColumnName="Child1_Breath" />
+          <ScalarProperty Name="Child2_Breath" ColumnName="Child2_Breath" />
+          <ScalarProperty Name="Child3_Breath" ColumnName="Child3_Breath" />
+          <ScalarProperty Name="Child4_Breath" ColumnName="Child4_Breath" />
+          <ScalarProperty Name="Child5_Breath" ColumnName="Child5_Breath" />
+          <ScalarProperty Name="Child1_KMC" ColumnName="Child1_KMC" />
+          <ScalarProperty Name="Child2_KMC" ColumnName="Child2_KMC" />
+          <ScalarProperty Name="Child3_KMC" ColumnName="Child3_KMC" />
+          <ScalarProperty Name="Child4_KMC" ColumnName="Child4_KMC" />
+          <ScalarProperty Name="Child5_KMC" ColumnName="Child5_KMC" />
+          <ScalarProperty Name="Child1_ReferUnitID" ColumnName="Child1_ReferUnitID" />
+          <ScalarProperty Name="Child2_ReferUnitID" ColumnName="Child2_ReferUnitID" />
+          <ScalarProperty Name="Child3_ReferUnitID" ColumnName="Child3_ReferUnitID" />
+          <ScalarProperty Name="Child4_ReferUnitID" ColumnName="Child4_ReferUnitID" />
+          <ScalarProperty Name="Child5_ReferUnitID" ColumnName="Child5_ReferUnitID" />
+          <ScalarProperty Name="MotherCondition" ColumnName="MotherCondition" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+          <ScalarProperty Name="Child1_IsLive" ColumnName="Child1_IsLive" />
+          <ScalarProperty Name="Child1_InfantID" ColumnName="Child1_InfantID" />
+          <ScalarProperty Name="Child1_Weight" ColumnName="Child1_Weight" />
+          <ScalarProperty Name="Child1_Comp" ColumnName="Child1_Comp" />
+          <ScalarProperty Name="Child2_IsLive" ColumnName="Child2_IsLive" />
+          <ScalarProperty Name="Child2_InfantID" ColumnName="Child2_InfantID" />
+          <ScalarProperty Name="Child2_Weight" ColumnName="Child2_Weight" />
+          <ScalarProperty Name="Child2_Comp" ColumnName="Child2_Comp" />
+          <ScalarProperty Name="Child3_IsLive" ColumnName="Child3_IsLive" />
+          <ScalarProperty Name="Child3_InfantID" ColumnName="Child3_InfantID" />
+          <ScalarProperty Name="Child3_Weight" ColumnName="Child3_Weight" />
+          <ScalarProperty Name="Child3_Comp" ColumnName="Child3_Comp" />
+          <ScalarProperty Name="Child4_IsLive" ColumnName="Child4_IsLive" />
+          <ScalarProperty Name="Child4_InfantID" ColumnName="Child4_InfantID" />
+          <ScalarProperty Name="Child4_Weight" ColumnName="Child4_Weight" />
+          <ScalarProperty Name="Child4_Comp" ColumnName="Child4_Comp" />
+          <ScalarProperty Name="Child5_IsLive" ColumnName="Child5_IsLive" />
+          <ScalarProperty Name="Child5_InfantID" ColumnName="Child5_InfantID" />
+          <ScalarProperty Name="Child5_Weight" ColumnName="Child5_Weight" />
+          <ScalarProperty Name="Child5_Comp" ColumnName="Child5_Comp" />
+          <ScalarProperty Name="PNCComp" ColumnName="PNCComp" />
+          <ScalarProperty Name="entrydate" ColumnName="entrydate" />
+          <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+          <ScalarProperty Name="Ashaautoid" ColumnName="Ashaautoid" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+          <ScalarProperty Name="ANMautoid" ColumnName="ANMautoid" />
+          <ScalarProperty Name="anmname" ColumnName="anmname" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ReferUnitType" ColumnName="ReferUnitType" />
+          <ScalarProperty Name="ReferDistrictCode" ColumnName="ReferDistrictCode" />
+          <ScalarProperty Name="ReferUnitCode" ColumnName="ReferUnitCode" />
+          <ScalarProperty Name="ReferUniName" ColumnName="ReferUniName" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="DeliveryAbortionDate" ColumnName="DeliveryAbortionDate" />
+          <ScalarProperty Name="DelplaceCode" ColumnName="DelplaceCode" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="RegUnittype" ColumnName="RegUnittype" />
+          <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspCheckPCTSIDByTagName" FunctionName="cnaaModel.Store.uspCheckPCTSIDByTagName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspCheckPCTSIDByTagName_Result">
+          <ScalarProperty Name="DelplaceCode" ColumnName="DelplaceCode" />
+          <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Freeze" ColumnName="Freeze" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantDataforInfantDeath" FunctionName="cnaaModel.Store.uspInfantDataforInfantDeath">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantDataforInfantDeath_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Motherid" ColumnName="Motherid" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Bfeed" ColumnName="Bfeed" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="VikrtiCode" ColumnName="VikrtiCode" />
+          <ScalarProperty Name="NBCC_NBSU" ColumnName="NBCC_NBSU" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="deathPlaceUnitcode" ColumnName="deathPlaceUnitcode" />
+          <ScalarProperty Name="deathPlaceUnittype" ColumnName="deathPlaceUnittype" />
+          <ScalarProperty Name="DeathUnitID" ColumnName="DeathUnitID" />
+          <ScalarProperty Name="RegDistrictName" ColumnName="RegDistrictName" />
+          <ScalarProperty Name="ashaautoid" ColumnName="ashaautoid" />
+          <ScalarProperty Name="regUntcode" ColumnName="regUntcode" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+          <ScalarProperty Name="AgeType" ColumnName="AgeType" />
+          <ScalarProperty Name="immucode" ColumnName="immucode" />
+          <ScalarProperty Name="Relative_Name" ColumnName="Relative_Name" />
+          <ScalarProperty Name="MasterMobile" ColumnName="MasterMobile" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="DeathReportDate" ColumnName="DeathReportDate" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ANCRegDetails">
+      <EntityTypeMapping TypeName="cnaaModel.ANCRegDetail">
+        <MappingFragment StoreEntitySet="ANCRegDetail">
+          <ScalarProperty Name="DeliveryAbortionDate_deleted" ColumnName="DeliveryAbortionDate_deleted" />
+          <ScalarProperty Name="villageautoidtemp" ColumnName="villageautoidtemp" />
+          <ScalarProperty Name="DelplaceCode_deleted" ColumnName="DelplaceCode_deleted" />
+          <ScalarProperty Name="WomanVillageAutoIDtemp" ColumnName="WomanVillageAutoIDtemp" />
+          <ScalarProperty Name="PNCStatus_deleted" ColumnName="PNCStatus_deleted" />
+          <ScalarProperty Name="ANCStatus_deleted" ColumnName="ANCStatus_deleted" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="IcdsSecondChildFlag" ColumnName="IcdsSecondChildFlag" />
+          <ScalarProperty Name="IcdsImmunizationInfantID" ColumnName="IcdsImmunizationInfantID" />
+          <ScalarProperty Name="IcdsInfantID" ColumnName="IcdsInfantID" />
+          <ScalarProperty Name="ICDS2ndFlagDate" ColumnName="ICDS2ndFlagDate" />
+          <ScalarProperty Name="IcdsRegistrationFlag" ColumnName="IcdsRegistrationFlag" />
+          <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+          <ScalarProperty Name="RCHID" ColumnName="RCHID" />
+          <ScalarProperty Name="HusbNameH" ColumnName="HusbNameH" />
+          <ScalarProperty Name="HusbnameE" ColumnName="HusbnameE" />
+          <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+          <ScalarProperty Name="BusinessH" ColumnName="BusinessH" />
+          <ScalarProperty Name="BusinessW" ColumnName="BusinessW" />
+          <ScalarProperty Name="QualificationH" ColumnName="QualificationH" />
+          <ScalarProperty Name="QualificationW" ColumnName="QualificationW" />
+          <ScalarProperty Name="CurrentAddressH" ColumnName="CurrentAddressH" />
+          <ScalarProperty Name="CurrentAddressE" ColumnName="CurrentAddressE" />
+          <ScalarProperty Name="PermanentAddressH" ColumnName="PermanentAddressH" />
+          <ScalarProperty Name="PermanentAddressE" ColumnName="PermanentAddressE" />
+          <ScalarProperty Name="IcdsAncFlag" ColumnName="IcdsAncFlag" />
+          <ScalarProperty Name="VillageUpdationDate" ColumnName="VillageUpdationDate" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="bplcardno" ColumnName="bplcardno" />
+          <ScalarProperty Name="BPL" ColumnName="BPL" />
+          <ScalarProperty Name="NFSA" ColumnName="NFSA" />
+          <ScalarProperty Name="Ghamantu" ColumnName="Ghamantu" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="DirectDelivery" ColumnName="DirectDelivery" />
+          <ScalarProperty Name="Location_Rajasthan" ColumnName="Location_Rajasthan" />
+          <ScalarProperty Name="BeforeDelivery500" ColumnName="BeforeDelivery500" />
+          <ScalarProperty Name="Freeze_AadhaarBankInfo" ColumnName="Freeze_AadhaarBankInfo" />
+          <ScalarProperty Name="EntryUnitVillage" ColumnName="EntryUnitVillage" />
+          <ScalarProperty Name="HighRisk" ColumnName="HighRisk" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mothers">
+      <EntityTypeMapping TypeName="cnaaModel.Mother">
+        <MappingFragment StoreEntitySet="Mother">
+          <ScalarProperty Name="BPLCardNo123" ColumnName="BPLCardNo123" />
+          <ScalarProperty Name="BPL123" ColumnName="BPL123" />
+          <ScalarProperty Name="Divyang" ColumnName="Divyang" />
+          <ScalarProperty Name="NameH" ColumnName="NameH" />
+          <ScalarProperty Name="NameE" ColumnName="NameE" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="RCHID" ColumnName="RCHID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="CastGroup" ColumnName="CastGroup" />
+          <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+          <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="JSY" ColumnName="JSY" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+          <ScalarProperty Name="Cast" ColumnName="Cast" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspANMusage" FunctionName="cnaaModel.Store.uspANMusage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMusage_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="anmcount" ColumnName="anmcount" />
+          <ScalarProperty Name="totalANMNotEnterd" ColumnName="totalANMNotEnterd" />
+          <ScalarProperty Name="totalANMNotUseApp" ColumnName="totalANMNotUseApp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMNotusageDetails" FunctionName="cnaaModel.Store.uspANMNotusageDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMNotusageDetails_Result">
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="anmname" ColumnName="anmname" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="phcchcname" ColumnName="phcchcname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANMusageDayWise" FunctionName="cnaaModel.Store.uspANMusageDayWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMusageDayWise_Result">
+          <ScalarProperty Name="Enterddate" ColumnName="Enterddate" />
+          <ScalarProperty Name="anmCount" ColumnName="anmCount" />
+          <ScalarProperty Name="totalANMNotEnterd" ColumnName="totalANMNotEnterd" />
+          <ScalarProperty Name="totalANMNotUseApp" ColumnName="totalANMNotUseApp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspANClist" FunctionName="cnaaModel.Store.uspANClist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANClist_Result">
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="ecid" ColumnName="ecid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="lmpdate" ColumnName="lmpdate" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="DueANC" ColumnName="DueANC" />
+          <ScalarProperty Name="DueANCFlag" ColumnName="DueANCFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVillageByAshaID" FunctionName="cnaaModel.Store.uspGetVillageByAshaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspGetVillageByAshaID_Result">
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspPNClist" FunctionName="cnaaModel.Store.uspPNClist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspPNClist_Result">
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+          <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+          <ScalarProperty Name="PNCDueDate" ColumnName="PNCDueDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USPDeathList" FunctionName="cnaaModel.Store.USPDeathList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.USPDeathList_Result">
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+          <ScalarProperty Name="DeathReport" ColumnName="DeathReport" />
+          <ScalarProperty Name="deathPlaces" ColumnName="deathPlaces" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USPDeathListForInfant" FunctionName="cnaaModel.Store.USPDeathListForInfant">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.USPDeathListForInfant_Result">
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+          <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+          <ScalarProperty Name="DeathReport" ColumnName="DeathReport" />
+          <ScalarProperty Name="deathPlaces" ColumnName="deathPlaces" />
+          <ScalarProperty Name="deathPlace" ColumnName="deathPlace" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspHBYClist" FunctionName="cnaaModel.Store.uspHBYClist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspHBYClist_Result">
+          <ScalarProperty Name="villageautoid" ColumnName="villageautoid" />
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="SexName" ColumnName="SexName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Immunization_Log">
+      <EntityTypeMapping TypeName="cnaaModel.Immunization_Log">
+        <MappingFragment StoreEntitySet="Immunization_Log">
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="EntryUnitID" ColumnName="EntryUnitID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="immudate" ColumnName="immudate" />
+          <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+          <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspANMusageDetails" FunctionName="cnaaModel.Store.uspANMusageDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspANMusageDetails_Result">
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="anmname" ColumnName="anmname" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="ancCount" ColumnName="ancCount" />
+          <ScalarProperty Name="pncCount" ColumnName="pncCount" />
+          <ScalarProperty Name="immuCount" ColumnName="immuCount" />
+          <ScalarProperty Name="maternalDeathount" ColumnName="maternalDeathount" />
+          <ScalarProperty Name="infantDeathount" ColumnName="infantDeathount" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="phcchcname" ColumnName="phcchcname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAppData" FunctionName="cnaaModel.Store.uspAppData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspAppData_Result">
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unittype" ColumnName="unittype" />
+          <ScalarProperty Name="ancCasesCount" ColumnName="ancCasesCount" />
+          <ScalarProperty Name="pncCasesCount" ColumnName="pncCasesCount" />
+          <ScalarProperty Name="immuCount" ColumnName="immuCount" />
+          <ScalarProperty Name="matDeathCount" ColumnName="matDeathCount" />
+          <ScalarProperty Name="infantDeathCount" ColumnName="infantDeathCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDueListForANMVerification" FunctionName="cnaaModel.Store.uspDueListForANMVerification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDueListForANMVerification_Result">
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="TotalVerifiedCases" ColumnName="TotalVerifiedCases" />
+          <ScalarProperty Name="TotalUnVerifiedCases" ColumnName="TotalUnVerifiedCases" />
+          <ScalarProperty Name="TotalCases" ColumnName="TotalCases" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ANCDetails">
+      <EntityTypeMapping TypeName="cnaaModel.ANCDetail">
+        <MappingFragment StoreEntitySet="ANCDetails">
+          <ScalarProperty Name="HepatitisBReferUnitID" ColumnName="HepatitisBReferUnitID" />
+          <ScalarProperty Name="ANMVerificationDate" ColumnName="ANMVerificationDate" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="CovidIsolation" ColumnName="CovidIsolation" />
+          <ScalarProperty Name="CovidQuarantine" ColumnName="CovidQuarantine" />
+          <ScalarProperty Name="CovidRelativePositive" ColumnName="CovidRelativePositive" />
+          <ScalarProperty Name="CovidRelativePossibility" ColumnName="CovidRelativePossibility" />
+          <ScalarProperty Name="CovidForeignTrip" ColumnName="CovidForeignTrip" />
+          <ScalarProperty Name="CovidFromDate" ColumnName="CovidFromDate" />
+          <ScalarProperty Name="CovidCase" ColumnName="CovidCase" />
+          <ScalarProperty Name="UpdateUserNo" ColumnName="UpdateUserNo" />
+          <ScalarProperty Name="EntryUserNo" ColumnName="EntryUserNo" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IronSucrose4" ColumnName="IronSucrose4" />
+          <ScalarProperty Name="IronSucrose3" ColumnName="IronSucrose3" />
+          <ScalarProperty Name="IronSucrose2" ColumnName="IronSucrose2" />
+          <ScalarProperty Name="IronSucrose1" ColumnName="IronSucrose1" />
+          <ScalarProperty Name="NormalLodingIronSucrose1" ColumnName="NormalLodingIronSucrose1" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="CAL500" ColumnName="CAL500" />
+          <ScalarProperty Name="ALBE400" ColumnName="ALBE400" />
+          <ScalarProperty Name="TreatmentCode" ColumnName="TreatmentCode" />
+          <ScalarProperty Name="UrineS" ColumnName="UrineS" />
+          <ScalarProperty Name="UrineA" ColumnName="UrineA" />
+          <ScalarProperty Name="BloodPressureD" ColumnName="BloodPressureD" />
+          <ScalarProperty Name="BloodPressureS" ColumnName="BloodPressureS" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="ReferUnitID" ColumnName="ReferUnitID" />
+          <ScalarProperty Name="motherid" ColumnName="motherid" />
+          <ScalarProperty Name="anganwariNo" ColumnName="anganwariNo" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="RTI" ColumnName="RTI" />
+          <ScalarProperty Name="CompL" ColumnName="CompL" />
+          <ScalarProperty Name="HB" ColumnName="HB" />
+          <ScalarProperty Name="IFA" ColumnName="IFA" />
+          <ScalarProperty Name="TTB" ColumnName="TTB" />
+          <ScalarProperty Name="TT2" ColumnName="TT2" />
+          <ScalarProperty Name="TT1" ColumnName="TT1" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspImmunizationListByInfantID" FunctionName="cnaaModel.Store.uspImmunizationListByInfantID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspImmunizationListByInfantID_Result">
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="immucode" ColumnName="immucode" />
+          <ScalarProperty Name="immudate" ColumnName="immudate" />
+          <ScalarProperty Name="immuname" ColumnName="immuname" />
+          <ScalarProperty Name="ashaautoid" ColumnName="ashaautoid" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="clickable" ColumnName="clickable" />
+          <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+          <ScalarProperty Name="DPTFlag" ColumnName="DPTFlag" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="Freeze_Immu" ColumnName="Freeze_Immu" />
+          <ScalarProperty Name="Freeze_DBooster" ColumnName="Freeze_DBooster" />
+          <ScalarProperty Name="Freeze_DBooster2" ColumnName="Freeze_DBooster2" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInfantlistForImmunization" FunctionName="cnaaModel.Store.uspInfantlistForImmunization">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspInfantlistForImmunization_Result">
+          <ScalarProperty Name="infantid" ColumnName="infantid" />
+          <ScalarProperty Name="childid" ColumnName="childid" />
+          <ScalarProperty Name="villagename" ColumnName="villagename" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspUserAuthenticate" FunctionName="cnaaModel.Store.uspUserAuthenticate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspUserAuthenticate_Result">
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
+          <ScalarProperty Name="ANMName" ColumnName="ANMName" />
+          <ScalarProperty Name="Saltcreatedon" ColumnName="Saltcreatedon" />
+          <ScalarProperty Name="Saltvalue" ColumnName="Saltvalue" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="resetpwd" ColumnName="resetpwd" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="ANMAutoID" ColumnName="ANMAutoID" />
+          <ScalarProperty Name="AppRoleID" ColumnName="AppRoleID" />
+          <ScalarProperty Name="UserContactNo" ColumnName="UserContactNo" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+          <ScalarProperty Name="PCHCHCName" ColumnName="PCHCHCName" />
+          <ScalarProperty Name="PCHCHCAbbr" ColumnName="PCHCHCAbbr" />
+          <ScalarProperty Name="UnitAbbr" ColumnName="UnitAbbr" />
+          <ScalarProperty Name="IsExp" ColumnName="IsExp" />
+          <ScalarProperty Name="TrailTime" ColumnName="TrailTime" />
+          <ScalarProperty Name="Trail" ColumnName="Trail" />
+          <ScalarProperty Name="EligibleForSurvey" ColumnName="EligibleForSurvey" />
+          <ScalarProperty Name="AnganwariEnglish" ColumnName="AnganwariEnglish" />
+          <ScalarProperty Name="AnganwariHindi" ColumnName="AnganwariHindi" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="ClaimANMName" ColumnName="ClaimANMName" />
+          <ScalarProperty Name="ClaimANMPhone" ColumnName="ClaimANMPhone" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDataforManageANC" FunctionName="cnaaModel.Store.uspDataforManageANC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cnaaModel.uspDataforManageANC_Result">
+          <ScalarProperty Name="ancregid" ColumnName="ancregid" />
+          <ScalarProperty Name="CovidCase" ColumnName="CovidCase" />
+          <ScalarProperty Name="CovidFromDate" ColumnName="CovidFromDate" />
+          <ScalarProperty Name="CovidForeignTrip" ColumnName="CovidForeignTrip" />
+          <ScalarProperty Name="CovidRelativePossibility" ColumnName="CovidRelativePossibility" />
+          <ScalarProperty Name="CovidRelativePositive" ColumnName="CovidRelativePositive" />
+          <ScalarProperty Name="CovidQuarantine" ColumnName="CovidQuarantine" />
+          <ScalarProperty Name="CovidIsolation" ColumnName="CovidIsolation" />
+          <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+          <ScalarProperty Name="AnganwariName" ColumnName="AnganwariName" />
+          <ScalarProperty Name="ANCDate" ColumnName="ANCDate" />
+          <ScalarProperty Name="ANCFlag" ColumnName="ANCFlag" />
+          <ScalarProperty Name="TT1" ColumnName="TT1" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="CompL" ColumnName="CompL" />
+          <ScalarProperty Name="RTI" ColumnName="RTI" />
+          <ScalarProperty Name="TT2" ColumnName="TT2" />
+          <ScalarProperty Name="TTB" ColumnName="TTB" />
+          <ScalarProperty Name="IFA" ColumnName="IFA" />
+          <ScalarProperty Name="HB" ColumnName="HB" />
+          <ScalarProperty Name="BloodPressureD" ColumnName="BloodPressureD" />
+          <ScalarProperty Name="BloodPressureS" ColumnName="BloodPressureS" />
+          <ScalarProperty Name="AshaName" ColumnName="AshaName" />
+          <ScalarProperty Name="ReferUnitCode" ColumnName="ReferUnitCode" />
+          <ScalarProperty Name="CAL500" ColumnName="CAL500" />
+          <ScalarProperty Name="ALBE400" ColumnName="ALBE400" />
+          <ScalarProperty Name="UrineA" ColumnName="UrineA" />
+          <ScalarProperty Name="UrineS" ColumnName="UrineS" />
+          <ScalarProperty Name="TreatmentCode" ColumnName="TreatmentCode" />
+          <ScalarProperty Name="ReferDistrictCode" ColumnName="ReferDistrictCode" />
+          <ScalarProperty Name="ReferUnitType" ColumnName="ReferUnitType" />
+          <ScalarProperty Name="ReferUniName" ColumnName="ReferUniName" />
+          <ScalarProperty Name="ashaAutoID" ColumnName="ashaAutoID" />
+          <ScalarProperty Name="IronSucrose1" ColumnName="IronSucrose1" />
+          <ScalarProperty Name="IronSucrose2" ColumnName="IronSucrose2" />
+          <ScalarProperty Name="IronSucrose3" ColumnName="IronSucrose3" />
+          <ScalarProperty Name="IronSucrose4" ColumnName="IronSucrose4" />
+          <ScalarProperty Name="NormalLodingIronSucrose1" ColumnName="NormalLodingIronSucrose1" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Freeze_ANC3Checkup" ColumnName="Freeze_ANC3Checkup" />
+          <ScalarProperty Name="RegUnitID" ColumnName="RegUnitID" />
+          <ScalarProperty Name="RegUnittype" ColumnName="RegUnittype" />
+          <ScalarProperty Name="DeliveryComplication" ColumnName="DeliveryComplication" />
+          <ScalarProperty Name="anganwariNo" ColumnName="anganwariNo" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ANMVerify" ColumnName="ANMVerify" />
+          <ScalarProperty Name="MinANCFlagUnVerify" ColumnName="MinANCFlagUnVerify" />
+          <ScalarProperty Name="ANC1Date" ColumnName="ANC1Date" />
+          <ScalarProperty Name="ANC2Date" ColumnName="ANC2Date" />
+          <ScalarProperty Name="ANC3Date" ColumnName="ANC3Date" />
+          <ScalarProperty Name="ANC4Date" ColumnName="ANC4Date" />
+          <ScalarProperty Name="PreviousTT1Date" ColumnName="PreviousTT1Date" />
+          <ScalarProperty Name="PreviousTT2Date" ColumnName="PreviousTT2Date" />
+          <ScalarProperty Name="PreviousTTBDate" ColumnName="PreviousTTBDate" />
+          <ScalarProperty Name="HighRisk" ColumnName="HighRisk" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

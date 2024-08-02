@@ -1,0 +1,1026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MaacnaaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ComplainSuggestion">
+          <Key>
+            <PropertyRef Name="ComplainID" />
+          </Key>
+          <Property Name="ComplainID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="motherid" Type="int" Nullable="false" />
+          <Property Name="ComplainSuggestionDate" Type="date" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ReplyMessage" Type="nvarchar(max)" />
+          <Property Name="Userno" Type="int" />
+          <Property Name="Replydate" Type="smalldatetime" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MaaTokens">
+          <Key>
+            <PropertyRef Name="Mobileno" />
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="Mobileno" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DeviceID" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Salt" Type="varchar" MaxLength="128" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MaaVideoDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VideoType" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="VideoType" Type="smallint" Nullable="false" />
+          <Property Name="Descrption" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="VideoName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Extension" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="UploadeDate" Type="datetime" Nullable="false" />
+          <Property Name="ImageName" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="OTP">
+          <Key>
+            <PropertyRef Name="MobileNo" />
+            <PropertyRef Name="SmsFlag" />
+          </Key>
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SmsFlag" Type="tinyint" Nullable="false" />
+          <Property Name="OTPNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OtpLog">
+          <Key>
+            <PropertyRef Name="MessageId" />
+          </Key>
+          <Property Name="Sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MotherID" Type="int" Nullable="false" />
+          <Property Name="Infantid" Type="int" Nullable="false" />
+          <Property Name="ErrorDescription" Type="varchar" MaxLength="1000" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="PushDate" Type="datetime" />
+          <Property Name="SentDate" Type="datetime" />
+          <Property Name="ErrorID" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="100" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="MessageId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ResponseStatus" Type="varchar" MaxLength="250" />
+          <Property Name="Msgtype" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PehchanBirth">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Name="InfantID" Type="int" Nullable="false" />
+          <Property Name="RegNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RegDate" Type="date" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="RegistrationYear" Type="int" />
+          <Property Name="Mode" Type="tinyint" />
+          <Property Name="MethodFlag" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="PinDetails">
+          <Key>
+            <PropertyRef Name="MobileNo" />
+          </Key>
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Pin" Type="varchar" MaxLength="128" />
+          <Property Name="SentDate" Type="datetime" Nullable="false" />
+          <Property Name="DeviceID" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+          <Property Name="trail" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="SMS_Log">
+          <Key>
+            <PropertyRef Name="SNo" />
+          </Key>
+          <Property Name="SNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unitcode" Type="varchar" MaxLength="11" />
+          <Property Name="UserID" Type="varchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="char" MaxLength="20" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="MsgType" Type="tinyint" />
+          <Property Name="ReceiverUnitcode" Type="text" />
+          <Property Name="MthYr" Type="int" />
+          <Property Name="smsCount" Type="int" />
+          <Property Name="MessageText" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="SMSDetails2020">
+          <Key>
+            <PropertyRef Name="SNO" />
+            <PropertyRef Name="ANMInfantID" />
+            <PropertyRef Name="resend" />
+          </Key>
+          <Property Name="SNO" Type="int" Nullable="false" />
+          <Property Name="ANMInfantID" Type="int" Nullable="false" />
+          <Property Name="ErrorID" Type="int" />
+          <Property Name="ErrorDescription" Type="varchar" MaxLength="250" />
+          <Property Name="PushDate" Type="datetime" />
+          <Property Name="MID" Type="varchar" MaxLength="30" />
+          <Property Name="SentDate" Type="datetime" />
+          <Property Name="Status" Type="varchar" MaxLength="100" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="VillageAutoID" Type="int" />
+          <Property Name="unitid" Type="int" />
+          <Property Name="MessageId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ResponseStatus" Type="varchar" MaxLength="250" />
+          <Property Name="resend" Type="tinyint" Nullable="false" />
+          <Property Name="SecondCovidSMSFlag" Type="tinyint" />
+          <Property Name="CompositeIndex" Type="float" />
+          <Property Name="PHSCallDate" Type="date" />
+        </EntityType>
+        <EntityType Name="UserTrailLog">
+          <Key>
+            <PropertyRef Name="Sno" />
+          </Key>
+          <Property Name="Sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DeviceID" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+          <Property Name="ApiCode" Type="smallint" />
+          <Property Name="ResponseTime" Type="datetime" />
+        </EntityType>
+        <Function Name="uspANCSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspANMASHADetailsByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_PCTSID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetMotherDetailsByMobileno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_mobileno" Type="varchar" Mode="In" />
+          <Parameter Name="DeviceID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspImmunizationSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_infantid" Type="int" Mode="In" />
+          <Parameter Name="Perm_flag" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="uspInfantDetailsByInfantID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_infantid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspInfantlistForBirthCertificatByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspInfantlistForImmunizationByPCTSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UspMaaAdvanceSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspMamtaCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspNearestFacility" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_unitcode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspPNCSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="uspWomendetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Perm_pctsid" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="MaacnaaModelStoreContainer">
+          <EntitySet Name="ComplainSuggestion" EntityType="Self.ComplainSuggestion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaaTokens" EntityType="Self.MaaTokens" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaaVideoDetails" EntityType="Self.MaaVideoDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTP" EntityType="Self.OTP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OtpLog" EntityType="Self.OtpLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PehchanBirth" EntityType="Self.PehchanBirth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PinDetails" EntityType="Self.PinDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMS_Log" EntityType="Self.SMS_Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMSDetails2020" EntityType="Self.SMSDetails2020" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTrailLog" EntityType="Self.UserTrailLog" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MaacnaaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MaacnaaEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ComplainSuggestions" EntityType="MaacnaaModel.ComplainSuggestion" />
+          <FunctionImport Name="uspANMASHADetailsByPCTSID" ReturnType="Collection(MaacnaaModel.uspANMASHADetailsByPCTSID_Result)">
+          <Parameter Name="Perm_PCTSID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetMobilenoForSendComplain" ReturnType="Collection(String)">
+          <Parameter Name="Perm_motherid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspImmunizationSchedule" ReturnType="Collection(MaacnaaModel.uspImmunizationSchedule_Result)">
+            <Parameter Name="Perm_infantid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_flag" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="uspInfantDetailsByInfantID" ReturnType="Collection(MaacnaaModel.uspInfantDetailsByInfantID_Result)">
+          <Parameter Name="Perm_infantid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspPNCSchedule" ReturnType="Collection(MaacnaaModel.uspPNCSchedule_Result)">
+          <Parameter Name="Perm_pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspWomendetail" ReturnType="Collection(MaacnaaModel.uspWomendetail_Result)">
+          <Parameter Name="Perm_pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MaaImmunizationSchedule" ReturnType="Collection(MaacnaaModel.MaaImmunizationSchedule_Result)">
+            <Parameter Name="Perm_infantid" Mode="In" Type="Int32" />
+            <Parameter Name="Perm_flag" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <EntitySet Name="PehchanBirths" EntityType="MaacnaaModel.PehchanBirth" />
+          <FunctionImport Name="uspInfantlistForImmunizationByPCTSID" ReturnType="Collection(MaacnaaModel.uspInfantlistForImmunizationByPCTSID_Result)">
+          <Parameter Name="Perm_pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="SMS_Log" EntityType="MaacnaaModel.SMS_Log" />
+          <EntitySet Name="SMSDetails2020" EntityType="MaacnaaModel.SMSDetails2020" />
+          <EntitySet Name="OTPs" EntityType="MaacnaaModel.OTP" />
+          <EntitySet Name="OtpLogs" EntityType="MaacnaaModel.OtpLog" />
+          <EntitySet Name="PinDetails" EntityType="MaacnaaModel.PinDetail" />
+          <EntitySet Name="UserTrailLogs" EntityType="MaacnaaModel.UserTrailLog" />
+          <FunctionImport Name="uspGetMotherDetailsByMobileno" ReturnType="Collection(MaacnaaModel.uspGetMotherDetailsByMobileno_Result)">
+            <Parameter Name="Perm_mobileno" Mode="In" Type="String" />
+            <Parameter Name="DeviceID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspANCSchedule" ReturnType="Collection(MaacnaaModel.uspANCSchedule_Result)">
+          <Parameter Name="Perm_pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UspMaaAdvanceSearch" ReturnType="Collection(MaacnaaModel.UspMaaAdvanceSearch_Result)">
+          <Parameter Name="pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="MaaVideoDetails" EntityType="MaacnaaModel.MaaVideoDetail" />
+          <FunctionImport Name="uspNearestFacility" ReturnType="Collection(MaacnaaModel.uspNearestFacility_Result)">
+          <Parameter Name="Perm_unitcode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspMamtaCard" ReturnType="Collection(MaacnaaModel.uspMamtaCard_Result)">
+          <Parameter Name="Perm_pctsID" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="MaaTokens" EntityType="MaacnaaModel.MaaToken" />
+          <FunctionImport Name="uspInfantlistForBirthCertificatByPCTSID" ReturnType="Collection(MaacnaaModel.uspInfantlistForBirthCertificatByPCTSID_Result)">
+            <Parameter Name="Perm_pctsid" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ComplainSuggestion">
+          <Key>
+            <PropertyRef Name="ComplainID" />
+          </Key>
+          <Property Name="ComplainID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="motherid" Type="Int32" Nullable="false" />
+          <Property Name="ComplainSuggestionDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ReplyMessage" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Userno" Type="Int32" />
+          <Property Name="Replydate" Type="DateTime" Precision="0" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <ComplexType Name="uspANMASHADetailsByPCTSID_Result">
+          <Property Type="String" Name="ashaname" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ashaphone" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="unitname" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="type" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspImmunizationSchedule_Result">
+          <Property Type="Int32" Name="infantid" Nullable="true" />
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sex" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="true" />
+          <Property Type="Byte" Name="ImmuCode" Nullable="true" />
+          <Property Type="String" Name="ImmuName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ImmuNameH" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="ImmuDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspInfantDetailsByInfantID_Result">
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="11" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="false" />
+          <Property Type="Double" Name="Weight" Nullable="true" />
+          <Property Type="String" Name="BloodGroup" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="DeathDate" Nullable="true" />
+          <Property Type="String" Name="ReasonName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="immuname" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="immudate" Nullable="true" />
+          <Property Type="String" Name="tagname" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="uspPNCSchedule_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="HusbName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PCTSID" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Villagename" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="16" />
+          <Property Type="String" Name="PNC2due" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PNC3due" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PNC4due" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PNC5due" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PNC6due" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PNC7due" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="String" Name="Complication" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="PNCFlag" Nullable="false" />
+          <Property Type="String" Name="ANMName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ASHAName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="PNCDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspWomendetail_Result">
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="VillageName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ECID" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Height" Nullable="true" />
+          <Property Type="Byte" Name="Age" Nullable="false" />
+          <Property Type="String" Name="BPL" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Location_Rajasthan" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Ghamantu" Nullable="false" MaxLength="4" />
+          <Property Type="DateTime" Name="RegDate" Nullable="false" />
+          <Property Type="Int32" Name="anccount" Nullable="false" />
+          <Property Type="DateTime" Name="deliveryDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="Abortion_date" Nullable="true" Precision="16" />
+          <Property Type="String" Name="outcome" Nullable="true" MaxLength="82" />
+          <Property Type="String" Name="AbortionType" Nullable="false" MaxLength="11" />
+          <Property Type="DateTime" Name="DischargeDT" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="pnccount" Nullable="false" />
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="String" Name="motherCast" Nullable="false" MaxLength="5" />
+          <Property Type="DateTime" Name="DeathDate" Nullable="true" />
+          <Property Type="String" Name="ReasonName" Nullable="true" MaxLength="200" />
+          <Property Type="Byte" Name="LiveChild" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="MaaImmunizationSchedule_Result">
+          <Property Type="Int32" Name="infantid" Nullable="true" />
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sex" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="true" />
+          <Property Type="Byte" Name="ImmuCode" Nullable="true" />
+          <Property Type="String" Name="ImmuName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ImmuNameH" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="ImmuDate" Nullable="true" />
+          <Property Type="DateTime" Name="ImmuDueDate" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="PehchanBirth">
+          <Key>
+            <PropertyRef Name="InfantID" />
+          </Key>
+          <Property Type="Int32" Name="InfantID" Nullable="false" />
+          <Property Type="String" Name="RegNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RegDate" Precision="0" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="RegistrationYear" />
+          <Property Name="Mode" Type="Byte" />
+          <Property Name="MethodFlag" Type="Byte" />
+        </EntityType>
+        <ComplexType Name="uspInfantlistForImmunizationByPCTSID_Result">
+          <Property Type="Int32" Name="PehchanRegFlag" Nullable="false" />
+          <Property Type="Int32" Name="infantid" Nullable="false" />
+          <Property Type="String" Name="childid" Nullable="true" MaxLength="51" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Sex" Nullable="true" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="false" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="SMS_Log">
+          <Key>
+            <PropertyRef Name="SNo" />
+          </Key>
+          <Property Type="Int32" Name="SNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Unitcode" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IPAddress" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="DateTime" Nullable="false" Precision="3" />
+          <Property Type="Byte" Name="MsgType" />
+          <Property Type="String" Name="ReceiverUnitcode" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MthYr" />
+          <Property Type="Int32" Name="smsCount" />
+          <Property Name="MessageText" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SMSDetails2020">
+          <Key>
+            <PropertyRef Name="SNO" />
+            <PropertyRef Name="ANMInfantID" />
+            <PropertyRef Name="resend" />
+          </Key>
+          <Property Type="Int32" Name="SNO" Nullable="false" />
+          <Property Type="Int32" Name="ANMInfantID" Nullable="false" />
+          <Property Type="Int32" Name="ErrorID" />
+          <Property Type="String" Name="ErrorDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PushDate" Precision="3" />
+          <Property Type="String" Name="MID" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SentDate" Precision="3" />
+          <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DeliveryDate" Precision="3" />
+          <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="VillageAutoID" />
+          <Property Type="Int32" Name="unitid" />
+          <Property Type="String" Name="MessageId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResponseStatus" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="resend" Nullable="false" />
+          <Property Type="Byte" Name="SecondCovidSMSFlag" />
+          <Property Type="Double" Name="CompositeIndex" />
+          <Property Type="DateTime" Name="PHSCallDate" Precision="0" />
+        </EntityType>
+        <EntityType Name="OTP">
+          <Key>
+            <PropertyRef Name="MobileNo" />
+            <PropertyRef Name="SmsFlag" />
+          </Key>
+          <Property Type="String" Name="MobileNo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="SmsFlag" Nullable="false" />
+          <Property Type="String" Name="OTPNo" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Type="DateTime" Name="EntryDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="OtpLog">
+          <Key>
+            <PropertyRef Name="MessageId" />
+          </Key>
+          <Property Type="Int32" Name="Sno" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="Int32" Name="Infantid" Nullable="false" />
+          <Property Type="String" Name="ErrorDescription" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PushDate" Precision="3" />
+          <Property Type="DateTime" Name="SentDate" Precision="3" />
+          <Property Type="Int32" Name="ErrorID" />
+          <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="unitid" />
+          <Property Type="String" Name="MessageId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResponseStatus" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Msgtype" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PinDetail">
+          <Key>
+            <PropertyRef Name="MobileNo" />
+          </Key>
+          <Property Type="String" Name="MobileNo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pin" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SentDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="DeviceID" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" Precision="3" />
+          <Property Type="Byte" Name="trail" />
+        </EntityType>
+        <EntityType Name="UserTrailLog">
+          <Key>
+            <PropertyRef Name="Sno" />
+          </Key>
+          <Property Type="Int32" Name="Sno" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MobileNo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DeviceID" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EntryDate" Nullable="false" Precision="3" />
+          <Property Type="Int16" Name="ApiCode" />
+          <Property Type="DateTime" Name="ResponseTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="uspGetMotherDetailsByMobileno_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="UnitNameHindi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="VillageNameHindi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="DistrictName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="totinf" Nullable="false" />
+          <Property Type="Int32" Name="infantid" Nullable="true" />
+          <Property Type="String" Name="TokenNo" Nullable="true" MaxLength="128" />
+        </ComplexType>
+        <ComplexType Name="uspANCSchedule_Result">
+          <Property Type="DateTime" Name="edd" Nullable="true" />
+          <Property Type="String" Name="unitcode" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="unitname" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="villname" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="bpl" Nullable="false" />
+          <Property Type="Byte" Name="age" Nullable="false" />
+          <Property Type="String" Name="ecid" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="husbname" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="lmpdt" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="regdate" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="ancdue1" Nullable="true" />
+          <Property Type="DateTime" Name="ancdue2" Nullable="true" />
+          <Property Type="DateTime" Name="ancdue3" Nullable="true" />
+          <Property Type="DateTime" Name="ancdue4" Nullable="true" />
+          <Property Type="DateTime" Name="anc1" Nullable="true" />
+          <Property Type="DateTime" Name="anc2" Nullable="true" />
+          <Property Type="DateTime" Name="anc3" Nullable="true" />
+          <Property Type="DateTime" Name="anc4" Nullable="true" />
+          <Property Type="Byte" Name="DelFlag" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="UspMaaAdvanceSearch_Result">
+          <Property Type="Int32" Name="ANCRegID" Nullable="false" />
+          <Property Type="String" Name="Schemefalg" Nullable="true" MaxLength="40" />
+          <Property Type="Byte" Name="InstallmentNo" Nullable="false" />
+          <Property Type="Byte" Name="PaymentMode" Nullable="false" />
+          <Property Type="String" Name="AccountNo" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="InfantID" Nullable="false" />
+          <Property Type="Int32" Name="Amount" Nullable="false" />
+          <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="26" />
+          <Property Type="DateTime" Name="ChequeDate" Nullable="true" />
+          <Property Type="String" Name="ChequeNo" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="ChequeAmount" Nullable="true" />
+          <Property Type="String" Name="Bank_Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="IFSC_CODE" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="PaymentDate" Nullable="false" />
+          <Property Type="DateTime" Name="RealizationDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <EntityType Name="MaaVideoDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VideoType" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int16" Name="VideoType" Nullable="false" />
+          <Property Type="String" Name="Descrption" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VideoName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Extension" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UploadeDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ImageName" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="uspNearestFacility_Result">
+          <Property Type="String" Name="unitcode" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="UnitNameHindi" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="16" />
+          <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="16" />
+          <Property Type="String" Name="block" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="District" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="234" />
+          <Property Type="Int32" Name="rno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspMamtaCard_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="8000" />
+          <Property Type="String" Name="pctsid" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="8000" />
+          <Property Type="Byte" Name="IsHusband" Nullable="false" />
+          <Property Type="String" Name="AadhaarNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="BHAMASHAHID" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RationCardNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bplcardno" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Accountno" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ifsc_code" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Bank_Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Branch_Name" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="Age" Nullable="false" />
+          <Property Type="String" Name="UnitNameHindi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ECID" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="RegDate" Nullable="false" />
+          <Property Type="DateTime" Name="LMPDT" Nullable="false" />
+          <Property Type="DateTime" Name="edd" Nullable="true" />
+          <Property Type="Int32" Name="LiveChild" Nullable="true" />
+          <Property Type="Int32" Name="sansthaflagPresent" Nullable="false" />
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Prasav_date" Nullable="true" Precision="16" />
+          <Property Type="Double" Name="Weight" Nullable="true" />
+          <Property Type="Byte" Name="Sex" Nullable="true" />
+          <Property Type="String" Name="BloodGroup" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="sansthaflagPrevious" Nullable="false" />
+          <Property Type="Int32" Name="JSYAmount" Nullable="true" />
+          <Property Type="DateTime" Name="JSYRealizationDate" Nullable="true" />
+          <Property Type="String" Name="ChildId" Nullable="true" MaxLength="51" />
+        </ComplexType>
+        <EntityType Name="MaaToken">
+          <Key>
+            <PropertyRef Name="Mobileno" />
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="Mobileno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DeviceID" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Salt" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <ComplexType Name="uspInfantlistForBirthCertificatByPCTSID_Result">
+          <Property Type="Int32" Name="PehchanRegFlag" Nullable="false" />
+          <Property Type="Int32" Name="infantid" Nullable="false" />
+          <Property Type="String" Name="childid" Nullable="true" MaxLength="51" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="8000" />
+          <Property Type="String" Name="Husbname" Nullable="true" MaxLength="8000" />
+          <Property Type="String" Name="ChildName" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Sex" Nullable="true" />
+          <Property Type="DateTime" Name="Birth_date" Nullable="false" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="MotherID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MaacnaaModelStoreContainer" CdmEntityContainer="MaacnaaEntities">
+          <EntitySetMapping Name="ComplainSuggestions">
+            <EntityTypeMapping TypeName="MaacnaaModel.ComplainSuggestion">
+              <MappingFragment StoreEntitySet="ComplainSuggestion">
+                <ScalarProperty Name="ComplainID" ColumnName="ComplainID" />
+                <ScalarProperty Name="motherid" ColumnName="motherid" />
+                <ScalarProperty Name="ComplainSuggestionDate" ColumnName="ComplainSuggestionDate" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ReplyMessage" ColumnName="ReplyMessage" />
+                <ScalarProperty Name="Userno" ColumnName="Userno" />
+                <ScalarProperty Name="Replydate" ColumnName="Replydate" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspANMASHADetailsByPCTSID" FunctionName="MaacnaaModel.Store.uspANMASHADetailsByPCTSID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspANMASHADetailsByPCTSID_Result">
+                <ScalarProperty Name="ashaname" ColumnName="ashaname" />
+                <ScalarProperty Name="ashaphone" ColumnName="ashaphone" />
+                <ScalarProperty Name="unitname" ColumnName="unitname" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspImmunizationSchedule" FunctionName="MaacnaaModel.Store.uspImmunizationSchedule">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspImmunizationSchedule_Result">
+                <ScalarProperty Name="infantid" ColumnName="infantid" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="ImmuCode" ColumnName="ImmuCode" />
+                <ScalarProperty Name="ImmuName" ColumnName="ImmuName" />
+                <ScalarProperty Name="ImmuNameH" ColumnName="ImmuNameH" />
+                <ScalarProperty Name="ImmuDate" ColumnName="ImmuDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspInfantDetailsByInfantID" FunctionName="MaacnaaModel.Store.uspInfantDetailsByInfantID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspInfantDetailsByInfantID_Result">
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+                <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+                <ScalarProperty Name="immuname" ColumnName="immuname" />
+                <ScalarProperty Name="immudate" ColumnName="immudate" />
+                <ScalarProperty Name="tagname" ColumnName="tagname" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspPNCSchedule" FunctionName="MaacnaaModel.Store.uspPNCSchedule">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspPNCSchedule_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+                <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+                <ScalarProperty Name="Villagename" ColumnName="Villagename" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="PNC2due" ColumnName="PNC2due" />
+                <ScalarProperty Name="PNC3due" ColumnName="PNC3due" />
+                <ScalarProperty Name="PNC4due" ColumnName="PNC4due" />
+                <ScalarProperty Name="PNC5due" ColumnName="PNC5due" />
+                <ScalarProperty Name="PNC6due" ColumnName="PNC6due" />
+                <ScalarProperty Name="PNC7due" ColumnName="PNC7due" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+                <ScalarProperty Name="Complication" ColumnName="Complication" />
+                <ScalarProperty Name="PNCFlag" ColumnName="PNCFlag" />
+                <ScalarProperty Name="ANMName" ColumnName="ANMName" />
+                <ScalarProperty Name="ASHAName" ColumnName="ASHAName" />
+                <ScalarProperty Name="PNCDate" ColumnName="PNCDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspWomendetail" FunctionName="MaacnaaModel.Store.uspWomendetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspWomendetail_Result">
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="ECID" ColumnName="ECID" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="BPL" ColumnName="BPL" />
+                <ScalarProperty Name="Location_Rajasthan" ColumnName="Location_Rajasthan" />
+                <ScalarProperty Name="Ghamantu" ColumnName="Ghamantu" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="anccount" ColumnName="anccount" />
+                <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+                <ScalarProperty Name="Abortion_date" ColumnName="Abortion_date" />
+                <ScalarProperty Name="outcome" ColumnName="outcome" />
+                <ScalarProperty Name="AbortionType" ColumnName="AbortionType" />
+                <ScalarProperty Name="DischargeDT" ColumnName="DischargeDT" />
+                <ScalarProperty Name="pnccount" ColumnName="pnccount" />
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="motherCast" ColumnName="motherCast" />
+                <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+                <ScalarProperty Name="ReasonName" ColumnName="ReasonName" />
+                <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="PehchanBirths">
+            <EntityTypeMapping TypeName="MaacnaaModel.PehchanBirth">
+              <MappingFragment StoreEntitySet="PehchanBirth">
+                <ScalarProperty Name="MethodFlag" ColumnName="MethodFlag" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="RegistrationYear" ColumnName="RegistrationYear" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspInfantlistForImmunizationByPCTSID" FunctionName="MaacnaaModel.Store.uspInfantlistForImmunizationByPCTSID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspInfantlistForImmunizationByPCTSID_Result">
+                <ScalarProperty Name="PehchanRegFlag" ColumnName="PehchanRegFlag" />
+                <ScalarProperty Name="infantid" ColumnName="infantid" />
+                <ScalarProperty Name="childid" ColumnName="childid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="SMS_Log">
+            <EntityTypeMapping TypeName="MaacnaaModel.SMS_Log">
+              <MappingFragment StoreEntitySet="SMS_Log">
+                <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+                <ScalarProperty Name="smsCount" ColumnName="smsCount" />
+                <ScalarProperty Name="MthYr" ColumnName="MthYr" />
+                <ScalarProperty Name="ReceiverUnitcode" ColumnName="ReceiverUnitcode" />
+                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Unitcode" ColumnName="Unitcode" />
+                <ScalarProperty Name="SNo" ColumnName="SNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMSDetails2020">
+            <EntityTypeMapping TypeName="MaacnaaModel.SMSDetails2020">
+              <MappingFragment StoreEntitySet="SMSDetails2020">
+                <ScalarProperty Name="PHSCallDate" ColumnName="PHSCallDate" />
+                <ScalarProperty Name="CompositeIndex" ColumnName="CompositeIndex" />
+                <ScalarProperty Name="SecondCovidSMSFlag" ColumnName="SecondCovidSMSFlag" />
+                <ScalarProperty Name="resend" ColumnName="resend" />
+                <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="PushDate" ColumnName="PushDate" />
+                <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+                <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+                <ScalarProperty Name="ANMInfantID" ColumnName="ANMInfantID" />
+                <ScalarProperty Name="SNO" ColumnName="SNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTPs">
+            <EntityTypeMapping TypeName="MaacnaaModel.OTP">
+              <MappingFragment StoreEntitySet="OTP">
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="OTPNo" ColumnName="OTPNo" />
+                <ScalarProperty Name="SmsFlag" ColumnName="SmsFlag" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OtpLogs">
+            <EntityTypeMapping TypeName="MaacnaaModel.OtpLog">
+              <MappingFragment StoreEntitySet="OtpLog">
+                <ScalarProperty Name="Msgtype" ColumnName="Msgtype" />
+                <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="unitid" ColumnName="unitid" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="PushDate" ColumnName="PushDate" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+                <ScalarProperty Name="Infantid" ColumnName="Infantid" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="Sno" ColumnName="Sno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PinDetails">
+            <EntityTypeMapping TypeName="MaacnaaModel.PinDetail">
+              <MappingFragment StoreEntitySet="PinDetails">
+                <ScalarProperty Name="trail" ColumnName="trail" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTrailLogs">
+            <EntityTypeMapping TypeName="MaacnaaModel.UserTrailLog">
+              <MappingFragment StoreEntitySet="UserTrailLog">
+                <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+                <ScalarProperty Name="ApiCode" ColumnName="ApiCode" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Sno" ColumnName="Sno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspGetMotherDetailsByMobileno" FunctionName="MaacnaaModel.Store.uspGetMotherDetailsByMobileno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspGetMotherDetailsByMobileno_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="VillageNameHindi" ColumnName="VillageNameHindi" />
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="totinf" ColumnName="totinf" />
+                <ScalarProperty Name="infantid" ColumnName="infantid" />
+                <ScalarProperty Name="TokenNo" ColumnName="TokenNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspANCSchedule" FunctionName="MaacnaaModel.Store.uspANCSchedule">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspANCSchedule_Result">
+                <ScalarProperty Name="edd" ColumnName="edd" />
+                <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+                <ScalarProperty Name="unitname" ColumnName="unitname" />
+                <ScalarProperty Name="villname" ColumnName="villname" />
+                <ScalarProperty Name="bpl" ColumnName="bpl" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="ecid" ColumnName="ecid" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="husbname" ColumnName="husbname" />
+                <ScalarProperty Name="lmpdt" ColumnName="lmpdt" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="ancdue1" ColumnName="ancdue1" />
+                <ScalarProperty Name="ancdue2" ColumnName="ancdue2" />
+                <ScalarProperty Name="ancdue3" ColumnName="ancdue3" />
+                <ScalarProperty Name="ancdue4" ColumnName="ancdue4" />
+                <ScalarProperty Name="anc1" ColumnName="anc1" />
+                <ScalarProperty Name="anc2" ColumnName="anc2" />
+                <ScalarProperty Name="anc3" ColumnName="anc3" />
+                <ScalarProperty Name="anc4" ColumnName="anc4" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UspMaaAdvanceSearch" FunctionName="MaacnaaModel.Store.UspMaaAdvanceSearch">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.UspMaaAdvanceSearch_Result">
+                <ScalarProperty Name="ANCRegID" ColumnName="ANCRegID" />
+                <ScalarProperty Name="Schemefalg" ColumnName="Schemefalg" />
+                <ScalarProperty Name="InstallmentNo" ColumnName="InstallmentNo" />
+                <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="InfantID" ColumnName="InfantID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+                <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+                <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+                <ScalarProperty Name="ChequeAmount" ColumnName="ChequeAmount" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+                <ScalarProperty Name="IFSC_CODE" ColumnName="IFSC_CODE" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="RealizationDate" ColumnName="RealizationDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="MaaVideoDetails">
+            <EntityTypeMapping TypeName="MaacnaaModel.MaaVideoDetail">
+              <MappingFragment StoreEntitySet="MaaVideoDetails">
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="UploadeDate" ColumnName="UploadeDate" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+                <ScalarProperty Name="Descrption" ColumnName="Descrption" />
+                <ScalarProperty Name="VideoType" ColumnName="VideoType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspNearestFacility" FunctionName="MaacnaaModel.Store.uspNearestFacility">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspNearestFacility_Result">
+                <ScalarProperty Name="unitcode" ColumnName="unitcode" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="block" ColumnName="block" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="rno" ColumnName="rno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspMamtaCard" FunctionName="MaacnaaModel.Store.uspMamtaCard">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspMamtaCard_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="pctsid" ColumnName="pctsid" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="IsHusband" ColumnName="IsHusband" />
+                <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+                <ScalarProperty Name="BHAMASHAHID" ColumnName="BHAMASHAHID" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+                <ScalarProperty Name="bplcardno" ColumnName="bplcardno" />
+                <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+                <ScalarProperty Name="Ifsc_code" ColumnName="Ifsc_code" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+                <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+                <ScalarProperty Name="ECID" ColumnName="ECID" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="LMPDT" ColumnName="LMPDT" />
+                <ScalarProperty Name="edd" ColumnName="edd" />
+                <ScalarProperty Name="LiveChild" ColumnName="LiveChild" />
+                <ScalarProperty Name="sansthaflagPresent" ColumnName="sansthaflagPresent" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="Prasav_date" ColumnName="Prasav_date" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="sansthaflagPrevious" ColumnName="sansthaflagPrevious" />
+                <ScalarProperty Name="JSYAmount" ColumnName="JSYAmount" />
+                <ScalarProperty Name="JSYRealizationDate" ColumnName="JSYRealizationDate" />
+                <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="MaaTokens">
+            <EntityTypeMapping TypeName="MaacnaaModel.MaaToken">
+              <MappingFragment StoreEntitySet="MaaTokens">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspInfantlistForBirthCertificatByPCTSID" FunctionName="MaacnaaModel.Store.uspInfantlistForBirthCertificatByPCTSID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MaacnaaModel.uspInfantlistForBirthCertificatByPCTSID_Result">
+                <ScalarProperty Name="PehchanRegFlag" ColumnName="PehchanRegFlag" />
+                <ScalarProperty Name="infantid" ColumnName="infantid" />
+                <ScalarProperty Name="childid" ColumnName="childid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Husbname" ColumnName="Husbname" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

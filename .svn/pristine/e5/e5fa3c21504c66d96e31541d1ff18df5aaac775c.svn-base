@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHSurveyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DHSurveyModelStoreContainer">
+    <EntitySet Name="ChildInformation" EntityType="DHSurveyModel.Store.ChildInformation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DHSMasterCodes" EntityType="DHSurveyModel.Store.DHSMasterCodes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiseaseDetails" EntityType="DHSurveyModel.Store.DiseaseDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ECdetails" EntityType="DHSurveyModel.Store.ECdetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HouseFamily" EntityType="DHSurveyModel.Store.HouseFamily" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberDetails" EntityType="DHSurveyModel.Store.MemberDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberPhoto" EntityType="DHSurveyModel.Store.MemberPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnitMaster" EntityType="DHSurveyModel.Store.UnitMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnMarriedGirlsDetail" EntityType="DHSurveyModel.Store.UnMarriedGirlsDetail" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ChildInformation">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="Male" Type="tinyint" />
+    <Property Name="Female" Type="tinyint" />
+    <Property Name="Transgender" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="DHSMasterCodes">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="masterID" />
+    </Key>
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="masterID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="gender" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="DiseaseDetails">
+    <Key>
+      <PropertyRef Name="SurveyYear" />
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="DiseasesCodes" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ECdetails">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="IFSCCode" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="PCTSID" Type="varchar" MaxLength="20" />
+    <Property Name="MarraigeDate" Type="date" />
+    <Property Name="AgeOnMarraige" Type="tinyint" />
+    <Property Name="HusbandAgeOnMarraige" Type="tinyint" />
+    <Property Name="Nisanthan" Type="tinyint" />
+    <Property Name="DeliveryInLastYear" Type="tinyint" />
+    <Property Name="InfantDeathBelow5YearInLastYear" Type="tinyint" />
+    <Property Name="LMPDate" Type="date" />
+    <Property Name="WantBaby" Type="tinyint" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryByUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="int" Nullable="false" />
+    <Property Name="CoupleNo" Type="int" Nullable="false" />
+    <Property Name="BhamashahID" Type="varchar" MaxLength="15" />
+    <Property Name="Entrydate_online" Type="datetime" />
+    <Property Name="LastUpdateDate_online" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HouseFamily">
+    <Key>
+      <PropertyRef Name="HouseFamilyID" />
+    </Key>
+    <Property Name="SurveyYear" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="HouseNo" Type="int" Nullable="false" />
+    <Property Name="FamiliyNo" Type="int" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Bpl" Type="tinyint" Nullable="false" />
+    <Property Name="BhamashahID" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Caste" Type="tinyint" Nullable="false" />
+    <Property Name="Religion" Type="tinyint" Nullable="false" />
+    <Property Name="Permanent_Residence" Type="tinyint" Nullable="false" />
+    <Property Name="FuelType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Entrydate_online" Type="datetime" />
+    <Property Name="LastUpdateDate_online" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MemberDetails">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="SurveyYear" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="HouseFamilyID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Age" Type="tinyint" Nullable="false" />
+    <Property Name="Sex" Type="tinyint" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="AadhaarNo" Type="varchar" MaxLength="15" />
+    <Property Name="Profession" Type="tinyint" Nullable="false" />
+    <Property Name="RelationToHead" Type="tinyint" Nullable="false" />
+    <Property Name="PollutionHazards" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="tinyint" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Education" Type="tinyint" Nullable="false" />
+    <Property Name="MobileNoBelongsToWhom" Type="tinyint" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryByUserNo" Type="int" Nullable="false" />
+    <Property Name="UpdateByUserNo" Type="int" Nullable="false" />
+    <Property Name="RationCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="DiseasesCodes" Type="varchar" MaxLength="200" />
+    <Property Name="SpouseID" Type="int" />
+    <Property Name="Entrydate_online" Type="datetime" />
+    <Property Name="LastUpdateDate_online" Type="datetime" />
+    <Property Name="Fatherid" Type="int" />
+    <Property Name="Motherid" Type="int" />
+  </EntityType>
+  <EntityType Name="MemberPhoto">
+    <Key>
+      <PropertyRef Name="MemberlD" />
+    </Key>
+    <Property Name="MemberlD" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varbinary" Nullable="false" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="UnitMaster">
+    <Key>
+      <PropertyRef Name="UnitCode" />
+    </Key>
+    <Property Name="UnitCode" Type="char" Nullable="false" MaxLength="11" />
+    <Property Name="UnitType" Type="smallint" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ACcode" Type="varchar" MaxLength="10" />
+    <Property Name="PCcode" Type="varchar" MaxLength="10" />
+    <Property Name="CensusCode" Type="varchar" MaxLength="15" />
+    <Property Name="UnitIncharge" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitContactNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="IsCHC" Type="char" MaxLength="1" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="RuralUrban" Type="varchar" MaxLength="1" />
+    <Property Name="building" Type="varchar" MaxLength="1" />
+    <Property Name="UnitNameHindi" Type="nvarchar" MaxLength="100" />
+    <Property Name="BID" Type="smallint" />
+    <Property Name="PID" Type="smallint" />
+    <Property Name="SID" Type="smallint" />
+    <Property Name="PPUID" Type="smallint" />
+    <Property Name="mobileno" Type="char" MaxLength="10" />
+    <Property Name="Latitude" Type="varchar" MaxLength="10" />
+    <Property Name="Longitude" Type="varchar" MaxLength="10" />
+    <Property Name="pincode" Type="varchar" MaxLength="6" />
+    <Property Name="PrivateHospitalType11" Type="tinyint" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="deliveryPoint" Type="tinyint" />
+    <Property Name="AWCID" Type="varchar" Nullable="false" MaxLength="11" />
+    <Property Name="MTC" Type="tinyint" Nullable="false" />
+    <Property Name="SNCU" Type="tinyint" Nullable="false" />
+    <Property Name="ReportingUnitID" Type="int" Nullable="false" />
+    <Property Name="Beds" Type="int" />
+    <Property Name="BSBY" Type="int" />
+    <Property Name="AccreditationYear" Type="int" />
+    <Property Name="VillageAutoID_P" Type="int" Nullable="false" />
+    <Property Name="NUHMUrban" Type="tinyint" Nullable="false" />
+    <Property Name="NBSU" Type="tinyint" />
+    <Property Name="NBCC" Type="tinyint" />
+    <Property Name="StaticsCenter" Type="tinyint" />
+    <Property Name="PHC_24Hour" Type="tinyint" />
+    <Property Name="FRU" Type="tinyint" />
+    <Property Name="AppLatitude" Type="varchar" MaxLength="20" />
+    <Property Name="AppLongitude" Type="varchar" MaxLength="20" />
+    <Property Name="WellnessCenter" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="UnMarriedGirlsDetail">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="AnganwariNo" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="tinyint" Nullable="false" />
+    <Property Name="Duration" Type="tinyint" Nullable="false" />
+    <Property Name="Used" Type="tinyint" Nullable="false" />
+    <Property Name="Cleaning" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TypeOfCleaningCloths" Type="varchar" MaxLength="100" />
+    <Property Name="FamiliyConcept" Type="varchar" MaxLength="100" />
+    <Property Name="PhysicalProblem" Type="varchar" MaxLength="100" />
+    <Property Name="AdviceFrom" Type="tinyint" />
+    <Property Name="DistroyNapkin" Type="varchar" MaxLength="100" />
+    <Property Name="Entrydate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="SurveyYear" Type="int" Nullable="false" />
+    <Property Name="Entrydate_online" Type="datetime" />
+    <Property Name="LastUpdateDate_online" Type="datetime" />
+  </EntityType>
+  <Function Name="GetUnitmasterData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Perm_Loginunitcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'DHSurvey.dbo.Match_Flag' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Match_Flag">
+        <Property Name="Code" Type="int" />
+        <Property Name="Name" Type="varchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'DHSurvey.dbo.TableStructure' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="TableStructure">
+        <Property Name="TableName" Type="varchar" MaxLength="100" />
+        <Property Name="ColumnName" Type="varchar" MaxLength="100" />
+        <Property Name="IsNullable" Type="varchar" MaxLength="10" />
+        <Property Name="DataType" Type="varchar" MaxLength="50" />
+        <Property Name="ColumnLength" Type="int" />
+        <Property Name="DefaultValue" Type="varchar" MaxLength="100" />
+        <Property Name="PkColumnName" Type="varchar" MaxLength="100" />
+        <Property Name="UkColumnName" Type="varchar" MaxLength="100" />
+        <Property Name="TargetTableName" Type="varchar" MaxLength="100" />
+        <Property Name="TargetCoulmnName" Type="varchar" MaxLength="100" />
+      </EntityType>-->
+</Schema>

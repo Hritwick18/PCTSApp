@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DHSurveyModelStoreContainer" CdmEntityContainer="DHSurveyEntities">
+    <FunctionImportMapping FunctionImportName="GetUnitmasterData" FunctionName="DHSurveyModel.Store.GetUnitmasterData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHSurveyModel.GetUnitmasterData_Result">
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitNameHindi" ColumnName="UnitNameHindi" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Couple_Master_Temp">
+      <EntityTypeMapping TypeName="DHSurveyModel.Couple_Master_Temp">
+        <MappingFragment StoreEntitySet="Couple_Master_Temp">
+          <ScalarProperty Name="MatchFlag" ColumnName="MatchFlag" />
+          <ScalarProperty Name="WifeAadhaarNo" ColumnName="WifeAadhaarNo" />
+          <ScalarProperty Name="WifeIFSC_Code" ColumnName="WifeIFSC_Code" />
+          <ScalarProperty Name="WifeAccountNo" ColumnName="WifeAccountNo" />
+          <ScalarProperty Name="AnganwadiId" ColumnName="AnganwadiId" />
+          <ScalarProperty Name="PCTSID_E" ColumnName="PCTSID_E" />
+          <ScalarProperty Name="MobileNo_E" ColumnName="MobileNo_E" />
+          <ScalarProperty Name="HusbandName" ColumnName="HusbandName" />
+          <ScalarProperty Name="WifeName" ColumnName="WifeName" />
+          <ScalarProperty Name="VillId" ColumnName="VillId" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="VillageAutoID" ColumnName="VillageAutoID" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="Ifsc_Code" ColumnName="Ifsc_Code" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="PCTSID_P" ColumnName="PCTSID_P" />
+          <ScalarProperty Name="MobileNo_P" ColumnName="MobileNo_P" />
+          <ScalarProperty Name="HusbName" ColumnName="HusbName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="rowId" ColumnName="rowId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiseaseDetails">
+      <EntityTypeMapping TypeName="DHSurveyModel.DiseaseDetail">
+        <MappingFragment StoreEntitySet="DiseaseDetails">
+          <ScalarProperty Name="DiseaseCode" ColumnName="DiseaseCode" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseFamilies">
+      <EntityTypeMapping TypeName="DHSurveyModel.HouseFamily">
+        <MappingFragment StoreEntitySet="HouseFamily">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="HouseFamilyID" ColumnName="HouseFamilyID" />
+          <ScalarProperty Name="FamiliyNo" ColumnName="FamiliyNo" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnMarriedGirlsDetails">
+      <EntityTypeMapping TypeName="DHSurveyModel.UnMarriedGirlsDetail">
+        <MappingFragment StoreEntitySet="UnMarriedGirlsDetail">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="AdviceFrom" ColumnName="AdviceFrom" />
+          <ScalarProperty Name="PhysicalProblem" ColumnName="PhysicalProblem" />
+          <ScalarProperty Name="FamiliyConcept" ColumnName="FamiliyConcept" />
+          <ScalarProperty Name="TypeOfCleaningCloths" ColumnName="TypeOfCleaningCloths" />
+          <ScalarProperty Name="Cleaning" ColumnName="Cleaning" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECdetails">
+      <EntityTypeMapping TypeName="DHSurveyModel.ECdetail">
+        <MappingFragment StoreEntitySet="ECdetails">
+          <ScalarProperty Name="UpdateByUserNo" ColumnName="UpdateByUserNo" />
+          <ScalarProperty Name="EntryByUserNo" ColumnName="EntryByUserNo" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="WantBaby" ColumnName="WantBaby" />
+          <ScalarProperty Name="LMPDate" ColumnName="LMPDate" />
+          <ScalarProperty Name="InfantDeathBelow5YearInLastYear" ColumnName="InfantDeathBelow5YearInLastYear" />
+          <ScalarProperty Name="DeliveryInLastYear" ColumnName="DeliveryInLastYear" />
+          <ScalarProperty Name="Nisanthan" ColumnName="Nisanthan" />
+          <ScalarProperty Name="Transgender" ColumnName="Transgender" />
+          <ScalarProperty Name="Girls" ColumnName="Girls" />
+          <ScalarProperty Name="Boys" ColumnName="Boys" />
+          <ScalarProperty Name="TotalBirth" ColumnName="TotalBirth" />
+          <ScalarProperty Name="HusbandAgeOnMarraige" ColumnName="HusbandAgeOnMarraige" />
+          <ScalarProperty Name="AgeOnMarraige" ColumnName="AgeOnMarraige" />
+          <ScalarProperty Name="MarraigeDate" ColumnName="MarraigeDate" />
+          <ScalarProperty Name="Bpl" ColumnName="Bpl" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PCTSID" ColumnName="PCTSID" />
+          <ScalarProperty Name="BhamashahID" ColumnName="BhamashahID" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="IFSCCode" ColumnName="IFSCCode" />
+          <ScalarProperty Name="RationCardNo" ColumnName="RationCardNo" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberPhotoes">
+      <EntityTypeMapping TypeName="DHSurveyModel.MemberPhoto">
+        <MappingFragment StoreEntitySet="MemberPhoto">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="MemberlD" ColumnName="MemberlD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterCodes">
+      <EntityTypeMapping TypeName="DHSurveyModel.MasterCode">
+        <MappingFragment StoreEntitySet="MasterCodes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="masterID" ColumnName="masterID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberDetails">
+      <EntityTypeMapping TypeName="DHSurveyModel.MemberDetail">
+        <MappingFragment StoreEntitySet="MemberDetails">
+          <ScalarProperty Name="DiseasesCodes" ColumnName="DiseasesCodes" />
+          <ScalarProperty Name="UpdateByUserNo" ColumnName="UpdateByUserNo" />
+          <ScalarProperty Name="EntryByUserNo" ColumnName="EntryByUserNo" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="Entrydate" ColumnName="Entrydate" />
+          <ScalarProperty Name="MobileNoBelongsToWhom" ColumnName="MobileNoBelongsToWhom" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="SpouseID" ColumnName="SpouseID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="PollutionHazards" ColumnName="PollutionHazards" />
+          <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+          <ScalarProperty Name="RelationToHead" ColumnName="RelationToHead" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Permanent_Residence" ColumnName="Permanent_Residence" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Caste" ColumnName="Caste" />
+          <ScalarProperty Name="HouseFamilyID" ColumnName="HouseFamilyID" />
+          <ScalarProperty Name="AnganwariNo" ColumnName="AnganwariNo" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllTables" FunctionName="DHSurveyModel.Store.uspGetAllTables">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHSurveyModel.uspGetAllTables_Result">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="IsNullable" ColumnName="IsNullable" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="Columnlength" ColumnName="Columnlength" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="PkColumnName" ColumnName="PkColumnName" />
+          <ScalarProperty Name="UkColumnName" ColumnName="UkColumnName" />
+          <ScalarProperty Name="TargetTableName" ColumnName="TargetTableName" />
+          <ScalarProperty Name="TargetColumnName" ColumnName="TargetColumnName" />
+          <ScalarProperty Name="AutoIncrement" ColumnName="AutoIncrement" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,496 @@
+Time: 11/01/2024 02:46:08 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamFreeDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:8be44c0d-103c-4ed9-b2b0-255c0f128b87
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:01:43 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:edbd5513-0fdc-4aa0-83fb-e5b90c793f8d
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:04:47 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:50b3b410-305f-4b17-ba6d-29321e3beb7f
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:09:14 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:920318e1-a6fe-423c-8347-ae92559e202b
+Error Number:-2,State:0,Class:11
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:13:11 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:920318e1-a6fe-423c-8347-ae92559e202b
+Error Number:-2,State:0,Class:11
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:13:11 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:50b3b410-305f-4b17-ba6d-29321e3beb7f
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:14:41 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:50b3b410-305f-4b17-ba6d-29321e3beb7f
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:18:11 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:18:21 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:13 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'SamAutoid', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:17342d45-74e5-4d23-8bdc-638b083b1a79
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:13 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:15 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:16 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:18 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:df1cd20f-217a-4dec-9625-2c2d55b33a59
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:19:22 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:17342d45-74e5-4d23-8bdc-638b083b1a79
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 03:20:18 PM
+-----------------------------------------------------------
+Message: Error in Post sam FollowupSystem.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'EntryDate', table 'ashasoft.dbo.SamFreeChildDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+69
+69
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at System.Data.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, MergeOption mergeOption, Object[] parameters)
+   at System.Data.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQueryAsIEnumerable[TElement](String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlQuery(Type elementType, String sql, Object[] parameters)
+   at System.Data.Entity.Internal.InternalSqlNonSetQuery.GetEnumerator()
+   at System.Data.Entity.Internal.InternalSqlQuery`1.GetEnumerator()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18458
+ClientConnectionId:17342d45-74e5-4d23-8bdc-638b083b1a79
+Error Number:515,State:2,Class:16
+-----------------------------------------------------------
+
+Time: 11/01/2024 05:33:54 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Operation cancelled by user.
+The statement has been terminated. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18466
+ClientConnectionId:0bddd696-4e6c-42e4-a10d-e538fb397728
+Error Number:-2,State:0,Class:11
+-----------------------------------------------------------
+
+Time: 11/01/2024 05:34:10 PM
+-----------------------------------------------------------
+Message: Error in PUT NDD System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Operation cancelled by user.
+The statement has been terminated. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at PCTSApp.Controllers.PCTSAppController.SaveSamRecoverd(SamRecovered A, Int32 methodFlag) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18466
+ClientConnectionId:e4d7e625-553f-4152-95dc-fca7dc856b68
+Error Number:-2,State:0,Class:11
+-----------------------------------------------------------
+

@@ -1,0 +1,11 @@
+Time: 14/02/2024 06:10:40 PM
+-----------------------------------------------------------
+Message: Error in Post ancSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at PCTSApp.Controllers.PCTSAppController.SaveJ1DetailsReReg(MotherAncRegDetailReReg m, Int16 methodFlag, String& Newpctsid) in D:\Project_Apr2023\PCTSWebApi\PCTSApp\Controllers\PCTSAppController.cs:line 18882
+-----------------------------------------------------------
+
+Time: 14/02/2024 06:11:52 PM
+-----------------------------------------------------------
+Message: Error in post delivery model--System.Web.Http.ModelBinding.ModelStateDictionary
+-----------------------------------------------------------
+
